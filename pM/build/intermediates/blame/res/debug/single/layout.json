@@ -1,0 +1,466 @@
+[
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_post_comment.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_post_comment.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_main.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\fragment_main.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_composer_header.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_composer_header.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_actionbar.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_actionbar.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_info.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_info.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_titile_bar.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_titile_bar.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_comment_detail_nomap.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_comment_detail_nomap.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_bak_platform_item_simple.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_bak_platform_item_simple.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_at_overlay.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_at_overlay.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_get_city.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_get_city.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_bluetooth.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_bluetooth.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\view_bottom_chart_1.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\view_bottom_chart_1.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\shake_umeng_socialize_share_dlg.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\shake_umeng_socialize_share_dlg.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_simple_spinner_item.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_simple_spinner_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_full_alert_dialog.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_full_alert_dialog.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_base_alert_dialog.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_base_alert_dialog.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_round.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_white_round.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_comment_view.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_comment_view.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_refresh.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_refresh.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_confirm.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_confirm.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_comment_item.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_comment_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_first.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\activity_first.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_notification.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_notification.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_comment_detail.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_comment_detail.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\view_bottom_chart_2.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\view_bottom_chart_2.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_notification.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\activity_notification.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\view_top_chart_1.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\view_top_chart_1.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_activity_layout.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\com_facebook_activity_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_bluetooth.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\fragment_bluetooth.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_input_weight.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_input_weight.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_shareboard_item.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_shareboard_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_titile_bar_comment.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_titile_bar_comment.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_full_alert_dialog_item.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_full_alert_dialog_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_personal_state.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_personal_state.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_lines.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_map.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\activity_map.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\gatt_services_characteristics.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\gatt_services_characteristics.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_profile.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_large.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_white_large.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_login.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_login.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_loading.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_loading.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_post_comment_platform.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_post_comment_platform.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_tooltip_bubble.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\com_facebook_tooltip_bubble.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_get_density.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_get_density.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\item_data_result.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\item_data_result.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_comment_more.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_comment_more.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_help.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_help.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_ucenter.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_ucenter.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_pull_to_refresh_header.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_pull_to_refresh_header.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_at_item.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_at_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\slidingmenumain.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\slidingmenu_library\\unspecified\\res\\layout\\slidingmenumain.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_modify_pwd.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_modify_pwd.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_bak_at_list.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_bak_at_list.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_bak_platform_selector_dialog.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_bak_platform_selector_dialog.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_bind_select_dialog.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_bind_select_dialog.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_large.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_blue_large.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_failed_load_page.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_failed_load_page.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_facebook_login_activity_layout.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_facebook_login_activity_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_data_result.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\activity_data_result.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_hot_map.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\activity_hot_map.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_post_share.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_post_share.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_small.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_white_small.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_oauth_dialog.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_oauth_dialog.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_indeterminate_progress.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\actionbar_indeterminate_progress.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_login_fragment.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\com_facebook_login_fragment.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_small.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_blue_small.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_comment_content.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_comment_content.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_at_view.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_at_view.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_bak_at_list_item.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_bak_at_list_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_base_alert_dialog_button.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_base_alert_dialog_button.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_initial.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_initial.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_get_location.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\widget_dialog_get_location.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\listitem_device.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\listitem_device.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\shake_umeng_socialize_scrshot_snapshot.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\shake_umeng_socialize_scrshot_snapshot.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_full_curtain.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_full_curtain.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\view_top_chart_2.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\layout\\view_top_chart_2.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_round.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_blue_round.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_ucenter_platform_item.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\exploded-aar\\Andorid-PM2.5-master\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_ucenter_platform_item.xml"
+    }
+]

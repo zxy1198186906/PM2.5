@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pm"
+    android:versionCode="100"
+    android:versionName="1.0.0">
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <!-- bluetooth -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- network -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Light.NoTitleBar">
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <!-- 请在下面添加自己申请的百度地图API的KEY -->
+
+
+        <!-- <meta-data -->
+        <!-- android:name="com.baidu.lbsapi.API_KEY" -->
+        <!-- android:value="In8U2gwdA6i5Q0lyDHne342u"> -->
+        <!-- </meta-data> -->
+
+
+        <!-- ######################Luo Yi############################# -->
+        <!--<meta-data-->
+            <!--android:name="com.baidu.lbsapi.API_KEY"-->
+            <!--android:value="2fVGi6VIr8dwoKofTl6Gd3L5" />-->
+
+        <!-- ######################Ding 2016.10.11############################# -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="aGvicpWUa3rRx5BPl3jPGcBhhoa6ASKQ" />
+
+        <!-- <meta-data -->
+        <!-- android:name="com.baidu.lbsapi.API_KEY" -->
+        <!-- android:value="BpPXGTGM7lpksZ2e0GZSbN6A"> -->
+        <!-- </meta-data> -->
+
+
+        <!-- ###################添加UmengAppkey###################### -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="566d299367e58e44cb005fe2" />
+
+        <activity
+            android:name=".FirstActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NotificationActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            />
+        </activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MapActivity" />
+        <activity android:name="app.bluetooth.DeviceControlActivity" />
+        <activity android:name=".DataResultActivity" />
+
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".wxapi.WXEntryActivity" />
+
+        <!-- <receiver android:name="app.services.WifiReceiver"> -->
+        <!-- <intent-filter > -->
+        <!-- <action android:name="android.net.wifi.RSSI_CHANGED"/> -->
+        <!-- <action android:name="android.net.wifi.STATE_CHANGE"/> -->
+        <!-- <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+        <service
+            android:name="app.services.ForegroundService"
+            android:exported="true" />
+
+        <receiver android:name="app.services.AlarmForeReceiver" />
+
+        <service
+            android:name="app.bluetooth.BluetoothService"
+            android:exported="true" />
+
+        <receiver
+            android:name="app.services.BackgroundService"
+            android:process=":remote" />
+        <receiver
+            android:name="app.services.AutoStartReceiver"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="app.services.WatchService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name="app.services.AlarmWatchReceiver" />
+        <receiver android:name="app.services.SystemActionReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="app.services.CountStepService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="app.services.AlarmCountStepReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+    </application>
+
+</manifest>

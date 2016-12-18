@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\build\\intermediates\\res\\merged\\debug\\menu\\gatt_services.xml",
+        "source": "D:\\AndroidStudioProjects\\Andorid-PM2.5-master\\pM\\src\\main\\res\\menu\\gatt_services.xml"
+    }
+]
