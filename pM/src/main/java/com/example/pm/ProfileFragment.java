@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -407,8 +408,9 @@ public class ProfileFragment extends Fragment implements
         confirm.show();
     }
 
-    private void logOff(){
+    public void logOff(){
         clearLoginCache();
+        Log.e("ProfileFragment","User have already log off");
         Intent intent = new Intent(mActivity, ForegroundService.class);
         mActivity.stopService(intent);
         getActivity().finish();

@@ -1,6 +1,8 @@
 package app.services;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.location.GpsSatellite;
 import android.location.GpsStatus;
 import android.location.Location;
@@ -9,7 +11,9 @@ import android.location.LocationManager;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.util.Log;
+import android.support.v4.content.ContextCompat;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -26,6 +30,7 @@ import app.utils.ShortcutUtil;
 import app.utils.StableCache;
 import app.utils.Const;
 import app.utils.FileUtil;
+import app.services.BackgroundService;
 
 /**
  * This class aims to contain all the necessary function for localization.
@@ -51,6 +56,8 @@ public class LocationServiceUtil implements LocationListener,GpsStatus.Listener
     public static LocationServiceUtil instance;
 
     private long timeIntervalBeforeStop = 1000 * 10;
+
+    public BackgroundService backgroundService;
 
     /**
      * The call-back listener for getting the filtered location
@@ -422,6 +429,9 @@ public class LocationServiceUtil implements LocationListener,GpsStatus.Listener
     @Override
     public void onStatusChanged(String s, int event, Bundle bundle) {
         if(mLocationManager == null) mLocationManager = (LocationManager)mContext.getSystemService(Context.LOCATION_SERVICE);
+        if ( ContextCompat.checkSelfPermission( mContext, android.Manifest.permission.ACCESS_COARSE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
+            ActivityCompat.requestPermissions( (Activity)mContext, new String[] {  android.Manifest.permission.ACCESS_COARSE_LOCATION  }, 233 );
+        }
         GpsStatus status = mLocationManager.getGpsStatus(null);
         if(event == GpsStatus.GPS_EVENT_SATELLITE_STATUS){
                 Iterable<GpsSatellite> allgps = status.getSatellites();

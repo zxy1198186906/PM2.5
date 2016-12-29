@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SocialSDK_evernote">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/umeng_share_library/libs/SocialSDK_evernote.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

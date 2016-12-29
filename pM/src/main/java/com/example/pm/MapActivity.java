@@ -229,6 +229,7 @@ public class MapActivity extends Activity {
             @Override
             public void onResponse(JSONObject response) {
                 try {
+                    Log.e("Map_search",response.toString());
                     PMModel pmModel = PMModel.parse(response);
                     Double PM25Density = Double.valueOf(pmModel.getPm25());
                     //position.setDensity(PM25Density.toString());

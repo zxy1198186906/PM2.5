@@ -197,6 +197,7 @@ public class UpdateServiceUtil {
                 @Override
                 public void onResponse(JSONObject response) {
                     try {
+                        Log.e("Update_search",response.toString());
                         Log.d("connection", "connection is ok now");
                         PMModel pmModel = PMModel.parse(response.getJSONObject("data"));
                         String mDensity = String.valueOf(pmModel.getPm25());

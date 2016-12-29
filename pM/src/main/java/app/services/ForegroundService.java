@@ -1,5 +1,6 @@
 package app.services;
 
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -47,6 +48,7 @@ import app.utils.HttpUtil;
 import app.utils.ShortcutUtil;
 import app.utils.VolleyQueue;
 
+import  com.example.pm.ProfileFragment;
 
 /**
  * Created by liuhaodong1 on 15/11/10.
@@ -72,6 +74,8 @@ public class ForegroundService extends Service {
 
     private volatile HandlerThread mHandlerThread;
     private Handler refreshHandler;
+
+    private ProfileFragment profileFragment;
 
     Receiver receiver;
 
@@ -105,6 +109,7 @@ public class ForegroundService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.v("LifecycleLog", "Fore_Service onStartCommand");
+
 //        Boolean isRunning=isServiceRunning("app.services.WatchService");
         //
 //        if(isRunning){
@@ -596,6 +601,9 @@ public class ForegroundService extends Service {
     public void checkPMDataForUpload() {
 
         int idStr = dataServiceUtil.getUserIdFromCache();
+        Log.e("ForeUpload_id",String.valueOf(idStr));
+        String tokenStr = dataServiceUtil.getTokenFromCache();
+        Log.e("ForeUpload_token",tokenStr);
 
         if (idStr != 0) {
             final List<State> states = dataServiceUtil.getPMDataForUpload();
@@ -603,6 +611,7 @@ public class ForegroundService extends Service {
             String url = HttpUtil.UploadBatch_url;
             JSONArray array = new JSONArray();
             final int size = states.size() < 1000 ? states.size() : 1000;
+            Log.e("ForeUpload_size",String.valueOf(size));
             for (int i = 0; i < size; i++) {
                 JSONObject tmp = State.toJsonobject(states.get(i), String.valueOf(idStr));
                 array.put(tmp);
@@ -610,6 +619,7 @@ public class ForegroundService extends Service {
             JSONObject batchData = null;
             try {
                 batchData = new JSONObject();
+                batchData.put("access_token", tokenStr);
                 batchData.put("data", array);
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -621,13 +631,25 @@ public class ForegroundService extends Service {
                 @Override
                 public void onResponse(JSONObject response) {
                     try {
-                        String value = response.getString("succeed_count");
-                        FileUtil.appendStrToFile(TAG, "checkPMDataForUpload" +
-                                " upload success value = " + value);
-                        if (Integer.valueOf(value) == size) {
-                            for (int i = 0; i < size; i++) {
-                                dataServiceUtil.updateStateUpLoad(states.get(i), 1);
+                        Log.e("Fore_upload",response.toString());
+                        int token_status = response.getInt("token_status");
+                        if (token_status == 1) {
+                            String value = response.getString("succeed_count");
+                            FileUtil.appendStrToFile(TAG, "checkPMDataForUpload" +
+                                    " upload success value = " + value);
+                            if (Integer.valueOf(value) == size) {
+                                for (int i = 0; i < size; i++) {
+                                    dataServiceUtil.updateStateUpLoad(states.get(i), 1);
+                                }
                             }
+                        }else if(Integer.valueOf(token_status) == 2) {
+                            Log.e("ForeUpload_logoff","logoff");
+                            aCache.remove(Const.Cache_User_Id);
+                            aCache.remove(Const.Cache_Access_Token);
+                            aCache.remove(Const.Cache_User_Name);
+                            aCache.remove(Const.Cache_User_Nickname);
+                            aCache.remove(Const.Cache_User_Gender);
+                            onDestroy();
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -671,7 +693,8 @@ public class ForegroundService extends Service {
     private void searchPMResult(String longitude, String latitude) {
 
         String url = HttpUtil.Search_PM_url;
-        url = url + "?longitude=" + longitude + "&latitude=" + latitude;
+        String token = dataServiceUtil.getTokenFromCache();
+        url = url + "?longitude=" + longitude + "&latitude=" + latitude + "&access_token=" + token;
         FileUtil.appendStrToFile(TAG, "searchPMResult " + url);
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, new Response.Listener<JSONObject>() {
@@ -679,21 +702,33 @@ public class ForegroundService extends Service {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    int status = response.getInt("status");
-
-                    if (status == 1) {
-                        PMModel pmModel = PMModel.parse(response.getJSONObject("data"));
-                        NotifyServiceUtil.notifyDensityChanged(ForegroundService.this, pmModel.getPm25());
-                        double PM25Density = Double.valueOf(pmModel.getPm25());
-                        int PM25Source = pmModel.getSource();
-                        dataServiceUtil.cachePMResult(PM25Density, PM25Source);
-                        dataServiceUtil.cacheSearchPMFailed(0);
-                        FileUtil.appendStrToFile(TAG, "searchPMResult success, density == " +
-                                PM25Density);
-                    } else {
-                        dataServiceUtil.cacheSearchPMFailed(
-                                dataServiceUtil.getSearchFailedCountFromCache() + 1);
-                        FileUtil.appendErrorToFile(TAG, "searchPMResult failed, status != 1");
+                    Log.e("Fore_search",response.toString());
+                    int token_status = response.getInt("token_status");
+                    if (token_status != 2) {
+                        int status = response.getInt("status");
+                        if (status == 1) {
+                            Const.IS_USE_805 = false;
+                            PMModel pmModel = PMModel.parse(response.getJSONObject("data"));
+                            NotifyServiceUtil.notifyDensityChanged(ForegroundService.this, pmModel.getPm25());
+                            double PM25Density = Double.valueOf(pmModel.getPm25());
+                            int PM25Source = pmModel.getSource();
+                            dataServiceUtil.cachePMResult(PM25Density, PM25Source);
+                            dataServiceUtil.cacheSearchPMFailed(0);
+                            FileUtil.appendStrToFile(TAG, "searchPMResult success, density == " +
+                                    PM25Density);
+                        } else {
+                            dataServiceUtil.cacheSearchPMFailed(
+                                    dataServiceUtil.getSearchFailedCountFromCache() + 1);
+                            FileUtil.appendErrorToFile(TAG, "searchPMResult failed, status != 1");
+                        }
+                    }else if (token_status == 2){
+                        checkPMDataForUpload();
+                        aCache.remove(Const.Cache_User_Id);
+                        aCache.remove(Const.Cache_Access_Token);
+                        aCache.remove(Const.Cache_User_Name);
+                        aCache.remove(Const.Cache_User_Nickname);
+                        aCache.remove(Const.Cache_User_Gender);
+                        onDestroy();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

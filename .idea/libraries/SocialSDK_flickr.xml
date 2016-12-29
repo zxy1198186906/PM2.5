@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SocialSDK_flickr">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/umeng_share_library/libs/SocialSDK_flickr.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

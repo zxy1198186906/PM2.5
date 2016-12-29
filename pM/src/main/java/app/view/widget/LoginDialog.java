@@ -24,6 +24,7 @@ import org.json.JSONObject;
 
 import app.model.HttpResult;
 import app.model.LogInModel;
+import app.services.BackgroundService;
 import app.utils.ACache;
 import app.utils.Const;
 import app.utils.HttpUtil;
@@ -49,6 +50,8 @@ public class LoginDialog extends Dialog implements OnClickListener {
     ACache aCache;
     Handler parentHandler;
     private InfoDialog infoDialog;
+
+    private BackgroundService backgroundService;
 
     public LoginDialog(Activity mActivity) {
         super(mActivity);

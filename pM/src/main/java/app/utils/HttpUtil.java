@@ -1,6 +1,7 @@
 package app.utils;
 
 import android.app.Activity;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -20,7 +21,9 @@ import app.model.UserModel;
  */
 public class HttpUtil {
 
-    private static final String base_url = "http://ilab.tongji.edu.cn/pm25/web/restful/";
+    //private static final String base_url = "http://ilab.tongji.edu.cn/pm25/web/restful/";
+
+    private static final String base_url = "http://100.64.2.201/pm25/web/restful/";
 
     public static final String Search_PM_url = base_url + "urban-airs/search";
 
@@ -42,7 +45,7 @@ public class HttpUtil {
 
     public static final String MonitorLocation_url = base_url + "area-positions";
 
-    public static final String UploadBatch_url = base_url + "mobile-data/upload";
+    public static final String UploadBatch_url = base_url + "new-mobile-data/upload";
 
     //jiangph for 805
     public static final String SERVERIP="255.255.255.255";
@@ -103,6 +106,7 @@ public class HttpUtil {
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
+                Log.e("Http_search",response.toString());
                 result.setResultBody(response.toString());
                 Toast.makeText(mActivity.getApplicationContext(), "Data Get Success!", Toast.LENGTH_LONG).show();
             }

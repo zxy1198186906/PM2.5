@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_sms.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dcef3560bca4260897ee9c9d82512357d153b538">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_sms_a00d383c6b3d9ac051201ad17a62c4599740e1da\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_renren_2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0458eaf94045cdfabc938f466753bbd4d19d63f9">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_renren_2_89114047da286f60c597d7a9f7bd7e163f708d5d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_tencentWB_1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9c524f29673bfede1442cb340f72ef9912020ce">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_tencentWB_1_1f38b42edb43e527faf9cb8026295f9650e2bd5e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_kakao.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e2c45d0f054a45d5564e73b540cdd2f24b78488a">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_kakao_b9188e2a07bbf0854faabdddeaaba8dc9630590a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_pocket.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b9c14d3a3cb51ff3130b285fefdb40ab15fe1dbd">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_pocket_fe42eb581ab1685810b95502b95eb9eee1cbfbf5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_yixin_2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4ab67f141d00be37014d7d60eb24ba2d745af6ec">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_yixin_2_8e3de430154469e2d9a5369790d2f562e21f5c8a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_comment.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="55d5805a0839ecb06e81bf1267b1e4df5ff7d0b1">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_comment_d778f8011b2b6a276454d13aa6ae9353c4fb73d3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_pinterest.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="94ab148748cde362c8e416844ab9cbda7dcfb8b9">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_pinterest_36178b7ce7cf76abf6a64f7bc7819d3e74a161e5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\httpmime-4.1.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1d78fd95cfbd4d8fb6f8726347fa3bda24d162ee">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\httpmime-4.1.3_205a6ade403bb8b95051c1b37c3e4722d9c53abc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_Sina.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4f4e396e98d9df68e3e235ae9c3258e2dac5890a">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_Sina_0dff9c0ed7729fe7c23e226eb4172b5e6a5af0a8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\umeng_social_sdk.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2ad68a174c99a3cefaecc70d0da7681b276ae97f">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\umeng_social_sdk_4301b2546a8edb66cd7f013ba6b4f8ffad4f9027\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_email.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9cdca70b4904756109378cf3230e9878d60478a3">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_email_5ccb19cbb19fda85dadbe8d9e6bc11a206c94ea8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\com.github.orhanobut\logger\1.12\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ecb9f39f775f414b18c7c61b4f71345f2ae8f738">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.orhanobut-logger-1.12_c59d41ad05232eaf0ec7e8e4ecf4d1a4c101fcb9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_flickr.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="7533e58a8dc0571d39cb1c0a0dd240606e6c041e">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_flickr_d2bd18c97f568c5bd0a8df2224ae6959022125d2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_whatsapp.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a378baa7bc3d1ece09830e440c3dd998b280dc18">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_whatsapp_97467854337c81225bf38a7bc772c0263ca820e2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_instagram.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5555c149deb6f984acbbd33f2b07ad0a4840e1f9">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_instagram_1a3dd6c702f68d1bc76bdf0aef741cdb3be0b009\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.0_a8b2ef61e0272da7ca3b2281605bd9548a46dab4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_facebook_2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0f89e30ef398a30f7a37665f9602e8c5d58785dd">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_facebook_2_a51c851f22b7a18c8531c4dd31fea9931067e2f5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_evernote.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1f72e82a3cf55f3e4486e0e8f606879e979d547e">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_evernote_d2253e32e2f7859f426054f4d966bfdeef8069b9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_laiwang_1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="04dd32162912fc2bfe3a619bb1fc4034d89187ff">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_laiwang_1_014e6307500a7d7343a06b9b1c47b26eca6046b0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.0_d1121e488812edaf1628be6b8928d1ef000f6846\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b40718c9722e3d380467da386ad833c8b4f5dd48">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_a0d9591997f44e604d901481472989a6baf27a81\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_QQZone_2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="7072bd908b79cdb7b7fe2d550c7755f0f6db4a17">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_QQZone_2_09ecc377cd8b5ada6b736c25163bd7cdb951b5d6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\bolts-android-1.1.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3299434a5ced5ea151e559adb4b840b16bfb94df">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\bolts-android-1.1.4_304164549228826e52132223640f48724e3b686e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_actionbarview.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b5e7ee41354c2956caab9c0acba1158df01e7f49">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_actionbarview_98d1221d6e2b788067ae75094bf03864bd18e09e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_tencentWB_3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b029f9e54d8639614528d0c55ca403f4431d7515">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_tencentWB_3_fdcaa0c7aaae700d8de199962cd3b35b301e15a0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_laiwang_2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="26acc65a136a164cf1d6c0c793d425a9ac67bbb2">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_laiwang_2_f6bc9de1fb2a522789a3714054f1380a6613df74\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_scrshot.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9fed473367d3c37d2bed63fd5c7c1567cf47b9aa">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_scrshot_17ff7f7939b8cf2e60d3ed41eddb6c8aa67dce2c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_AtFriends.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c43d5b87ee29dc2179e9b46877cc2ace4ef96b63">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_AtFriends_e477d54dc7ec3c88866c83064bf02ef2404705e3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_QQZone_3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="157dd4aa07dfd371275b1fae8d9cc2ead7b2da54">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_QQZone_3_babee102f72d15ce14435e3b96c3cd385acd2ad4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\libs\locSDK_6.13.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2cdb37444b41b42e1ce5a8a27e5d3c22e1c57479">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\2\locSDK_6.13_6b39b55baad20ebe141c3a7e62731fba7ec006cf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_UserCenter.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d107b572b9b1b0735a620f6eaa074d162c3cd1c4">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_UserCenter_a4d6b3cb650bba6c734255f6b6801bdcebf7f7cd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_WeiXin_1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b5fe9dcdaca41bdb2874b503a628723c658346c8">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_WeiXin_1_fe69487e92bf84e40405ca73352479a76a667142\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_tencentWB_2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="62e48ad4e1896519cdffc181d5f3c612c7d7b37d">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_tencentWB_2_819c6c7341b7e12b4a0a8583b9c8ae18f64d03c1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\.gradle\caches\modules-2\files-2.1\nl.qbusict\cupboard\2.1.2\aa2654568535e3a29af7a3b86453b8ff85af6d12\cupboard-2.1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa2654568535e3a29af7a3b86453b8ff85af6d12">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\10\cupboard-2.1.2_7b00eef342eec09a5a5bc5a4e8b8e0f1e81485e3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_linkedin.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fa343c7160dfeafcb0d715bb03d1314b454e11af">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_linkedin_1b6e752540f9e72525fe116e2d7663f30274d8b4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.0_20e9404eec3a25137ebbfc3037a991794d5feabc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_yixin_1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b1844f7973bc0c8b5c65eb8091373d9d53f225ba">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_yixin_1_9b72777d4f38ffbca15e65bbc4766cb6920d77f6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\libs\baidumapapi_v3_5_0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b63b092a660a70370a05e00be60fd2b4ed290fcb">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\2\baidumapapi_v3_5_0_580b76a4d1434fcef909d6301e120363bd30e5ac\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_foursquare.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a5e2e86becf58baaea05cc5f48f45e67ba77ddff">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_foursquare_a2e3309d7eaeb26c8f97c64e3f17e55d6649d7b6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_tumblr.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="7266caed2ced137430958ea8093993bbe5738a3d">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_tumblr_d1ad0956667046bbf369c6f4a2f6dcb41fcb346c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_renren_1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="01397a3a91b34a77c85688d65a0027bd56469b37">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_renren_1_e879a49dfbe9368e87d95dc707c516160837ce74\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_WeiXin_2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="301e43b22403ab47eab75a8ecdff80d697bc9289">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_WeiXin_2_4b6769f1c918f2dbffbbb130ce3892f3157d9ddb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_facebook_1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="80ff87d138ae32cfe473b786851e78a841933a82">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_facebook_1_b35fa9936496a0cd4f7afdd257c3a292875a8993\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9822741b54d3c286552c7aeffc62cd1eeea92677">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_3591824ffc9257701cd108782c5b4f7f6f3d6fde\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_QQZone_1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="418868f1416898ed88da34f10e4d770502a8d6b7">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_QQZone_1_638e064dbb0953cfbc1d2d366940fd6fdb9ae62a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\com.github.lecho\hellocharts-library\1.5.8\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="56c6a22c42588628903e9dda5d8f3aa1c1b4372f">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.lecho-hellocharts-library-1.5.8_02cc85a18e17e5dd61f1ada56d61ff97d4a01e96\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_line.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="425cf9eded283121242f4879c429019ea745694d">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_line_4b1cfaaaefccf51a51b394043bed8d887337e0d0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_shake.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="34e94b3100ce4546b907460e725f9eeb13847c96">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_shake_9b3c68167ee8a7da54db79b818a3403521afca07\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.18\38da306aafee11459cd935a01d2c92a98dc670a4\library-1.0.18.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="38da306aafee11459cd935a01d2c92a98dc670a4">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\10\library-1.0.18_06fae2685655dd3c561dcf847d50c278de8db878\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_ynote.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f62ac92e6241e1cd4f4bb3d12fc5eed60296a432">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_ynote_3e2f00d497885f83d358b6f61cbc1e4b9b5bac3a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_2a67b602f9e686ee35a2dedd42636fd09b13aa46\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\exploded-aar\PM2.5_805\umeng_share_library\unspecified\jars\libs\SocialSDK_like.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6685f6a75bcbdd81df8ce00a6cdd3215e3e1fcb0">
+        <dex dex="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_like_c955151e951c100a9428ba8dd9bf62627293a850\classes.dex" />
+    </item>
+
+</items>

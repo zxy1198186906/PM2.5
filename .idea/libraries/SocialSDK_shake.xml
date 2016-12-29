@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SocialSDK_shake">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/umeng_share_library/libs/SocialSDK_shake.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

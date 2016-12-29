@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
 import android.util.Log;
 
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -46,11 +47,17 @@ public class DataServiceUtil {
 
     private double PM25Today;
 
-    private int PM25Source; //a stable holding of pm density of cache.
+    private int PM25Source = 1; //a stable holding of pm source
 
     private ACache aCache;
 
     private StableCache stableCache;
+
+    private String token = null;
+
+    private String version = Const.CURRENT_VERSION;
+
+    private String device_number = null;
 
     private int avg_rate = 12; //a stable holding of current hearth rate of cache.
 
@@ -124,6 +131,7 @@ public class DataServiceUtil {
         Log.e(TAG, "calculatePM25 " + System.currentTimeMillis());
         Double breath = 0.0;
         Double density = PM25Density;
+        token = getTokenFromCache();
         boolean isConnected = ShortcutUtil.isNetworkAvailable(mContext);
 
         Const.MotionStatus mMotionStatus = MotionServiceUtil.getMotionStatus(steps);
@@ -141,19 +149,34 @@ public class DataServiceUtil {
             breath = static_breath * 6;
         }
 
+        BigDecimal new_breath = new BigDecimal(breath);
+        breath = new_breath.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
+
         venVolToday += breath;
+        BigDecimal new_venVolToday = new BigDecimal(venVolToday);
+        venVolToday = new_venVolToday.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
+
         breath = breath / 1000; //change L/min to m3/min
+        double pm25_intake = density * breath;
+        BigDecimal new_pm25_intake = new BigDecimal(pm25_intake);
+        pm25_intake = new_pm25_intake.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
+
         PM25Today += density * breath;
+        boolean source = Const.IS_USE_805;
+        if(source == true) {
+            PM25Source = 2;
+            device_number = Const.Device_Number;
+        }
 
         try {
-            state = new State(IDToday, String.valueOf(getUserIdFromCache()), Long.toString(System.currentTimeMillis()),
+            state = new State(IDToday, String.valueOf(getUserIdFromCache()), token, Long.toString(System.currentTimeMillis()),
                     String.valueOf(longi),
                     String.valueOf(lati),
                     String.valueOf(getInOutDoorFromCache()),
                     mMotionStatus == Const.MotionStatus.STATIC ? "1" : mMotionStatus == Const.MotionStatus.WALK ? "2" : "3",
-                    Integer.toString(steps), String.valueOf(avg_rate),
-                    String.valueOf(venVolToday), density.toString(), String.valueOf(PM25Today),
-                    String.valueOf(PM25Source), 0, isConnected ? 1 : 0);
+                    Integer.toString(steps), String.valueOf(avg_rate),String.valueOf(breath),
+                    String.valueOf(venVolToday), density.toString(), String.valueOf(pm25_intake),
+                    String.valueOf(PM25Source), device_number, version, isConnected ? 1 : 0);
         }catch (Exception e){
             FileUtil.appendErrorToFile(TAG,"calculatePM25 error in initialized state");
         }
@@ -166,6 +189,7 @@ public class DataServiceUtil {
      */
     public void insertState(State state) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
+        Log.e("DataService","insert state");
         state.print();
         cupboard().withDatabase(db).put(state);
         IDToday++;
@@ -258,6 +282,14 @@ public class DataServiceUtil {
         aCache.put(Const.Cache_PM_Density, density);
         aCache.put(Const.Cache_PM_Source, String.valueOf(source));
         PM25Density = density;
+    }
+
+    /**
+     * cache the Cache_Access_Token
+     * @param Token
+     */
+    public void cacheToken(String Token){
+        aCache.put(Const.Cache_Access_Token,Token);
     }
 
     /**
@@ -388,6 +420,25 @@ public class DataServiceUtil {
             }
         }else {
             return 0;
+        }
+    }
+
+    /**
+     * get the tooken from cache, if failed, return 0
+     * @return the tooken
+     */
+    public String getTokenFromCache(){
+        String TokenStr = aCache.getAsString(Const.Cache_Access_Token);
+        if(ShortcutUtil.isStringOK(TokenStr)){
+            try{
+                return String.valueOf(TokenStr);
+            }catch (Exception e){
+                FileUtil.appendErrorToFile(TAG,"getTookenFromCache parsing error"
+                        +" in/outdoor == "+TokenStr);
+                return TokenStr;
+            }
+        }else {
+            return TokenStr;
         }
     }
 

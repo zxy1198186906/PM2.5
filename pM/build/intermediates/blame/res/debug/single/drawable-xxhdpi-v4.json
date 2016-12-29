@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\messenger_bubble_small_white.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-xxhdpi-v4\\messenger_bubble_small_white.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\messenger_bubble_large_white.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-xxhdpi-v4\\messenger_bubble_large_white.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\com_facebook_button_send_icon.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-xxhdpi-v4\\com_facebook_button_send_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\splash.JPG",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\drawable-xxhdpi\\splash.JPG"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\messenger_bubble_small_blue.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-xxhdpi-v4\\messenger_bubble_small_blue.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\messenger_bubble_large_blue.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-xxhdpi-v4\\messenger_bubble_large_blue.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\com_facebook_button_like_icon_selected.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-xxhdpi-v4\\com_facebook_button_like_icon_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\messenger_button_send_round_shadow.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-xxhdpi-v4\\messenger_button_send_round_shadow.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\com_facebook_button_icon.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-xxhdpi-v4\\com_facebook_button_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\shanghai.jpg",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\drawable-xxhdpi\\shanghai.jpg"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\beijing.jpg",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\drawable-xxhdpi\\beijing.jpg"
+    }
+]

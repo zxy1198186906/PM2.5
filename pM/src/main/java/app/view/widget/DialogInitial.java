@@ -3,6 +3,7 @@ package app.view.widget;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
@@ -26,13 +27,18 @@ import org.json.JSONObject;
 
 import app.model.PMModel;
 import app.services.DataServiceUtil;
+import app.services.ForegroundService;
 import app.services.LocationServiceUtil;
 import app.services.NotifyServiceUtil;
+import app.services.BackgroundService;
 import app.utils.Const;
 import app.utils.FileUtil;
 import app.utils.HttpUtil;
 import app.utils.ShortcutUtil;
 import app.utils.VolleyQueue;
+import app.utils.ACache;
+
+import com.example.pm.ProfileFragment;
 
 /**
  * Created by liuhaodong1 on 16/6/13.
@@ -70,6 +76,10 @@ public class DialogInitial extends Dialog implements View.OnClickListener{
     private Button mCancel;
 
     private Handler mHandler;
+
+    private BackgroundService backgroundService;
+    private  ACache aCache;
+    private  ProfileFragment profileFragment;
 
     public DialogInitial(Context context,Handler handler) {
         super(context);
@@ -203,26 +213,41 @@ public class DialogInitial extends Dialog implements View.OnClickListener{
     private void searchPMResult(String longitude, String latitude) {
 
         String url = HttpUtil.Search_PM_url;
-        url = url + "?longitude=" + longitude + "&latitude=" + latitude;
+        String token = dataServiceUtil.getTokenFromCache();
+        url = url + "?longitude=" + longitude + "&latitude=" + latitude + "&access_token=" + token;
         FileUtil.appendStrToFile(TAG,"searchPMResult " + url);
         Log.e(TAG,url);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    int status = response.getInt("status");
-                    if (status == 1) {
+                    Log.e("Dialog_ini_search",response.toString());
+                    int token_status = response.getInt("token_status");
+                    if (token_status != 2) {
+                        int status = response.getInt("status");
+                        if (status == 1) {
+                            Const.IS_USE_805 = false;
+                            PMModel pmModel = PMModel.parse(response.getJSONObject("data"));
+                            NotifyServiceUtil.notifyDensityChanged(mContext, pmModel.getPm25());
 
-                        PMModel pmModel = PMModel.parse(response.getJSONObject("data"));
-                        NotifyServiceUtil.notifyDensityChanged(mContext,pmModel.getPm25());
-
-                        double PM25Density = Double.valueOf(pmModel.getPm25());
-                        int PM25Source = pmModel.getSource();
-                        dataServiceUtil.cachePMResult(PM25Density, PM25Source);
-                        FileUtil.appendStrToFile(TAG,"3.search pm density success, density: " + PM25Density);
-                    } else {
-                        Toast.makeText(mContext,Const.Info_Failed_PMDensity,Toast.LENGTH_SHORT).show();
-                        FileUtil.appendErrorToFile(-1,"search pm density failed, status != 1");
+                            double PM25Density = Double.valueOf(pmModel.getPm25());
+                            int PM25Source = pmModel.getSource();
+                            dataServiceUtil.cachePMResult(PM25Density, PM25Source);
+                            FileUtil.appendStrToFile(TAG, "3.search pm density success, density: " + PM25Density);
+                        } else {
+                            Toast.makeText(mContext, Const.Info_Failed_PMDensity, Toast.LENGTH_SHORT).show();
+                            FileUtil.appendErrorToFile(-1, "search pm density failed, status != 1");
+                        }
+                    }else if (token_status == 2){
+                        backgroundService.checkPMDataForUpload();
+                        aCache.remove(Const.Cache_User_Id);
+                        aCache.remove(Const.Cache_Access_Token);
+                        aCache.remove(Const.Cache_User_Name);
+                        aCache.remove(Const.Cache_User_Nickname);
+                        aCache.remove(Const.Cache_User_Gender);
+                        Activity mActivity = (Activity)mContext;
+                        Intent intent = new Intent(mActivity, ForegroundService.class);
+                        mActivity.stopService(intent);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

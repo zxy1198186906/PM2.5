@@ -213,30 +213,30 @@ public class DataResultActivity extends Activity implements OnClickListener{
             }else {
                 viewHolder = (ViewHolder)convertView.getTag();
             }
-                viewHolder.mId.setText(mdata.get(position).getId() == null?"null":String.valueOf(mdata.get(position).getId()));
-                viewHolder.mUserId.setText(mdata.get(position).getUserid() == null? "null":mdata.get(position).getUserid());
-                viewHolder.mDate.setText(ShortcutUtil.refFormatDateAndTime(Long.valueOf(mdata.get(position).getTime_point())));
-                viewHolder.mLati.setText(cutStringByType(mdata.get(position).getLatitude()));
-                viewHolder.mLongi.setText(cutStringByType(mdata.get(position).getLongtitude()));
-                viewHolder.mStep.setText(mdata.get(position).getSteps());
-                viewHolder.mAvgRate.setText(mdata.get(position).getAvg_rate());
-                int status = Integer.valueOf(mdata.get(position).getStatus());
-                if(status == 1)
-                    viewHolder.mStatus.setText("S");
-                else if(status == 2)
-                    viewHolder.mStatus.setText("W");
-                else if(status == 3)
-                    viewHolder.mStatus.setText("R");
-                viewHolder.mOutdoor.setText(Integer.valueOf(mdata.get(position).getOutdoor())== 1? "out":"in");
-                viewHolder.mAir.setText(mdata.get(position).getVentilation_volume().length() < 5?
-                        mdata.get(position).getVentilation_volume() : mdata.get(position).getVentilation_volume().substring(0, 4));
-                viewHolder.mPMDensity.setText(mdata.get(position).getDensity().length() < 5?
-                        mdata.get(position).getDensity() : mdata.get(position).getDensity().substring(0,4));
-                viewHolder.mPMResult.setText(mdata.get(position).getPm25().length() < 5?
-                        mdata.get(position).getPm25() : mdata.get(position).getPm25().substring(0,4));
-                viewHolder.mSource.setText(mdata.get(position).getSource());
-                viewHolder.mUpload.setText(mdata.get(position).getUpload() == 0? "N":"Y");
-                viewHolder.mConnection.setText(mdata.get(position).getConnection() == 0? "N":"Y");
+            viewHolder.mId.setText(mdata.get(position).getId() == null?"null":String.valueOf(mdata.get(position).getId()));
+            viewHolder.mUserId.setText(mdata.get(position).getUserid() == null? "null":mdata.get(position).getUserid());
+            viewHolder.mDate.setText(ShortcutUtil.refFormatDateAndTime(Long.valueOf(mdata.get(position).getTime_point())));
+            viewHolder.mLati.setText(cutStringByType(mdata.get(position).getLatitude()));
+            viewHolder.mLongi.setText(cutStringByType(mdata.get(position).getLongtitude()));
+            viewHolder.mStep.setText(mdata.get(position).getSteps());
+            viewHolder.mAvgRate.setText(mdata.get(position).getVentilation_rate());
+            int status = Integer.valueOf(mdata.get(position).getStatus());
+            if(status == 1)
+                viewHolder.mStatus.setText("S");
+            else if(status == 2)
+                viewHolder.mStatus.setText("W");
+            else if(status == 3)
+                viewHolder.mStatus.setText("R");
+            viewHolder.mOutdoor.setText(Integer.valueOf(mdata.get(position).getOutdoor())== 1? "out":"in");
+            viewHolder.mAir.setText(mdata.get(position).getVentilation_volume().length() < 5?
+                    mdata.get(position).getVentilation_volume() : mdata.get(position).getVentilation_volume().substring(0, 4));
+            viewHolder.mPMDensity.setText(mdata.get(position).getDensity().length() < 5?
+                    mdata.get(position).getDensity() : mdata.get(position).getDensity().substring(0,4));
+            viewHolder.mPMResult.setText(mdata.get(position).getPm25().length() < 5?
+                    mdata.get(position).getPm25() : mdata.get(position).getPm25().substring(0,4));
+            viewHolder.mSource.setText(mdata.get(position).getSource());
+            viewHolder.mUpload.setText(mdata.get(position).getUpload() == 0? "N":"Y");
+            viewHolder.mConnection.setText(mdata.get(position).getConnection() == 0? "N":"Y");
             return convertView;
         }
 

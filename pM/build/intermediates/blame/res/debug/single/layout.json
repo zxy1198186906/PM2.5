@@ -1,0 +1,466 @@
+[
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_at_overlay.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_at_overlay.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_activity_layout.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\com_facebook_activity_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\view_top_chart_1.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\view_top_chart_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_bak_platform_selector_dialog.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_bak_platform_selector_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_get_density.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_get_density.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_help.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_help.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_hot_map.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\activity_hot_map.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_login_fragment.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\com_facebook_login_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_refresh.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_refresh.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\view_bottom_chart_1.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\view_bottom_chart_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_round.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_blue_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\view_top_chart_2.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\view_top_chart_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_main.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\fragment_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_round.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_white_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_at_item.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_at_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_full_alert_dialog.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_full_alert_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_comment_content.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_comment_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_base_alert_dialog.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_base_alert_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_titile_bar.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_titile_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_loading.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_post_share.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_post_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_at_view.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_at_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\listitem_device.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\listitem_device.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_ucenter_platform_item.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_ucenter_platform_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_get_location.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_get_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_bluetooth.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\fragment_bluetooth.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_bind_select_dialog.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_bind_select_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_titile_bar_comment.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_titile_bar_comment.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_info.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_full_curtain.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_full_curtain.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_bluetooth.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_bluetooth.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_confirm.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_confirm.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_small.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_blue_small.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_bak_at_list_item.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_bak_at_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_large.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_white_large.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_full_alert_dialog_item.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_full_alert_dialog_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_shareboard_item.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_shareboard_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_pull_to_refresh_header.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_pull_to_refresh_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_map.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\activity_map.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\slidingmenumain.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\slidingmenu_library\\unspecified\\res\\layout\\slidingmenumain.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\gatt_services_characteristics.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\gatt_services_characteristics.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_oauth_dialog.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_oauth_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_comment_detail.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_comment_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_composer_header.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_composer_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_actionbar.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_actionbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_login.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_comment_view.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_comment_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_post_comment_platform.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_post_comment_platform.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_tooltip_bubble.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\com_facebook_tooltip_bubble.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\shake_umeng_socialize_share_dlg.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\shake_umeng_socialize_share_dlg.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_comment_item.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_comment_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_data_result.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\activity_data_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_post_comment.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_post_comment.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_modify_pwd.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_modify_pwd.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_lines.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_base_alert_dialog_button.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_base_alert_dialog_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_bak_at_list.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_bak_at_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_initial.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_initial.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_bak_platform_item_simple.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_bak_platform_item_simple.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\item_data_result.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\item_data_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_indeterminate_progress.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\actionbar_indeterminate_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_simple_spinner_item.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_simple_spinner_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_notification.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_failed_load_page.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_failed_load_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\shake_umeng_socialize_scrshot_snapshot.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\shake_umeng_socialize_scrshot_snapshot.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_large.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_blue_large.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\view_bottom_chart_2.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\view_bottom_chart_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_notification.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\activity_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_ucenter.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_ucenter.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_first.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\activity_first.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_small.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_white_small.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_get_city.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_get_city.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_personal_state.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_personal_state.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_facebook_login_activity_layout.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_facebook_login_activity_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_comment_more.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_comment_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_comment_detail_nomap.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_comment_detail_nomap.xml"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\widget_dialog_input_weight.xml",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\layout\\widget_dialog_input_weight.xml"
+    }
+]

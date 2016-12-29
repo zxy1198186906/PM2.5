@@ -6,6 +6,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import app.utils.Const;
 
 /**
  * Created by jiangph on 16-5-21.
@@ -49,8 +50,9 @@ public class SDMRequest implements Runnable {
                 if (sn.length>5)
                 {
                     HttpUtil.deviceNumber=sn[10].split(":")[1];
-
+                    Const.Device_Number = HttpUtil.deviceNumber;
                     System.out.println("deviceNumber"+HttpUtil.deviceNumber);
+                    Const.IS_USE_805 = true;
                 }
 
             } catch (IOException e) {

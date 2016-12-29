@@ -1,0 +1,102 @@
+[
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_close.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\com_facebook_close.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_button_send_icon.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\com_facebook_button_send_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_socialize_light_bar_bg_pad.9.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\umeng_socialize_light_bar_bg_pad.9.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\slider4.jpg",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\src\\main\\res\\drawable-hdpi\\slider4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_button_icon.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\com_facebook_button_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_tooltip_black_xout.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_xout.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_socialize_oauth_check_on.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\umeng_socialize_oauth_check_on.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_socialize_oauth_check_off.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\umeng_socialize_oauth_check_off.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_tooltip_black_topnub.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_topnub.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_tooltip_black_background.9.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_background.9.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_socialize_share_video.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\umeng_socialize_share_video.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_tooltip_blue_bottomnub.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\messenger_bubble_small_blue.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\messenger_bubble_small_blue.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\messenger_bubble_large_white.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\messenger_bubble_large_white.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_socialize_share_music.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\umeng_socialize_share_music.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_tooltip_blue_topnub.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_topnub.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_socialize_share_pic.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\umeng_socialize_share_pic.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_tooltip_black_bottomnub.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\messenger_bubble_large_blue.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\messenger_bubble_large_blue.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\messenger_bubble_small_white.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\messenger_bubble_small_white.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\messenger_button_send_round_shadow.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\messenger_button_send_round_shadow.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_button_like_icon_selected.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\com_facebook_button_like_icon_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_socialize_nav_bar_bg_pad.9.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\umeng_socialize_nav_bar_bg_pad.9.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_tooltip_blue_xout.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_xout.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_tooltip_blue_background.9.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_background.9.png"
+    }
+]

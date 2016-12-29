@@ -1,5 +1,6 @@
 package app.services;
 
+import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -20,16 +21,21 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import app.Entity.State;
 import app.model.PMModel;
+import app.utils.Const;
 import app.utils.FileUtil;
 import app.utils.HttpUtil;
 import app.utils.ShortcutUtil;
 import app.utils.VolleyQueue;
+import app.utils.ACache;
+import com.example.pm.ProfileFragment;
 
 /**
  * Created by liuhaodong1 on 16/6/2.
@@ -77,8 +83,19 @@ public class BackgroundService extends BroadcastReceiver {
 
     private int stepNum = 0;
 
-    private boolean isReset = false; //if surpass a day, then reset the value.
+    private boolean isReset = false;    //if surpass a day, then reset the value.
 
+    private String s="now";
+
+    private String token_status;
+
+    private String access_token;
+
+    private String device_number;
+
+    private ACache aCache;
+
+    private  ProfileFragment profileFragment;
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -140,19 +157,29 @@ public class BackgroundService extends BroadcastReceiver {
 
         getLastParams();
         Log.e(TAG, repeatingCycle + " ");
-        if (isGoingToGetLocation || repeatingCycle % 23 == 0) {
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+        if (isGoingToGetLocation || repeatingCycle % 30 == 0) {
             isLocationFinished = false;
             getLocations(1000 * 10);
+            Date d1=new Date();
+            String sdf1=sdf.format(d1);
+            Log.e(s,sdf1+" ");
         }
-        if (isGoingToSearchPM || repeatingCycle % 101 == 0) {
+        if (isGoingToSearchPM || repeatingCycle % 101 == 0) {//101
             isSearchDensityFinished = false;
             searchPMResult(String.valueOf(mLocation.getLongitude()), String.valueOf(mLocation.getLatitude()));
+            Date d2=new Date();
+            String sdf2=sdf.format(d2);
+            Log.e(s,sdf2+" ");
         }
         //every 1 hour to check if some data need to be uploaded
-        if (repeatingCycle % 119 == 0) {
+        if (repeatingCycle % 119 == 0) {//119
             FileUtil.appendStrToFile(repeatingCycle, "every 1 hour to check pm data for upload");
             isUploadFinished = false;
             checkPMDataForUpload();
+            Date d3=new Date();
+            String sdf3=sdf.format(d3);
+            Log.e(s,sdf3+" ");
         }
         onGetSteps();
         saveValues();
@@ -244,28 +271,43 @@ public class BackgroundService extends BroadcastReceiver {
     private void searchPMResult(String longitude, String latitude) {
 
         String url = HttpUtil.Search_PM_url;
-        url = url + "?longitude=" + longitude + "&latitude=" + latitude;
+        String token = dataServiceUtil.getTokenFromCache();
+        url = url + "?longitude=" + longitude + "&latitude=" + latitude + "&access_token=" + token;
         FileUtil.appendStrToFile(repeatingCycle, "searchPMResult " + url);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, new Response.Listener<JSONObject>() {
 
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    int status = response.getInt("status");
-                    if (status == 1) {
+                    Log.e("Back_search",response.toString());
+                    int token_status = response.getInt("token_status");
+                    if (token_status != 2) {
+                        int status = response.getInt("status");
+                        if (status == 1) {
+                            Const.IS_USE_805 = false;
+                            PMModel pmModel = PMModel.parse(response.getJSONObject("data"));
+                            NotifyServiceUtil.notifyDensityChanged(mContext, pmModel.getPm25());
+                            double PM25Density = Double.valueOf(pmModel.getPm25());
+                            int PM25Source = pmModel.getSource();
 
-                        PMModel pmModel = PMModel.parse(response.getJSONObject("data"));
-                        NotifyServiceUtil.notifyDensityChanged(mContext, pmModel.getPm25());
-                        double PM25Density = Double.valueOf(pmModel.getPm25());
-                        int PM25Source = pmModel.getSource();
+                            dataServiceUtil.cacheIsSearchDensity(false);
+                            dataServiceUtil.cachePMResult(PM25Density, PM25Source);
+                            dataServiceUtil.cacheSearchPMFailed(0);
 
-                        dataServiceUtil.cacheIsSearchDensity(false);
-                        dataServiceUtil.cachePMResult(PM25Density, PM25Source);
-                        dataServiceUtil.cacheSearchPMFailed(0);
-
-                        FileUtil.appendStrToFile(TAG,"searchPMResult success, density: " + PM25Density);
-                    } else {
-                        FileUtil.appendErrorToFile(TAG,"searchPMResult failed, status != 1");
+                            FileUtil.appendStrToFile(TAG, "searchPMResult success, density: " + PM25Density);
+                        } else {
+                            FileUtil.appendErrorToFile(TAG, "searchPMResult failed, status != 1");
+                        }
+                    }else if (token_status == 2){
+                        checkPMDataForUpload();
+                        aCache.remove(Const.Cache_User_Id);
+                        aCache.remove(Const.Cache_Access_Token);
+                        aCache.remove(Const.Cache_User_Name);
+                        aCache.remove(Const.Cache_User_Nickname);
+                        aCache.remove(Const.Cache_User_Gender);
+                        Activity mActivity = (Activity)mContext;
+                        Intent intent = new Intent(mActivity, ForegroundService.class);
+                        mActivity.stopService(intent);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -295,6 +337,7 @@ public class BackgroundService extends BroadcastReceiver {
         State last = state;
         state = dataServiceUtil.calculatePM25(mLocation.getLatitude(), mLocation.getLongitude(),stepNum);
 //        Log.v("Crysa_location","saveValues()lati"+mLocation.getLatitude()+"||"+"longi"+ mLocation.getLongitude());
+        Log.e("Back","save state");
         state.print();
         State now = state;
 
@@ -311,10 +354,11 @@ public class BackgroundService extends BroadcastReceiver {
         Log.e(TAG, "repeating times: " + repeatingCycle);
     }
 
-    private void checkPMDataForUpload() {
+    public void checkPMDataForUpload() {
         dataServiceUtil.cacheLastUploadTime(System.currentTimeMillis());
         FileUtil.appendStrToFile(repeatingCycle, "every 1 hour to check pm data for upload");
         int idStr = dataServiceUtil.getUserIdFromCache();
+        String tokenStr=dataServiceUtil.getTokenFromCache();
 
         if (idStr != 0) {
             final List<State> states = dataServiceUtil.getPMDataForUpload();
@@ -330,6 +374,8 @@ public class BackgroundService extends BroadcastReceiver {
             try {
                 batchData = new JSONObject();
                 batchData.put("data", array);
+                batchData.put("access_token", tokenStr);
+                //batchData.put(tokenStr,array);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -337,12 +383,28 @@ public class BackgroundService extends BroadcastReceiver {
                 @Override
                 public void onResponse(JSONObject response) {
                     try {
-                        String value = response.getString("succeed_count");
-                        FileUtil.appendStrToFile(repeatingCycle, "1.checkPMDataForUpload upload success value = " + value);
-                        if (Integer.valueOf(value) == size) {
-                            for (int i = 0; i < size; i++) {
-                                dataServiceUtil.updateStateUpLoad(states.get(i), 1);
+                        Log.e("Back_upload",response.toString());
+                        int token_status = response.getInt("token_status");
+                        if (token_status == 1) {
+                            String value = response.getString("succeed_count");
+                            FileUtil.appendStrToFile(repeatingCycle, "1.checkPMDataForUpload upload success value = " + value);
+                            FileUtil.appendStrToFile(repeatingCycle, "2.checkTokenStatus upload value = " + token_status);
+                            if (Integer.valueOf(value) == size) {
+                                for (int i = 0; i < size; i++) {
+                                    dataServiceUtil.updateStateUpLoad(states.get(i), 1);
+                                }
                             }
+                        }
+                        else if(Integer.valueOf(token_status) == 2) {
+                            Log.e("BackUpload_logoff","logoff");
+                            aCache.remove(Const.Cache_User_Id);
+                            aCache.remove(Const.Cache_Access_Token);
+                            aCache.remove(Const.Cache_User_Name);
+                            aCache.remove(Const.Cache_User_Nickname);
+                            aCache.remove(Const.Cache_User_Gender);
+                            Activity mActivity = (Activity)mContext;
+                            Intent intent = new Intent(mActivity, ForegroundService.class);
+                            mActivity.stopService(intent);
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();

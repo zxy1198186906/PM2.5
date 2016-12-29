@@ -28,7 +28,11 @@ public class Const {
 
     public static int CURRENT_WIDTH = -1;
 
-    public static String CURRENT_ACCESS_TOKEN = "-1";
+    public static String CURRENT_VERSION = "an.2016.12.25";
+
+    public static String CURRENT_ACCESS_TOKEN = null;
+
+    public static String Device_Number = null;
 
     public static String CURRENT_USER_NAME = "-1";
 
@@ -39,6 +43,8 @@ public class Const {
     public static int CURRENT_OUTDOOR = 0;
 
     public static boolean CURRENT_NEED_REFRESH = false;
+
+    public static boolean IS_USE_805 = false;
 
     public static final double longitude_for_test = 116.304521;
 

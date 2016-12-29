@@ -1,5 +1,6 @@
 package app.view.widget;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -24,9 +25,14 @@ import org.json.JSONObject;
 
 import app.model.PMModel;
 import app.services.DataServiceUtil;
+import app.services.BackgroundService;
+import app.services.ForegroundService;
 import app.utils.Const;
 import app.utils.HttpUtil;
 import app.utils.VolleyQueue;
+import app.utils.ACache;
+
+import com.example.pm.ProfileFragment;
 
 /**
  * Created by liuhaodong1 on 16/1/30.
@@ -50,6 +56,10 @@ public class DialogGetDensity extends Dialog implements View.OnClickListener
     private TextView mDensity;
     private Button mCancel;
     private Button mSearch;
+
+    private BackgroundService backgroundService;
+    private  ACache aCache;
+    private ProfileFragment profileFragment;
 
     private Runnable mRunnable = new Runnable() {
 
@@ -129,37 +139,52 @@ public class DialogGetDensity extends Dialog implements View.OnClickListener
         mSearch.setClickable(false);
         setRun();
         isRunning = true;
+        String token = dataServiceUtil.getTokenFromCache();
         String url = HttpUtil.Search_PM_url;
-        url = url + "?longitude=" + longitude + "&latitude=" + latitude;
+        url = url + "?longitude=" + longitude + "&latitude=" + latitude + "&access_token=" + token;
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
+                Log.e("Dialog_search",response.toString());
                 isRunning = false;
                 mSearch.setEnabled(true);
                 mSearch.setClickable(true);
                 setStop();
                 try {
-                    int status = response.getInt("status");
+                    int token_status = response.getInt("token_status");
+                    if (token_status != 2) {
+                        int status = response.getInt("status");
 
-                    if(status == 1) {
+                        if (status == 1) {
+                            Const.IS_USE_805 = false;
+                            pmModel = PMModel.parse(response.getJSONObject("data"));
+                            Intent intent = new Intent(Const.Action_DB_MAIN_PMDensity);
+                            intent.putExtra(Const.Intent_PM_Density, pmModel.getPm25());
+                            //set current pm density for calculation
+                            PM25Density = Double.valueOf(pmModel.getPm25());
+                            int source = pmModel.getSource();
 
-                        pmModel = PMModel.parse(response.getJSONObject("data"));
-                        Intent intent = new Intent(Const.Action_DB_MAIN_PMDensity);
-                        intent.putExtra(Const.Intent_PM_Density, pmModel.getPm25());
-                        //set current pm density for calculation
-                        PM25Density = Double.valueOf(pmModel.getPm25());
-                        int source = pmModel.getSource();
+                            mDensity.setText(String.valueOf(PM25Density));
+                            dataServiceUtil.cachePMResult(PM25Density, source);
+                            dataServiceUtil.cacheSearchPMFailed(0);
 
-                        mDensity.setText(String.valueOf(PM25Density));
-                        dataServiceUtil.cachePMResult(PM25Density, source);
-                        dataServiceUtil.cacheSearchPMFailed(0);
+                            notifyService(PM25Density);
+                            Toast.makeText(mContext.getApplicationContext(), Const.Info_PMDATA_Success, Toast.LENGTH_SHORT).show();
 
-                        notifyService(PM25Density);
-                        Toast.makeText(mContext.getApplicationContext(), Const.Info_PMDATA_Success, Toast.LENGTH_SHORT).show();
-
-                    }else {
-                        String str = response.getString("message");
-                        mDensity.setText(str);
+                        } else {
+                            String str = response.getString("message");
+                            mDensity.setText(str);
+                        }
+                    }else if (token_status == 2){
+                        backgroundService.checkPMDataForUpload();
+                        aCache.remove(Const.Cache_User_Id);
+                        aCache.remove(Const.Cache_Access_Token);
+                        aCache.remove(Const.Cache_User_Name);
+                        aCache.remove(Const.Cache_User_Nickname);
+                        aCache.remove(Const.Cache_User_Gender);
+                        Activity mActivity = (Activity)mContext;
+                        Intent intent = new Intent(mActivity, ForegroundService.class);
+                        mActivity.stopService(intent);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
