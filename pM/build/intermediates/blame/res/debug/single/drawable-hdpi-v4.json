@@ -24,12 +24,12 @@
         "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_xout.png"
     },
     {
-        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_socialize_oauth_check_on.png",
-        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\umeng_socialize_oauth_check_on.png"
-    },
-    {
         "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_socialize_oauth_check_off.png",
         "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\umeng_socialize_oauth_check_off.png"
+    },
+    {
+        "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\umeng_socialize_oauth_check_on.png",
+        "source": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\drawable-hdpi-v4\\umeng_socialize_oauth_check_on.png"
     },
     {
         "merged": "C:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_tooltip_black_topnub.png",

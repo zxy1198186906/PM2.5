@@ -181,7 +181,7 @@ public class DataCalculator {
                 month = month - 1;
                 if (month < 1) {
                     year = year - 1;
-                    month = 12;
+                    month = 11;
                 }
                 day = Const.DayMaxOfTheMonth[month + 1] + day - i;  //month比实际值小1
 //                if (month == 2 && (year % 4 == 0)) day = 29 + day - i;  //day已赋值
