@@ -42,6 +42,9 @@ public class DialogPersonalState extends Dialog implements View.OnClickListener{
     private RadioButton mOutdoor;
     private Button mDataResult;
     private TextView mGPSNum;
+    private EditText mWifiId;
+    private EditText mDevId;
+    private TextView mSaveWifi;
 
     public DialogPersonalState(Context context,Handler parent) {
         super(context);
@@ -72,6 +75,10 @@ public class DialogPersonalState extends Dialog implements View.OnClickListener{
         mLocalization = (Button)findViewById(R.id.personal_state_get_location);
         mLocalization.setOnClickListener(this);
         mGPSNum = (TextView)findViewById(R.id.personal_state_gps_num);
+        mWifiId = (EditText) findViewById(R.id.wifiIdInput);
+        mDevId = (EditText) findViewById(R.id.devIdInput);
+        mSaveWifi = (TextView) findViewById(R.id.wifiSave);
+        mSaveWifi.setOnClickListener(this);
         loadData();
     }
 
@@ -83,11 +90,16 @@ public class DialogPersonalState extends Dialog implements View.OnClickListener{
         String weight = stableCache.getAsString(Const.Cache_User_Weight);
         String gps = stableCache.getAsString(Const.Cache_GPS_SATE_NUM);
 
+        String wifiId = stableCache.getAsString(Const.Cache_User_Wifi);
+        String devId = stableCache.getAsString(Const.Cache_User_Device);
+
         mLatitude.setText(String.valueOf(dataServiceUtil.getLatitudeFromCache()));
         mLongitude.setText(String.valueOf(dataServiceUtil.getLongitudeFromCache()));
         if(weight != null) mWeight.setText(weight);
         setLocation(dataServiceUtil.getInOutDoorFromCache());
         if(gps != null) mGPSNum.setText(gps);
+        if(wifiId != null) mWifiId.setText(wifiId);
+        if(devId != null) mDevId.setText(devId);
     }
 
     private void setLocation(int state){
@@ -135,6 +147,17 @@ public class DialogPersonalState extends Dialog implements View.OnClickListener{
                 DialogGetLocation getLocation = new DialogGetLocation(mContext);
                 getLocation.show();
                 DialogPersonalState.this.dismiss();
+                break;
+            case R.id.wifiSave:
+                String wifiId = mWifiId.getText().toString();
+                String devId = mDevId.getText().toString();
+                if(ShortcutUtil.isWifiOrDevCorrect(wifiId) && ShortcutUtil.isWifiOrDevCorrect(devId)){
+                    Toast.makeText(mContext.getApplicationContext(),Const.Info_Input_WIFI_Saved,Toast.LENGTH_SHORT).show();
+                    stableCache.put(Const.Cache_User_Wifi, wifiId);
+                    stableCache.put(Const.Cache_User_Device, devId);
+                }else {
+                    Toast.makeText(mContext.getApplicationContext(),Const.Info_Input_WIFI_Error,Toast.LENGTH_SHORT).show();
+                }
                 break;
         }
     }

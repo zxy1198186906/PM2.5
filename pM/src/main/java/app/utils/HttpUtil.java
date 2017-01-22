@@ -20,9 +20,11 @@ import app.model.UserModel;
  */
 public class HttpUtil {
 
-    private static final String base_url = "http://ilab.tongji.edu.cn/pm25/web/restful/";
+    private static final String base_url = "http://54.64.196.87/pm25/web/restful/";
 
     public static final String Search_PM_url = base_url + "urban-airs/search";
+
+    public static final String Search_PM_url_wifi = base_url + "device-datas";
 
     public static final String Register_url = base_url + "users/logon";
 

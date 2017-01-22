@@ -104,6 +104,8 @@ public class Const {
     public static final String Cache_Chart_12_Date = "Cache_Chart_12_Date";
     public static final String Cache_Chart_Alert = "Cache_Chart_Alert";
     public static final String Cache_User_Weight = "Cache_User_Weight";
+    public static final String Cache_User_Wifi = "Cache_User_Wifi";
+    public static final String Cache_User_Device = "Cache_User_Device";
     public static final String Cache_Is_Saving_Battery = "Cache_Is_Saving_Battery";
     public static final String Cache_GPS_SATE_NUM = "Cache_GPS_SATE_NUM";
 
@@ -347,6 +349,10 @@ public class Const {
     public static final String Info_Input_Weight_Error = "体重输入有误，请重新输入.";
 
     public static final String Info_Input_Weight_Saved = "体重数据已保存";
+
+    public static final String Info_Input_WIFI_Error = "wifi或设备号输入有误，请重新输入.";
+
+    public static final String Info_Input_WIFI_Saved = "wifi和设备号已保存";
 
     public static final String Info_Weight_Null = "当前体重数据为零，请在状态栏中输入相关体重数据";
 
