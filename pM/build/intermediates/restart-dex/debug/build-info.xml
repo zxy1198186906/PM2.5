@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="22"
+    api-level="23"
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="176425354243430"
+    timestamp="217330802961729"
     token="-7609023764103174218"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="19783" />
+        duration="29228" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="7896" />
+        duration="19465" />
     <task
         name="verifier"
-        duration="2814" />
+        duration="4537" />
 
     <artifact
         location="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\outputs\apk\pM-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="176425354243430"
+        timestamp="217330802961729"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\yhs\StudioProjects\PM2.5_805\pM\build\outputs\apk\pM-debug.apk"

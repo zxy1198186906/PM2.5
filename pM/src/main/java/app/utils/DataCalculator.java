@@ -18,6 +18,7 @@ import java.util.Map;
 import java.util.Set;
 
 import app.Entity.State;
+import app.services.DataServiceUtil;
 
 import static nl.qbusict.cupboard.CupboardFactory.cupboard;
 
@@ -33,6 +34,8 @@ public class DataCalculator {
     private List<List<State>> lastWeekStates;
     private ArrayList<String> lastWeekDate;
     private ArrayList<String> lastTwoHourTime;
+
+    private DataServiceUtil dataServiceUtil = null;
 
     private static DataCalculator instance = null;
 
@@ -70,20 +73,30 @@ public class DataCalculator {
         Long lastTime = calendar.getTime().getTime();
         calendar.set(year, month, day, 0, 0, 0);
         Long originTime = calendar.getTime().getTime();
-        List<State> test = cupboard().withDatabase(db).query(State.class).withSelection("time_point > ? AND time_point < ?", originTime.toString(), lastTime.toString()).list();
-        if (test.isEmpty()) firstHour = true;
+//        List<State> test = cupboard().withDatabase(db).query(State.class).withSelection("time_point > ? AND time_point < ?", originTime.toString(), lastTime.toString()).list();
+        Log.v("DataCalculator","test2");
+        List<State> test2 = cupboard().withDatabase(db).query(State.class).withSelection("time_point > ? AND time_point < ?", originTime.toString(), nowTime.toString()).list();
+        if (currentHour == 0) firstHour = true;
         List<State> states = cupboard().withDatabase(db).query(State.class).withSelection("time_point > ? AND time_point < ?", lastTime.toString(), nowTime.toString()).list();
         if (states.isEmpty()) {
             return String.valueOf(result);
         } else if (states.size() == 1) {
             return states.get(states.size() - 1).getPm25();
         } else {
-            State state1 = states.get(states.size() - 1); // the last one
+//            State state1 = states.get(states.size() - 1); // the last one
             if (firstHour) {
-                result = Double.valueOf(state1.getPm25()) - 0;
+                Log.v("DataCalculator","calLastHourPM_firsthour");
+                for(int i = 0; i < test2.size(); i++){
+                    result += Double.valueOf(test2.get(i).getPm25());
+                }
+//                result = Double.valueOf(state1.getPm25()) - 0;
             } else {
-                State state2 = states.get(0); //the first one
-                result = Double.valueOf(state1.getPm25()) - Double.valueOf(state2.getPm25());
+                Log.v("DataCalculator","calLastHourPM");
+                for(int i = 0; i < states.size(); i++){
+                    result += Double.valueOf(states.get(i).getPm25());
+                }
+//                State state2 = states.get(0); //the first one
+//                result = Double.valueOf(state1.getPm25()) - Double.valueOf(state2.getPm25());
             }
         }
         return String.valueOf(result);
@@ -91,7 +104,7 @@ public class DataCalculator {
 
     public String calLastWeekAvgPM() {
         Double result = 0.0;
-        Double tmp;
+        Double tmp = 0.0;
         int num = 0;
         List<List<State>> datas = DataCalculator.getIntance(db).getLastWeekStates();
         if (datas.isEmpty()) {
@@ -101,13 +114,28 @@ public class DataCalculator {
             List<State> states = datas.get(i);
             if (!states.isEmpty()) {
                 num++;
-                tmp = Double.valueOf(states.get(states.size() - 1).getPm25());
+//                tmp = Double.valueOf(states.get(states.size() - 1).getPm25());
+                for(int j = 0; j < states.size();j++){
+                    tmp += Double.valueOf(states.get(j).getPm25());
+                }
             } else {
                 tmp = 0.0;
             }
             result += tmp;
         }
         return String.valueOf(result / num);
+    }
+
+    public String calTodayPM() {
+        Double tmp = 0.0;
+        List<State> todaystates = DataCalculator.getIntance(db).getTodayStates();
+        if (todaystates.isEmpty()) {
+            return String.valueOf(tmp);
+        }
+        for (int i = 0; i != todaystates.size(); i++) {
+            tmp += Double.valueOf(todaystates.get(i).getPm25());
+        }
+        return String.valueOf(tmp);
     }
 
     public void updateLastDayState() {
@@ -265,15 +293,13 @@ public class DataCalculator {
         if (states.isEmpty()) {
             return map;
         }
+        Log.v("DataCalculator","calChart1Data");
         for (int i = 0; i != states.size(); i++) {
             State state = states.get(i);
             int index = ShortcutUtil.timeToPointOfDay(Long.valueOf(state.getTime_point()));
             float pm25;
-            if (i == 0) {
-                pm25 = Float.valueOf(state.getPm25());
-            } else {
-                pm25 = Float.valueOf(state.getPm25()) - Float.valueOf(states.get(i - 1).getPm25());
-            }
+            pm25 = Float.valueOf(state.getPm25());
+
             //now we get the index of time and the pm25 of that point
             if (map.containsKey(index)) {
                 float tmp = map.get(index).floatValue() + pm25;
@@ -293,6 +319,7 @@ public class DataCalculator {
         if (db == null) return map;
         List<State> states = todayStates;
         if (states.isEmpty()) {
+            Log.e("calChart2Data","states_isEmpty");
             return map;
         }
         HashMap<Integer, Float> tmpMap = new HashMap<>();
@@ -336,18 +363,17 @@ public class DataCalculator {
         if (db == null) return map;
         List<State> states = todayStates;
         if (states.isEmpty()) {
+            Log.e("calChart3Data","states_isEmpty");
             return map;
         }
+        Log.v("DataCalculator","calChart3Data");
         ArrayList<Integer> tmpIndex = new ArrayList<>();
         for (int i = 0; i != states.size(); i++) {
             State state = states.get(i);
             int index = ShortcutUtil.timeToPointOfDay(Long.valueOf(state.getTime_point()));
             float pm25;
-            if (i == 0) {
-                pm25 = Float.valueOf(state.getPm25());
-            } else {
-                pm25 = Float.valueOf(state.getPm25()) - Float.valueOf(states.get(i - 1).getPm25());
-            }
+            pm25 = Float.valueOf(state.getPm25());
+
             //now we get the index of time and the pm25 of that point
             if (map.containsKey(index)) {
                 float tmp = map.get(index).floatValue() + pm25;
@@ -439,6 +465,7 @@ public class DataCalculator {
             //Log.e("calChart5Data","states is empty");
             return map;
         }
+        Log.v("DataCalculator","calChart5Data");
         //Log.e("calChart5Data","state.size: "+String.valueOf(states.size()));
         HashMap<Integer, Float> tmpMap = new HashMap<>();
         if (states.size() == 1) {
@@ -448,10 +475,10 @@ public class DataCalculator {
         for (int i = 1; i != states.size(); i++) {
             State state = states.get(i);
             int index = ShortcutUtil.timeToPointOfTwoHour(Long.valueOf(states.get(0).getTime_point()), Long.valueOf(state.getTime_point()));
-            Float pmNow, pmLast;
-            pmNow = Float.valueOf(state.getPm25());
-            pmLast = Float.valueOf(states.get(i - 1).getPm25());
-            Float result = pmNow - pmLast; //calculate the 1 min air breathed in
+//            Float pmNow, pmLast;
+//            pmNow = Float.valueOf(state.getPm25());
+//            pmLast = Float.valueOf(states.get(i - 1).getPm25());
+            Float result = Float.valueOf(state.getPm25()); //calculate the 1 min air breathed in
             //Log.e("calChart8Data",String.valueOf(index)+" "+String.valueOf(airNow)+" "+String.valueOf(i) + " "+String.valueOf(result));
             //now we get the index of time and the air  of that point
             if (tmpMap.containsKey(index)) {
@@ -514,7 +541,9 @@ public class DataCalculator {
      * Return a map contains last week pm breathed of each day. today's index is 0
      **/
     public HashMap<Integer, Float> calChart7Data() {
+        Log.v("DataCalculator","calChart7Data");
         HashMap<Integer, Float> map = new HashMap<>();
+        float PM25Today = 0;
         if (db == null) return map;
         List<List<State>> datas = getLastWeekStates();
         if (datas.isEmpty()) return map;
@@ -523,7 +552,11 @@ public class DataCalculator {
             if (state.isEmpty())
                 map.put(i, 0.0f);
             else
-                map.put(i, Float.valueOf(state.get(state.size() - 1).getPm25()));
+                PM25Today = 0;
+                for (int j = 0; j < state.size();j++){
+                    PM25Today += Float.parseFloat(state.get(j).getPm25());
+                }
+                map.put(i, PM25Today);
         }
         return map;
     }
@@ -549,6 +582,7 @@ public class DataCalculator {
             return tmpMap;
         }
         HashMap<Integer, Integer> tmpNumMap = new HashMap<>();
+        HashMap<Integer, Float> avgtmpMap = new HashMap<>();
         for (int i = 1; i != states.size(); i++) {
             State state = states.get(i);
             int index = ShortcutUtil.timeToPointOfTwoHour(Long.valueOf(states.get(0).getTime_point()), Long.valueOf(state.getTime_point()));
@@ -573,10 +607,10 @@ public class DataCalculator {
         for (Integer key : tmpMap.keySet()) {
             Float sum = tmpMap.get(key);
             int num = tmpNumMap.get(key);
-            tmpMap.put(key, sum / num);
+            avgtmpMap.put(key, sum / num);
         }
         //DebugUtil.printMap("sss",tmpNumMap);
-        return tmpMap;
+        return avgtmpMap;
     }
 
     /**

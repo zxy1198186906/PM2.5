@@ -38,6 +38,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import app.services.DataServiceUtil;
 import app.Entity.State;
 import app.model.PMModel;
 import app.utils.ACache;
@@ -254,7 +255,8 @@ public class ForegroundService extends Service {
                     }
                     intentText = new Intent(Const.Action_DB_MAIN_PMResult);
                     intentText.putExtra(Const.Intent_DB_PM_Hour, DataCalculator.getIntance(db).calLastHourPM());
-                    intentText.putExtra(Const.Intent_DB_PM_Day, state.getPm25());
+                    Log.v("ForegroundService","getPM25Today");
+                    intentText.putExtra(Const.Intent_DB_PM_Day, DataCalculator.getIntance(db).calTodayPM());
                     intentText.putExtra(Const.Intent_DB_PM_Week, DataCalculator.getIntance(db).calLastWeekAvgPM());
                     sendBroadcast(intentText);
                 }
@@ -461,7 +463,8 @@ public class ForegroundService extends Service {
                     DataCalculator.getIntance(db).updateLastWeekState();
                     Intent intentText = new Intent(Const.Action_DB_MAIN_PMResult);
                     intentText.putExtra(Const.Intent_DB_PM_Hour, DataCalculator.getIntance(db).calLastHourPM());
-                    intentText.putExtra(Const.Intent_DB_PM_Day, state.getPm25());
+                    Log.v("ForegroundService","getPM25Today2");
+                    intentText.putExtra(Const.Intent_DB_PM_Day, DataCalculator.getIntance(db).calTodayPM());
                     intentText.putExtra(Const.Intent_DB_PM_Week, DataCalculator.getIntance(db).calLastWeekAvgPM());
                     sendBroadcast(intentText);
                 } else if (msg.what == Const.Handler_Refresh_Chart1) {

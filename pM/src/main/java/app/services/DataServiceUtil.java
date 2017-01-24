@@ -101,12 +101,20 @@ public class DataServiceUtil {
             State state = states.get(states.size() - 1);
             this.state = state;
             state.print();
+            Log.v("DataServiceUtils","calculate pm25today & venvoltoday");
+            for(int i = 0;i < states.size();i++){
+                State theState = states.get(i);
+                PM25Today += Double.parseDouble(theState.getPm25());
+                venVolToday += Double.parseDouble(theState.getVentilation_volume());
+            }
 //            Log.v("Crysa_log", "print97");
-            PM25Today = Double.parseDouble(state.getPm25());
-            venVolToday = Double.parseDouble(state.getVentilation_volume());
+//            PM25Today = Double.parseDouble(state.getPm25());
+//            venVolToday = Double.parseDouble(state.getVentilation_volume());
             IDToday = state.getId() + 1;
         }
     }
+
+
 
     /**
      *
@@ -149,6 +157,7 @@ public class DataServiceUtil {
             breath = static_breath * 6;
         }
 
+        breath = breath / 1000; //change L/min to m3/min
         BigDecimal new_breath = new BigDecimal(breath);
         breath = new_breath.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
 
@@ -156,7 +165,6 @@ public class DataServiceUtil {
         BigDecimal new_venVolToday = new BigDecimal(venVolToday);
         venVolToday = new_venVolToday.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
 
-        breath = breath / 1000; //change L/min to m3/min
         double pm25_intake = density * breath;
         BigDecimal new_pm25_intake = new BigDecimal(pm25_intake);
         pm25_intake = new_pm25_intake.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
@@ -743,6 +751,25 @@ public class DataServiceUtil {
     }
 
     public double getPM25Today() {
+//        SQLiteDatabase db = dbHelper.getReadableDatabase();
+//        Calendar calendar = Calendar.getInstance();
+//        int year = calendar.get(Calendar.YEAR);
+//        int month = calendar.get(Calendar.MONTH);
+//        int day = calendar.get(Calendar.DAY_OF_MONTH);
+//        calendar.set(year, month, day, 0, 0, 0);
+//        Long nowTime = calendar.getTime().getTime();
+//        calendar.set(year, month, day, 23, 59, 59);
+//        Long nextTime = calendar.getTime().getTime();
+//        /**Get states of today **/
+//        List<State> states = cupboard().withDatabase(db).query(State.class).withSelection("time_point > ? AND time_point < ?", nowTime.toString(), nextTime.toString()).list();
+//        if (states.isEmpty()) {
+//            PM25Today = 0.0;
+//        } else {
+//            for(int i = 0;i < states.size();i++){
+//                State theState = states.get(i);
+//                PM25Today += Double.parseDouble(theState.getPm25());
+//            }
+//        }
         return PM25Today;
     }
 

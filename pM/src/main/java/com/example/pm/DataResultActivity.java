@@ -209,6 +209,14 @@ public class DataResultActivity extends Activity implements OnClickListener{
                 viewHolder.mSource = (TextView)convertView.findViewById(R.id.data_result_source);
                 viewHolder.mUpload = (TextView)convertView.findViewById(R.id.data_result_upload);
                 viewHolder.mConnection = (TextView)convertView.findViewById(R.id.data_result_connection);
+                viewHolder.mToken = (TextView)convertView.findViewById(R.id.data_result_token);
+                viewHolder.mH_rate = (TextView)convertView.findViewById(R.id.data_result_heart_rate);
+                viewHolder.mV_rate = (TextView)convertView.findViewById(R.id.data_result_ventilation_rate);
+                viewHolder.mV_vol = (TextView)convertView.findViewById(R.id.data_result_ventilation_vol);
+                viewHolder.mCon = (TextView)convertView.findViewById(R.id.data_result_concen);
+                viewHolder.mInk = (TextView)convertView.findViewById(R.id.data_result_intake);
+                viewHolder.mMot = (TextView)convertView.findViewById(R.id.data_result_monitor);
+                viewHolder.mA_ver = (TextView)convertView.findViewById(R.id.data_result_app_version);
                 convertView.setTag(viewHolder);
             }else {
                 viewHolder = (ViewHolder)convertView.getTag();
@@ -220,12 +228,20 @@ public class DataResultActivity extends Activity implements OnClickListener{
             viewHolder.mLongi.setText(cutStringByType(mdata.get(position).getLongtitude()));
             viewHolder.mStep.setText(mdata.get(position).getSteps());
             viewHolder.mAvgRate.setText(mdata.get(position).getVentilation_rate());
-            int status = Integer.valueOf(mdata.get(position).getStatus());
-            if(status == 1)
+            viewHolder.mToken.setText("$w34534");
+            viewHolder.mH_rate.setText("121");
+            viewHolder.mV_rate.setText("64");
+            viewHolder.mV_vol.setText("63");
+            viewHolder.mCon.setText("rand");
+            viewHolder.mInk.setText("185");
+            viewHolder.mMot.setText("Running");
+            viewHolder.mA_ver.setText("2017.1.16");
+            String status = mdata.get(position).getStatus();
+            if(status == "1")
                 viewHolder.mStatus.setText("S");
-            else if(status == 2)
+            else if(status == "2")
                 viewHolder.mStatus.setText("W");
-            else if(status == 3)
+            else if(status == "3")
                 viewHolder.mStatus.setText("R");
             viewHolder.mOutdoor.setText(Integer.valueOf(mdata.get(position).getOutdoor())== 1? "out":"in");
             viewHolder.mAir.setText(mdata.get(position).getVentilation_volume().length() < 5?
@@ -256,6 +272,14 @@ public class DataResultActivity extends Activity implements OnClickListener{
             TextView mSource;
             TextView mUpload;
             TextView mConnection;
+            TextView mToken;
+            TextView mH_rate;
+            TextView mV_rate;
+            TextView mV_vol;
+            TextView mCon;
+            TextView mInk;
+            TextView mMot;
+            TextView mA_ver;
         }
 
         private String cutStringByType(String str){

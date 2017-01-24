@@ -246,6 +246,7 @@ public class UpdateServiceUtil {
     update total pm2.5
      */
     private void updateTotalPM25(State state, String mDensity) {
+        Log.v("UpdateServiceUtils","updateTotalPM25");
         double breath = 0;
         Double density = new Double(Double.valueOf(mDensity)-Double.valueOf(state.getDensity()));
         Boolean mIndoor =  state.getOutdoor().equals("0")?true:false;
@@ -262,10 +263,11 @@ public class UpdateServiceUtil {
             density /= 3;
         }
         double PM25 = density*breath/60/1000;
-        List<State> states = this.getAllAfterState(state);
-        for (State s : states) {
-            this.updateStatePM25(s,Double.valueOf(s.getPm25())+PM25);
-        }
+        updateStatePM25(state,PM25);
+//        List<State> states = this.getAllAfterState(state);
+//        for (State s : states) {
+//            this.updateStatePM25(s,PM25);
+//        }
     }
 
     /*

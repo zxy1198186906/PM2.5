@@ -136,4 +136,74 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$w34534"
+            android:textSize="14dp"
+            android:id="@+id/data_result_token" />
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="121"
+            android:id="@+id/data_result_heart_rate" />
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="64"
+            android:textSize="14dp"
+            android:id="@+id/data_result_ventilation_rate" />
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="63"
+            android:textSize="14dp"
+            android:id="@+id/data_result_ventilation_vol" />
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rand"
+            android:textSize="14dp"
+            android:id="@+id/data_result_concen" />
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="185"
+            android:textSize="14dp"
+            android:id="@+id/data_result_intake" />
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Running"
+            android:textSize="14dp"
+            android:id="@+id/data_result_monitor" />
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017.1.16"
+            android:textSize="14dp"
+            android:id="@+id/data_result_app_version" />
+
+
+    </LinearLayout>
 </LinearLayout>

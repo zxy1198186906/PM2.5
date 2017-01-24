@@ -28,7 +28,7 @@ public class Const {
 
     public static int CURRENT_WIDTH = -1;
 
-    public static String CURRENT_VERSION = "an.2016.12.25";
+    public static String CURRENT_VERSION = "an.2017.1.24";
 
     public static String CURRENT_ACCESS_TOKEN = null;
 
