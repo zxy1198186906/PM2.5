@@ -84,6 +84,13 @@ public class ShortcutUtil {
         return true;
     }
 
+    public static boolean isWifiOrDevCorrect(String content){
+            if(content == null) return false;
+            if(content.trim().equals("")) return false;
+            if(content.equals("")) return false;
+            return true;
+        }
+
     public static boolean isServiceWork(Context mContext, String serviceName) {
         boolean isWork = false;
         ActivityManager myAM = (ActivityManager) mContext

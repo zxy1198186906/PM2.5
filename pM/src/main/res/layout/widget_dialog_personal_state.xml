@@ -102,6 +102,75 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WiFi ID"
+                    android:textColor="@android:color/black"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/wifiId" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/wifiIdInput"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/wifiId"
+                    android:layout_marginRight="6dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dev ID"
+                    android:textColor="@android:color/black"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/deviceId" />
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/devIdInput"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/deviceId"
+                    android:layout_marginRight="6dp"
+                    android:layout_toStartOf="@+id/wifiSave"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保存"
+                    android:id="@+id/wifiSave"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/AccentBlue"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -20,8 +20,8 @@ public class NotifyServiceUtil {
      */
     public static void notifyLocationChanged(Context context,double latitude,double longitude){
         Intent intentText = new Intent(Const.Action_DB_MAIN_Location);
-        intentText.putExtra(Const.Intent_DB_PM_Lati, String.valueOf(latitude));
-        intentText.putExtra(Const.Intent_DB_PM_Longi, String.valueOf(longitude));
+        intentText.putExtra(Const.Intent_DB_PM_Lati, latitude);
+        intentText.putExtra(Const.Intent_DB_PM_Longi, longitude);
         context.sendBroadcast(intentText);
     }
 
@@ -44,8 +44,8 @@ public class NotifyServiceUtil {
 
     public static void notifyCityChanged(Context context,double latitude,double longitude){
         Intent intentText = new Intent(Const.Action_DB_MAIN_Location);
-        intentText.putExtra(Const.Intent_DB_PM_Lati, String.valueOf(latitude));
-        intentText.putExtra(Const.Intent_DB_PM_Longi, String.valueOf(longitude));
+        intentText.putExtra(Const.Intent_DB_PM_Lati, latitude);
+        intentText.putExtra(Const.Intent_DB_PM_Longi, longitude);
         intentText.putExtra(Const.Intent_DB_City_Ref, 1);
         context.sendBroadcast(intentText);
     }

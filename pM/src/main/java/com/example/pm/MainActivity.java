@@ -3,8 +3,15 @@ package com.example.pm;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.ResolveInfo;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.support.v7.app.AlertDialog;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
@@ -21,11 +28,11 @@ import app.utils.FileUtil;
 
 public class MainActivity extends SlidingActivity {
 
-    public static final String TAG = "MainActivity";
     Fragment newFragment;
     private final UMSocialService mController = UMServiceFactory
             .getUMSocialService("com.umeng.share");
     int offset = 20;
+    private static final String TAG = "MainActivity";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

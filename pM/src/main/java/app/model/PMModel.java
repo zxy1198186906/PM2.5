@@ -37,6 +37,8 @@ public class PMModel {
 
     public static final String WIND = "Wind";
 
+    public static final String TIME_POINT = "time_point";
+
     public static final String Source = "source";
 
     private String pm25;
@@ -72,6 +74,8 @@ public class PMModel {
     private String pm_breath_today;
 
     private String pm_breath_week;
+
+    private String time_point;
 
     private int source;
 
@@ -141,6 +145,9 @@ public class PMModel {
             bean.setWind(object.getString(WIND));
         }if(object.has(Source)){
             bean.setSource(object.getInt(Source));
+        }
+        if (object.has(TIME_POINT)) {
+            bean.setTimePoint(object.getString(TIME_POINT));
         }
         return bean;
     }
@@ -288,4 +295,11 @@ public class PMModel {
     public void setSource(int source) {
         this.source = source;
     }
+
+    public String getTimePoint() {
+        return time_point;
+     }
+    public String setTimePoint(String time_point){
+        return this.time_point = time_point;
+   }
 }

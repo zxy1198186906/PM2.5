@@ -10,6 +10,7 @@ import android.location.Location;
 import android.os.PowerManager;
 import android.os.SystemClock;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -289,6 +290,7 @@ public class BackgroundService extends BroadcastReceiver {
                             NotifyServiceUtil.notifyDensityChanged(mContext, pmModel.getPm25());
                             double PM25Density = Double.valueOf(pmModel.getPm25());
                             int PM25Source = pmModel.getSource();
+                            aCache.put(Const.Cache_Data_Source,String.valueOf(PM25Source));
 
                             dataServiceUtil.cacheIsSearchDensity(false);
                             dataServiceUtil.cachePMResult(PM25Density, PM25Source);

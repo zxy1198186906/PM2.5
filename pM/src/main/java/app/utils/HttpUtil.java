@@ -27,6 +27,8 @@ public class HttpUtil {
 
     public static final String Search_PM_url = base_url + "urban-airs/search";
 
+    public static final String Search_PM_url_wifi = base_url + "device-datas";
+
     public static final String Register_url = base_url + "users/logon";
 
     public static final String Login_url = base_url + "users/login";

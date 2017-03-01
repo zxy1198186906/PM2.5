@@ -28,7 +28,7 @@ public class Const {
 
     public static int CURRENT_WIDTH = -1;
 
-    public static String CURRENT_VERSION = "an.2017.1.24";
+    public static String CURRENT_VERSION = "an.2017.2.28";
 
     public static String CURRENT_ACCESS_TOKEN = null;
 
@@ -60,6 +60,8 @@ public class Const {
 
     public static final String IS_SAVING_BATTERY = "true";
 
+    public static final String Device_Id = "Device_Id";
+
     /**
      * Cache*
      */
@@ -69,10 +71,12 @@ public class Const {
     public static final String Cache_DB_Lastime_Upload = "Cache_DB_Lastime_Upload";
     public static final String Cache_DB_Lastime_Refresh = "Cache_DB_Lastime_Refresh";
     public static final String Cache_User_Id = "Cache_User_Id";
+    public static final String Cache_User_Password = "Cache_User_Password";
     public static final String Cache_User_Name = "Cache_User_Name";
     public static final String Cache_User_Nickname = "Cache_User_Nickname";
     public static final String Cache_User_Gender = "Cache_User_Gender"; // 0 male, 1 female, -1 undefined
     public static final String Cache_Access_Token = "Cache_Access_Token";
+    public static final String Cache_Data_Source = "Cache_Data_Source";
 
     public static final String Cache_PM_Density = "Cache_PM_Density";
     public static final String Cache_PM_Source = "Cache_PM_Source";
@@ -110,6 +114,8 @@ public class Const {
     public static final String Cache_Chart_12_Date = "Cache_Chart_12_Date";
     public static final String Cache_Chart_Alert = "Cache_Chart_Alert";
     public static final String Cache_User_Weight = "Cache_User_Weight";
+    public static final String Cache_User_Wifi = "Cache_User_Wifi";
+    public static final String Cache_User_Device = "Cache_User_Device";
     public static final String Cache_Is_Saving_Battery = "Cache_Is_Saving_Battery";
     public static final String Cache_GPS_SATE_NUM = "Cache_GPS_SATE_NUM";
 
@@ -353,6 +359,10 @@ public class Const {
     public static final String Info_Input_Weight_Error = "体重输入有误，请重新输入.";
 
     public static final String Info_Input_Weight_Saved = "体重数据已保存";
+
+    public static final String Info_Input_WIFI_Error = "wifi或设备号输入有误，请重新输入.";
+
+    public static final String Info_Input_WIFI_Saved = "wifi和设备号已保存";
 
     public static final String Info_Weight_Null = "当前体重数据为零，请在状态栏中输入相关体重数据";
 

@@ -115,7 +115,7 @@ public class UpdateServiceUtil {
 
     private void updateStateDensity(State state,String density) {
         ContentValues values = new ContentValues();
-        values.put(DBConstants.DB_MetaData.STATE_DENSITY_COL, density);
+        values.put(DBConstants.DB_MetaData.STATE_PM25_CONCEN_COL, density);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         cupboard().withDatabase(db).update(State.class,values,"id = ?",state.getId()+"");
     }
@@ -136,7 +136,7 @@ public class UpdateServiceUtil {
 
     private void updateStatePM25(State state,double pm25) {
         ContentValues values = new ContentValues();
-        values.put(DBConstants.DB_MetaData.STATE_PM25_COL, pm25);
+        values.put(DBConstants.DB_MetaData.STATE_PM25_INTAKE_COL, pm25);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         cupboard().withDatabase(db).update(State.class,values,"id = ?",state.getId()+"");
     }
@@ -201,6 +201,8 @@ public class UpdateServiceUtil {
                         Log.d("connection", "connection is ok now");
                         PMModel pmModel = PMModel.parse(response.getJSONObject("data"));
                         String mDensity = String.valueOf(pmModel.getPm25());
+                        int PM25Source = pmModel.getSource();
+                        aCache.put(Const.Cache_Data_Source,String.valueOf(PM25Source));
                         String inOutDoor = state.getOutdoor();
                         if (inOutDoor.equals(LocationServiceUtil.Indoor)) {
                             mDensity = Integer.valueOf(mDensity) / 3 + "";

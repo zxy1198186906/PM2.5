@@ -6,6 +6,12 @@ import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
 import android.util.Log;
 
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.SocketException;
+import java.net.UnknownHostException;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -170,10 +176,11 @@ public class DataServiceUtil {
         pm25_intake = new_pm25_intake.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
 
         PM25Today += density * breath;
-        boolean source = Const.IS_USE_805;
-        if(source == true) {
-            PM25Source = 2;
-            device_number = Const.Device_Number;
+//        boolean source = Const.IS_USE_805;
+        String data_source = aCache.getAsString(Const.Cache_Data_Source);
+        if(data_source.equals("3")) {
+            data_source = "3";
+            device_number = aCache.getAsString(Const.Device_Id);
         }
 
         try {
@@ -184,7 +191,7 @@ public class DataServiceUtil {
                     mMotionStatus == Const.MotionStatus.STATIC ? "1" : mMotionStatus == Const.MotionStatus.WALK ? "2" : "3",
                     Integer.toString(steps), String.valueOf(avg_rate),String.valueOf(breath),
                     String.valueOf(venVolToday), density.toString(), String.valueOf(pm25_intake),
-                    String.valueOf(PM25Source), device_number, version, isConnected ? 1 : 0);
+                    data_source, device_number, version, isConnected ? 1 : 0);
         }catch (Exception e){
             FileUtil.appendErrorToFile(TAG,"calculatePM25 error in initialized state");
         }

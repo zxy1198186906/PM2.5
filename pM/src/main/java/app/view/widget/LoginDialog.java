@@ -30,6 +30,8 @@ import app.utils.Const;
 import app.utils.HttpUtil;
 import app.utils.VolleyQueue;
 
+import static com.example.pm.R.id.view;
+
 /**
  *
  */
@@ -83,6 +85,10 @@ public class LoginDialog extends Dialog implements OnClickListener {
         mSure.setOnClickListener(this);
         mBack.setOnClickListener(this);
         resetPwd.setOnClickListener(this);
+        String LastUserName = aCache.getAsString(Const.Cache_User_Name);
+        String LastUserPassword = aCache.getAsString(Const.Cache_User_Password);
+        mUser.setText(LastUserName);
+        mPass.setText(LastUserPassword);
     }
 
     @Override
@@ -150,7 +156,7 @@ public class LoginDialog extends Dialog implements OnClickListener {
         }
     }
 
-    private void login(final String name, String password) throws JSONException {
+    private void login(final String name, final String password) throws JSONException {
         String url = HttpUtil.Login_url;
         JSONObject object = new JSONObject();
         object.put("name", name);
@@ -171,6 +177,7 @@ public class LoginDialog extends Dialog implements OnClickListener {
                     Const.CURRENT_USER_NICKNAME = model.getLastname() + model.getFirstname();
                     Const.CURRENT_USER_GENDER = model.getGender();
                     aCache.put(Const.Cache_User_Id, model.getUserid());
+                    aCache.put(Const.Cache_User_Password,password);
                     aCache.put(Const.Cache_Access_Token, Const.CURRENT_ACCESS_TOKEN);
                     aCache.put(Const.Cache_User_Name, Const.CURRENT_USER_NAME);
                     aCache.put(Const.Cache_User_Nickname, Const.CURRENT_USER_NICKNAME);

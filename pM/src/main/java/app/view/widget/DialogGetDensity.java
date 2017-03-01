@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -23,16 +25,34 @@ import com.example.pm.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import app.bluetooth.DeviceControlActivity;
 import app.model.PMModel;
 import app.services.DataServiceUtil;
 import app.services.BackgroundService;
 import app.services.ForegroundService;
+import app.services.NotifyServiceUtil;
 import app.utils.Const;
+import app.utils.FileUtil;
 import app.utils.HttpUtil;
+import app.utils.StableCache;
 import app.utils.VolleyQueue;
 import app.utils.ACache;
 
 import com.example.pm.ProfileFragment;
+
+import static android.content.Context.WIFI_SERVICE;
+import static com.facebook.FacebookSdk.getApplicationContext;
 
 /**
  * Created by liuhaodong1 on 16/1/30.
@@ -56,6 +76,8 @@ public class DialogGetDensity extends Dialog implements View.OnClickListener
     private TextView mDensity;
     private Button mCancel;
     private Button mSearch;
+    private StableCache stableCache;
+    private String currentWifiId;
 
     private BackgroundService backgroundService;
     private  ACache aCache;
@@ -111,12 +133,16 @@ public class DialogGetDensity extends Dialog implements View.OnClickListener
 
     private void init(){
         dataServiceUtil = DataServiceUtil.getInstance(mContext);
+        stableCache = StableCache.getInstance(mContext);
         String longiStr = String.valueOf(dataServiceUtil.getLongitudeFromCache());
         String latiStr = String.valueOf(dataServiceUtil.getLatitudeFromCache());
         String density = String.valueOf(dataServiceUtil.getPM25Density());
         mLati.setText(latiStr);
         mLongi.setText(longiStr);
         mDensity.setText(density);
+        WifiManager wifi_service = (WifiManager)getContext().getSystemService(WIFI_SERVICE);
+        WifiInfo wifiInfo = wifi_service.getConnectionInfo();
+        currentWifiId = wifiInfo.getSSID();
     }
 
     private void setStop(){
@@ -151,6 +177,8 @@ public class DialogGetDensity extends Dialog implements View.OnClickListener
                 mSearch.setClickable(true);
                 setStop();
                 try {
+                    int data_source = response.getInt("source");
+                    aCache.put(Const.Cache_Data_Source,String.valueOf(data_source));
                     int token_status = response.getInt("token_status");
                     if (token_status != 2) {
                         int status = response.getInt("status");
@@ -163,6 +191,7 @@ public class DialogGetDensity extends Dialog implements View.OnClickListener
                             //set current pm density for calculation
                             PM25Density = Double.valueOf(pmModel.getPm25());
                             int source = pmModel.getSource();
+                            aCache.put(Const.Cache_Data_Source,String.valueOf(source));
 
                             mDensity.setText(String.valueOf(PM25Density));
                             dataServiceUtil.cachePMResult(PM25Density, source);
@@ -227,6 +256,108 @@ public class DialogGetDensity extends Dialog implements View.OnClickListener
         VolleyQueue.getInstance(mContext.getApplicationContext()).addToRequestQueue(jsonObjectRequest);
     }
 
+    private void searchPMRequest(String devId) {
+        final DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        final Date date = new Date();
+        mSearch.setEnabled(false);
+        mSearch.setClickable(false);
+        setRun();
+        isRunning = true;
+        Const.Device_Number = devId;
+        Const.IS_USE_805 = true;
+        aCache.put(Const.Device_Id,devId);
+        aCache.put(Const.Cache_Data_Source,"3");
+        String url = HttpUtil.Search_PM_url_wifi;
+        url = url + "?devid=" + devId;
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                isRunning = false;
+                mSearch.setEnabled(true);
+                mSearch.setClickable(true);
+                setStop();
+                try {
+                    int status = response.getInt("status");
+
+                    if(status == 1) {
+                        pmModel = PMModel.parse(response.getJSONObject("data"));
+                        Toast.makeText(getApplicationContext(), PM25Density+"", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(Const.Action_DB_MAIN_PMDensity);
+                        intent.putExtra(Const.Intent_PM_Density, pmModel.getPm25());
+                        //set current pm density for calculation
+                        PM25Density = Double.valueOf(pmModel.getPm25());
+                        String time = String.valueOf(pmModel.getTimePoint());
+                        float diff = (float)(date.getTime() - format1.parse(time).getTime())/(1000 * 60 * 60);
+                        if(time != null && diff < 1.0){
+                            int source = 0;
+
+                            mDensity.setText(String.valueOf(PM25Density));
+                            dataServiceUtil.cachePMResult(PM25Density, source);
+                            dataServiceUtil.cacheSearchPMFailed(0);
+
+                            notifyService(PM25Density);
+                            Toast.makeText(mContext.getApplicationContext(), Const.Info_PMDATA_Success, Toast.LENGTH_SHORT).show();
+                         } else {
+                            Toast.makeText(getApplicationContext(), "ilab服务器数据过期", Toast.LENGTH_SHORT).show();
+                            searchPMRequest(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+                                    String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                            Log.e("DialogGetDensity","ilab服务器数据过期");
+                         }
+
+                    }else {
+                        Toast.makeText(getApplicationContext(), "设备号有误", Toast.LENGTH_SHORT).show();
+                        String str = response.getString("message");
+                        mDensity.setText(str);
+                        searchPMRequest(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+                                String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                        Log.e("DialogGetDensity","设备号有误");
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    mDensity.setText("server error");
+                    searchPMRequest(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+                            String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                } catch (ParseException e) {
+                        e.printStackTrace();
+                }
+                Log.e(TAG, "searchPMRequest resp:" + response.toString());
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), "ilab服务器请求出错", Toast.LENGTH_SHORT).show();
+                Log.e(TAG,"dialog get density searchPMRequest error "+error.toString());
+                Toast.makeText(mContext.getApplicationContext(),Const.Info_Failed_PMDensity,Toast.LENGTH_SHORT).show();
+                dataServiceUtil.cacheSearchPMFailed(dataServiceUtil.getSearchFailedCountFromCache()+1);
+
+                 if(error != null){
+                    if(error.getMessage() != null) {
+                        Log.e(TAG, error.getMessage());
+                        mDensity.setText(error.getMessage());
+                        if (error.getMessage().trim().equals("org.json.JSONException: End of input at character 0 of")) {
+                            mDensity.setText(Const.Info_No_PMDensity);
+                         }
+                    }
+                    if(error.networkResponse != null){
+                        Log.e(TAG,"dialog get density status code = "+error.networkResponse.statusCode);
+                     }
+                 }
+                isRunning = false;
+                mSearch.setEnabled(true);
+                mSearch.setClickable(true);
+                setStop();
+                searchPMRequest(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+                        String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                }
+
+            });
+            jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
+                Const.Default_Timeout,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+             VolleyQueue.getInstance(mContext.getApplicationContext()).addToRequestQueue(jsonObjectRequest);
+        }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -235,8 +366,21 @@ public class DialogGetDensity extends Dialog implements View.OnClickListener
                 break;
             case R.id.get_density_confirm:
                 mRunnable.run();
-                if(!isRunning)
-                    searchPMRequest(mLongi.getText().toString(),mLati.getText().toString());
+                if(!isRunning){
+                    if(stableCache.getAsString(Const.Cache_User_Wifi) == null){
+                        searchPMRequest(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+                                String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                        } else {
+                            if(stableCache.getAsString(Const.Cache_User_Wifi).equals(currentWifiId.replaceAll("\"",""))){
+                                searchPMRequest(stableCache.getAsString(Const.Cache_User_Device));
+                            } else {
+                                searchPMRequest(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+                                    String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                            }
+                        }
+                    }
+//                if(!isRunning)
+//                    searchPMRequest(mLongi.getText().toString(),mLati.getText().toString());
                 break;
         }
     }

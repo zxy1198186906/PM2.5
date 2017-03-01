@@ -57,11 +57,11 @@ public class DialogInputWeight extends Dialog implements View.OnClickListener{
             case R.id.input_weight_confirm:
                 String content = mContent.getText().toString();
                 if(ShortcutUtil.isWeightInputCorrect(content)){
-                    DialogInputWeight.this.dismiss();
                     Message message = new Message();
                     message.what = Const.Handler_Input_Weight;
                     message.obj = content;
                     mHandler.sendMessage(message);
+                    DialogInputWeight.this.dismiss();
                 }else {
                     Toast.makeText(mContext.getApplicationContext(), Const.Info_Input_Weight_Error,Toast.LENGTH_SHORT).show();
                 }

@@ -1,7 +1,7 @@
-#Tue Jan 24 03:54:12 CST 2017
-base.0=C\:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_3591824ffc9257701cd108782c5b4f7f6f3d6fde
+#Tue Feb 28 19:39:41 CST 2017
+base.0=E\:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_bdb60ce3467447ee311485bbba0d53c5d0dfee41
 renamed.1=classes.dex
 renamed.0=classes2.dex
-file.1=C\:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_a0d9591997f44e604d901481472989a6baf27a81\\classes.dex
-base.1=C\:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_a0d9591997f44e604d901481472989a6baf27a81
-file.0=C\:\\Users\\yhs\\StudioProjects\\PM2.5_805\\pM\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_3591824ffc9257701cd108782c5b4f7f6f3d6fde\\classes.dex
+file.1=E\:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_e31452c85d82790a7149d4ebfda1ef9a45239e27\\classes.dex
+base.1=E\:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_e31452c85d82790a7149d4ebfda1ef9a45239e27
+file.0=E\:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_bdb60ce3467447ee311485bbba0d53c5d0dfee41\\classes.dex

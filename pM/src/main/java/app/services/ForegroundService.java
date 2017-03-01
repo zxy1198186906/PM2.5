@@ -10,6 +10,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -34,6 +36,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -47,6 +53,7 @@ import app.utils.DataCalculator;
 import app.utils.FileUtil;
 import app.utils.HttpUtil;
 import app.utils.ShortcutUtil;
+import app.utils.StableCache;
 import app.utils.VolleyQueue;
 
 import  com.example.pm.ProfileFragment;
@@ -75,6 +82,8 @@ public class ForegroundService extends Service {
 
     private volatile HandlerThread mHandlerThread;
     private Handler refreshHandler;
+    private StableCache stableCache;
+    private String currentWifiId;
 
     private ProfileFragment profileFragment;
 
@@ -92,6 +101,7 @@ public class ForegroundService extends Service {
         FileUtil.appendStrToFile(TAG + "OnCreate");
         initialThread();
         dataServiceUtil = DataServiceUtil.getInstance(this);
+        stableCache = StableCache.getInstance(this);
         DBRunTime = 0;
         isRefreshRunning = false;
         aCache = ACache.get(getApplicationContext());
@@ -129,6 +139,9 @@ public class ForegroundService extends Service {
             public void run() {
 
                 int runTimeInterval = Const.DB_Run_Time_INTERVAL;
+                WifiManager wifi_service = (WifiManager)getApplicationContext().getSystemService(WIFI_SERVICE);
+                WifiInfo wifiInfo = wifi_service.getConnectionInfo();
+                currentWifiId = wifiInfo.getSSID();
 
                 /***** DB Run First time *****/
                 if (DBRunTime == 0) {   //The initial state, set cache for chart
@@ -157,8 +170,27 @@ public class ForegroundService extends Service {
                     }
                     sendBroadcast(intentChart);
                     aCache.put(Const.Cache_DB_Lastime_Upload, String.valueOf(System.currentTimeMillis()));
-                    searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
-                            String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+//                    searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+//                            String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+
+                    Log.i("wifi currently:", currentWifiId.replaceAll("\"",""));
+//                    Log.i("wifi from cache:", stableCache.getAsString(Const.Cache_User_Wifi));
+                    Log.i("wifi status:", currentWifiId.replaceAll("\"","").equals(stableCache.getAsString(Const.Cache_User_Wifi))+"");
+                    if(stableCache.getAsString(Const.Cache_User_Wifi) == null){
+                        searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+                                String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                        Log.e("ForegroundService","Now using data from server");
+                    } else {
+                        if(stableCache.getAsString(Const.Cache_User_Wifi).equals(currentWifiId.replaceAll("\"",""))){
+                            searchPMResult(stableCache.getAsString(Const.Cache_User_Device));
+                            Log.e("ForegroundService","Now using data from 805 device");
+                        } else {
+                            searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+                                    String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                            Log.e("ForegroundService","Now using data from server");
+                        }
+                     }
+
                     aCache.put(Const.Cache_DB_Lastime_Upload, String.valueOf(System.currentTimeMillis()));
 
                 }
@@ -690,6 +722,90 @@ public class ForegroundService extends Service {
     /**
      * Get and Update Current PM info.
      *
+     +     * @param devId device id
+     +     */
+    private void searchPMResult(String devId) {
+        final DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        final Date date = new Date();
+        String url = HttpUtil.Search_PM_url_wifi;
+        url = url + "?devid=" + devId;
+        Const.Device_Number = devId;
+        Const.IS_USE_805 = true;
+        aCache.put(Const.Device_Id,devId);
+        aCache.put(Const.Cache_Data_Source,"3");
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, new Response.Listener<JSONObject>() {
+
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    int status = response.getInt("status");
+
+                    if (status == 1) {
+                        PMModel pmModel = PMModel.parse(response.getJSONObject("data"));
+                        NotifyServiceUtil.notifyDensityChanged(ForegroundService.this, pmModel.getPm25());
+                        double PM25Density = Double.valueOf(pmModel.getPm25());
+                        String time = String.valueOf(pmModel.getTimePoint());
+                        float diff = (float)(date.getTime() - format1.parse(time).getTime())/(1000 * 60 * 60);
+                        if(time != null && diff < 1.0){
+                            Toast.makeText(getApplicationContext(), PM25Density+"", Toast.LENGTH_SHORT).show();
+                            int PM25Source = 0;
+                            dataServiceUtil.cachePMResult(PM25Density, PM25Source);
+                            dataServiceUtil.cacheSearchPMFailed(0);
+                            Log.i("response from ilab:",PM25Density+", "+time);
+                            FileUtil.appendStrToFile(TAG, "searchPMResult success, density == " +
+                                    PM25Density);
+                        } else {
+                            Toast.makeText(getApplicationContext(), "ilab服务器数据过期", Toast.LENGTH_SHORT).show();
+                            searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+                                    String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                            Log.e("ForeGroundService","ilab服务器数据过期");
+                         }
+
+                     } else {
+                        Toast.makeText(getApplicationContext(), "设备号有误", Toast.LENGTH_SHORT).show();
+                        dataServiceUtil.cacheSearchPMFailed(
+                                dataServiceUtil.getSearchFailedCountFromCache() + 1);
+                        FileUtil.appendErrorToFile(TAG, "searchPMResult failed, status != 1");
+                        searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+                                String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                        Log.e("ForeGroundService","设备号有误");
+                      }
+                 } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.i("response from ilab:","error");
+                    FileUtil.appendErrorToFile(TAG, "searchPMResult failed, JSON parsing error");
+                    Log.e("ForeGroundService","searchPMResult failed, JSON parsing error");
+                    searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+                            String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                    } catch (ParseException e) {
+                    e.printStackTrace();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(getApplicationContext(), "ilab服务器请求出错", Toast.LENGTH_SHORT).show();
+                    dataServiceUtil.cacheSearchPMFailed(dataServiceUtil.getSearchFailedCountFromCache() + 1);
+                    Log.i("response from ilab:","error");
+                    FileUtil.appendErrorToFile(TAG, "searchPMResult failed error msg == " +
+                        error.getMessage() + " " + error);
+                    Log.e("ForeGroundService","ilab服务器请求出错");
+                    searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+                        String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                }
+            });
+
+            jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        Const.Default_Timeout,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        VolleyQueue.getInstance(
+                ForegroundService.this.getApplicationContext()).addToRequestQueue(jsonObjectRequest);
+        }
+
+    /**
+     * Get and Update Current PM info.
+     *
      * @param longitude the current zone longitude
      * @param latitude  the current zone latitude
      */
@@ -715,6 +831,7 @@ public class ForegroundService extends Service {
                             NotifyServiceUtil.notifyDensityChanged(ForegroundService.this, pmModel.getPm25());
                             double PM25Density = Double.valueOf(pmModel.getPm25());
                             int PM25Source = pmModel.getSource();
+                            aCache.put(Const.Cache_Data_Source,String.valueOf(PM25Source));
                             dataServiceUtil.cachePMResult(PM25Density, PM25Source);
                             dataServiceUtil.cacheSearchPMFailed(0);
                             FileUtil.appendStrToFile(TAG, "searchPMResult success, density == " +

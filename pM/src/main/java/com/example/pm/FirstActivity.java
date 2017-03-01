@@ -1,10 +1,16 @@
 package com.example.pm;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.ResolveInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.WindowManager;
 
@@ -27,6 +33,7 @@ public class FirstActivity extends Activity {
 
         @Override
         public void handleMessage(Message msg) {
+
             boolean isAlreadyInit = SharedPreferencesUtil.getBooleanValue(
                     getApplicationContext(),
                     "isAlreadyInit"

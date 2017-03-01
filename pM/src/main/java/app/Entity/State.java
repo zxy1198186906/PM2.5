@@ -39,11 +39,11 @@ public class State {
     private String ventilation_rate;
     @Column(DBConstants.DB_MetaData.STATE_VENTILATION_VOLUME_COL)
     private String ventilation_volume;
-    @Column(DBConstants.DB_MetaData.STATE_DENSITY_COL)
+    @Column(DBConstants.DB_MetaData.STATE_PM25_CONCEN_COL)
     private String pm25_concen;
-    @Column(DBConstants.DB_MetaData.STATE_PM25_COL)
+    @Column(DBConstants.DB_MetaData.STATE_PM25_INTAKE_COL)
     private String pm25_intake;
-    @Column(DBConstants.DB_MetaData.STATE_SOURCE_COL)
+    @Column(DBConstants.DB_MetaData.STATE_PM25_DATASOURCE_COL)
     private String pm25_datasource;
     @Column(DBConstants.DB_MetaData.STATE_PM25_MONITOR_COL)
     private String pm25_monitor;
@@ -274,5 +274,6 @@ public class State {
     public void setConnection(int connection) {
         this.connection = connection;
     }
+
 
 }

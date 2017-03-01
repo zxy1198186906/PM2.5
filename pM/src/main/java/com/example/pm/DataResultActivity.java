@@ -209,6 +209,9 @@ public class DataResultActivity extends Activity implements OnClickListener{
                 viewHolder.mSource = (TextView)convertView.findViewById(R.id.data_result_source);
                 viewHolder.mUpload = (TextView)convertView.findViewById(R.id.data_result_upload);
                 viewHolder.mConnection = (TextView)convertView.findViewById(R.id.data_result_connection);
+                viewHolder.mVentilationRate = (TextView) convertView.findViewById(R.id.data_ventilation_rate);
+                viewHolder.mPMIntake = (TextView) convertView.findViewById(R.id.data_result_intake);
+                viewHolder.mMonitor = (TextView) convertView.findViewById(R.id.data_monitor);
                 viewHolder.mToken = (TextView)convertView.findViewById(R.id.data_result_token);
                 viewHolder.mH_rate = (TextView)convertView.findViewById(R.id.data_result_heart_rate);
                 viewHolder.mV_rate = (TextView)convertView.findViewById(R.id.data_result_ventilation_rate);
@@ -272,6 +275,9 @@ public class DataResultActivity extends Activity implements OnClickListener{
             TextView mSource;
             TextView mUpload;
             TextView mConnection;
+            TextView mVentilationRate;
+            TextView mPMIntake;
+            TextView mMonitor;
             TextView mToken;
             TextView mH_rate;
             TextView mV_rate;
