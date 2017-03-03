@@ -48,13 +48,7 @@
             android:textSize="14dp"
             android:id="@+id/data_result_lati" />
 
-        <TextView
-            android:layout_marginLeft="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textSize="14dp"
-            android:id="@+id/data_result_outdoor" />
+
 
     </LinearLayout>
 
@@ -62,6 +56,14 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="14dp"
+            android:id="@+id/data_result_outdoor" />
 
         <TextView
             android:layout_marginLeft="10dp"
@@ -92,7 +94,24 @@
             android:layout_height="wrap_content"
             android:text="349.800"
             android:textSize="14dp"
+            android:id="@+id/data_ventilation_rate" />
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="349.800"
+            android:textSize="14dp"
             android:id="@+id/data_result_air" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
 
         <TextView
             android:layout_marginLeft="15dp"
@@ -114,9 +133,25 @@
             android:layout_marginLeft="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="6.863"
+            android:textSize="14dp"
+            android:id="@+id/data_result_intake" />
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="0"
             android:textSize="14dp"
             android:id="@+id/data_result_source" />
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="device_id"
+            android:textSize="14dp"
+            android:id="@+id/data_monitor" />
 
         <TextView
             android:layout_marginLeft="15dp"

@@ -4,10 +4,13 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ResolveInfo;
 import android.graphics.Color;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -134,6 +137,13 @@ public class DialogInitial extends Dialog implements View.OnClickListener{
                 break;
             case R.id.initial_search_location:
                 searchLocation();
+                if (Build.VERSION.SDK_INT >= 23){
+                    Intent intent = new Intent(Settings.ACTION_SETTINGS);  //跳转到设置页面
+                    ResolveInfo resolveInfo = getContext().getPackageManager().resolveActivity(intent, 0);
+                    if (resolveInfo != null) {
+                        mActivity.startActivity(intent);
+                    }
+                }
                 break;
             case R.id.initial_success:
                 isSuccess = true;

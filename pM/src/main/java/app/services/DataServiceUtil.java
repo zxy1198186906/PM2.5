@@ -157,23 +157,24 @@ public class DataServiceUtil {
             breath = static_breath * 6;
         }
 
-        breath = breath / 1000; //change L/min to m3/min
-        BigDecimal new_breath = new BigDecimal(breath);
-        breath = new_breath.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
-
         venVolToday += breath;
         BigDecimal new_venVolToday = new BigDecimal(venVolToday);
         venVolToday = new_venVolToday.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
 
-        double pm25_intake = density * breath;
+        Double cal_breath = breath / 1000; //change L/min to m3/min
+        BigDecimal new_breath = new BigDecimal(cal_breath);
+        cal_breath = new_breath.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
+
+        double pm25_intake = density * cal_breath;
         BigDecimal new_pm25_intake = new BigDecimal(pm25_intake);
         pm25_intake = new_pm25_intake.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
 
-        PM25Today += density * breath;
-        boolean source = Const.IS_USE_805;
-        if(source == true) {
-            PM25Source = 2;
-            device_number = Const.Device_Number;
+        PM25Today += density * cal_breath;
+//        boolean source = Const.IS_USE_805;
+        String data_source = aCache.getAsString(Const.Cache_Data_Source);
+        if(data_source.equals("3")) {
+            data_source = "3";
+            device_number = aCache.getAsString(Const.Device_Id);
         }
 
         try {
@@ -183,7 +184,7 @@ public class DataServiceUtil {
                     String.valueOf(getInOutDoorFromCache()),
                     mMotionStatus == Const.MotionStatus.STATIC ? "1" : mMotionStatus == Const.MotionStatus.WALK ? "2" : "3",
                     Integer.toString(steps), String.valueOf(avg_rate),String.valueOf(breath),
-                    String.valueOf(venVolToday), density.toString(), String.valueOf(pm25_intake),
+                    String.valueOf(breath), density.toString(), String.valueOf(pm25_intake),
                     String.valueOf(PM25Source), device_number, version, isConnected ? 1 : 0);
         }catch (Exception e){
             FileUtil.appendErrorToFile(TAG,"calculatePM25 error in initialized state");

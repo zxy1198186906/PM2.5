@@ -169,22 +169,25 @@ public class ForegroundService extends Service {
                     }
                     sendBroadcast(intentChart);
                     aCache.put(Const.Cache_DB_Lastime_Upload, String.valueOf(System.currentTimeMillis()));
-
+//                    searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+//                            String.valueOf(dataServiceUtil.getLatitudeFromCache()));
                     Log.i("wifi currently:", currentWifiId.replaceAll("\"",""));
-                    Log.i("wifi from cache:", stableCache.getAsString(Const.Cache_User_Wifi));
+//                    Log.i("wifi from cache:", stableCache.getAsString(Const.Cache_User_Wifi));
                     Log.i("wifi status:", currentWifiId.replaceAll("\"","").equals(stableCache.getAsString(Const.Cache_User_Wifi))+"");
                     if(stableCache.getAsString(Const.Cache_User_Wifi) == null){
                         searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
                                 String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                        Log.e("ForegroundService","Now using data from server 1");
                     } else {
                         if(stableCache.getAsString(Const.Cache_User_Wifi).equals(currentWifiId.replaceAll("\"",""))){
                             searchPMResult(stableCache.getAsString(Const.Cache_User_Device));
+                            Log.e("ForegroundService","Now using data from 805 device");
                         } else {
                             searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
                                     String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                            Log.e("ForegroundService","Now using data from server 2");
                         }
                     }
-
                     aCache.put(Const.Cache_DB_Lastime_Upload, String.valueOf(System.currentTimeMillis()));
 
                 }
@@ -716,13 +719,17 @@ public class ForegroundService extends Service {
     /**
      * Get and Update Current PM info.
      *
-     * @param devId device id
-     */
+     +     * @param devId device id
+     +     */
     private void searchPMResult(String devId) {
         final DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         final Date date = new Date();
         String url = HttpUtil.Search_PM_url_wifi;
         url = url + "?devid=" + devId;
+        Const.Device_Number = devId;
+        Const.IS_USE_805 = true;
+        aCache.put(Const.Device_Id,devId);
+        aCache.put(Const.Cache_Data_Source,"3");
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, new Response.Listener<JSONObject>() {
 
             @Override
@@ -748,6 +755,7 @@ public class ForegroundService extends Service {
                             Toast.makeText(getApplicationContext(), "ilab服务器数据过期", Toast.LENGTH_SHORT).show();
                             searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
                                     String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                            Log.e("ForeGroundService","ilab服务器数据过期");
                         }
 
                     } else {
@@ -757,11 +765,13 @@ public class ForegroundService extends Service {
                         FileUtil.appendErrorToFile(TAG, "searchPMResult failed, status != 1");
                         searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
                                 String.valueOf(dataServiceUtil.getLatitudeFromCache()));
+                        Log.e("ForeGroundService","设备号有误");
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.i("response from ilab:","error");
                     FileUtil.appendErrorToFile(TAG, "searchPMResult failed, JSON parsing error");
+                    Log.e("ForeGroundService","searchPMResult failed, JSON parsing error");
                     searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
                             String.valueOf(dataServiceUtil.getLatitudeFromCache()));
                 } catch (ParseException e) {
@@ -776,10 +786,10 @@ public class ForegroundService extends Service {
                 Log.i("response from ilab:","error");
                 FileUtil.appendErrorToFile(TAG, "searchPMResult failed error msg == " +
                         error.getMessage() + " " + error);
+                Log.e("ForeGroundService","ilab服务器请求出错");
                 searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
                         String.valueOf(dataServiceUtil.getLatitudeFromCache()));
             }
-
         });
 
         jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
@@ -818,6 +828,7 @@ public class ForegroundService extends Service {
                             NotifyServiceUtil.notifyDensityChanged(ForegroundService.this, pmModel.getPm25());
                             double PM25Density = Double.valueOf(pmModel.getPm25());
                             int PM25Source = pmModel.getSource();
+                            aCache.put(Const.Cache_Data_Source,String.valueOf(PM25Source));
                             dataServiceUtil.cachePMResult(PM25Density, PM25Source);
                             dataServiceUtil.cacheSearchPMFailed(0);
                             FileUtil.appendStrToFile(TAG, "searchPMResult success, density == " +

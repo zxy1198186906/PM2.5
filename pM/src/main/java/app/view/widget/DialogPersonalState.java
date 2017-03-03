@@ -89,6 +89,8 @@ public class DialogPersonalState extends Dialog implements View.OnClickListener{
         stableCache = StableCache.getInstance(mContext);
         String weight = stableCache.getAsString(Const.Cache_User_Weight);
         String gps = stableCache.getAsString(Const.Cache_GPS_SATE_NUM);
+        String wifiId = stableCache.getAsString(Const.Cache_User_Wifi);
+        String devId = stableCache.getAsString(Const.Cache_User_Device);
 
         String wifiId = stableCache.getAsString(Const.Cache_User_Wifi);
         String devId = stableCache.getAsString(Const.Cache_User_Device);

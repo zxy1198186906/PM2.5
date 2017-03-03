@@ -73,6 +73,8 @@ public class Const {
     public static final String Cache_User_Nickname = "Cache_User_Nickname";
     public static final String Cache_User_Gender = "Cache_User_Gender"; // 0 male, 1 female, -1 undefined
     public static final String Cache_Access_Token = "Cache_Access_Token";
+    public static final String Cache_Data_Source = "Cache_Data_Source";
+    public static final String Device_Id = "Device_Id";
 
     public static final String Cache_PM_Density = "Cache_PM_Density";
     public static final String Cache_PM_Source = "Cache_PM_Source";
