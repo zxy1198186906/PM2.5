@@ -37,6 +37,8 @@ import app.utils.VolleyQueue;
 import app.utils.ACache;
 import com.example.pm.ProfileFragment;
 
+import static com.facebook.FacebookSdk.getApplicationContext;
+
 /**
  * Created by liuhaodong1 on 16/6/2.
  * This service (receiver) is intended to running on background and do some discrete tasks.
@@ -103,6 +105,7 @@ public class BackgroundService extends BroadcastReceiver {
         PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         wakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "backgroundWake");
         wakeLock.acquire();
+//        aCache = ACache.get(getApplicationContext());
         FileUtil.appendStrToFile(TAG, "wakeLock acquire");
         initInner();
         startInner();

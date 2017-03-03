@@ -96,6 +96,8 @@ public class DataServiceUtil {
             state = null;
             PM25Today = 0.0;
             venVolToday = 0.0;
+            aCache.put(Const.PM25Today,PM25Today);
+            aCache.put(Const.venVolToday,venVolToday);
             IDToday = 0L;
         } else {
             State state = states.get(states.size() - 1);
@@ -106,6 +108,8 @@ public class DataServiceUtil {
                 State theState = states.get(i);
                 PM25Today += Double.parseDouble(theState.getPm25());
                 venVolToday += Double.parseDouble(theState.getVentilation_volume());
+                aCache.put(Const.PM25Today,PM25Today);
+                aCache.put(Const.venVolToday,venVolToday);
             }
 //            Log.v("Crysa_log", "print97");
 //            PM25Today = Double.parseDouble(state.getPm25());
@@ -160,6 +164,12 @@ public class DataServiceUtil {
         venVolToday += breath;
         BigDecimal new_venVolToday = new BigDecimal(venVolToday);
         venVolToday = new_venVolToday.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
+        if(venVolToday >= 1000000.0){
+            venVolToday = Double.parseDouble(aCache.getAsString(Const.venVolToday));
+        }
+        else{
+            aCache.put(Const.venVolToday,venVolToday);
+        }
 
         Double cal_breath = breath / 1000; //change L/min to m3/min
         BigDecimal new_breath = new BigDecimal(cal_breath);
@@ -170,6 +180,12 @@ public class DataServiceUtil {
         pm25_intake = new_pm25_intake.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
 
         PM25Today += density * cal_breath;
+        if(PM25Today >= 1000000.0){
+            PM25Today = Double.parseDouble(aCache.getAsString(Const.PM25Today));
+        }
+        else{
+            aCache.put(Const.PM25Today,PM25Today);
+        }
 //        boolean source = Const.IS_USE_805;
         String data_source = aCache.getAsString(Const.Cache_Data_Source);
         if(data_source.equals("3")) {
@@ -264,6 +280,8 @@ public class DataServiceUtil {
         IDToday = 0;
         PM25Today = 0;
         venVolToday = 0;
+        aCache.put(Const.PM25Today,PM25Today);
+        aCache.put(Const.venVolToday,venVolToday);
     }
 
 

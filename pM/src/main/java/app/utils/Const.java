@@ -204,6 +204,10 @@ public class Const {
 
     public static final String Intent_Low_Battery_State = "Intent_Low_Battery_State";
 
+    public static final String PM25Today = "PM25Today";
+
+    public static final String venVolToday = "venVolToday";
+
     /**
      * Service & Activity Code*
      */
