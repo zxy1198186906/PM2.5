@@ -100,6 +100,8 @@ public class DataServiceUtil {
             aCache.put(Const.venVolToday,venVolToday);
             IDToday = 0L;
         } else {
+            PM25Today = 0.0;
+            venVolToday = 0.0;
             State state = states.get(states.size() - 1);
             this.state = state;
             state.print();
@@ -107,7 +109,7 @@ public class DataServiceUtil {
             for(int i = 0;i < states.size();i++){
                 State theState = states.get(i);
                 PM25Today += Double.parseDouble(theState.getPm25());
-                venVolToday += Double.parseDouble(theState.getVentilation_volume());
+                venVolToday += Double.parseDouble(theState.getVentilation_rate());
                 aCache.put(Const.PM25Today,PM25Today);
                 aCache.put(Const.venVolToday,venVolToday);
             }
