@@ -92,9 +92,6 @@ public class DialogPersonalState extends Dialog implements View.OnClickListener{
         String wifiId = stableCache.getAsString(Const.Cache_User_Wifi);
         String devId = stableCache.getAsString(Const.Cache_User_Device);
 
-        String wifiId = stableCache.getAsString(Const.Cache_User_Wifi);
-        String devId = stableCache.getAsString(Const.Cache_User_Device);
-
         mLatitude.setText(String.valueOf(dataServiceUtil.getLatitudeFromCache()));
         mLongitude.setText(String.valueOf(dataServiceUtil.getLongitudeFromCache()));
         if(weight != null) mWeight.setText(weight);

@@ -184,7 +184,7 @@ public class DataServiceUtil {
                     String.valueOf(getInOutDoorFromCache()),
                     mMotionStatus == Const.MotionStatus.STATIC ? "1" : mMotionStatus == Const.MotionStatus.WALK ? "2" : "3",
                     Integer.toString(steps), String.valueOf(avg_rate),String.valueOf(breath),
-                    String.valueOf(breath), density.toString(), String.valueOf(pm25_intake),
+                    String.valueOf(venVolToday), density.toString(), String.valueOf(pm25_intake),
                     String.valueOf(PM25Source), device_number, version, isConnected ? 1 : 0);
         }catch (Exception e){
             FileUtil.appendErrorToFile(TAG,"calculatePM25 error in initialized state");
