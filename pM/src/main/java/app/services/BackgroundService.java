@@ -292,7 +292,7 @@ public class BackgroundService extends BroadcastReceiver {
                             NotifyServiceUtil.notifyDensityChanged(mContext, pmModel.getPm25());
                             double PM25Density = Double.valueOf(pmModel.getPm25());
                             int PM25Source = pmModel.getSource();
-                            aCache.put(Const.Cache_Data_Source,String.valueOf(PM25Source));
+//                            aCache.put(Const.Cache_Data_Source,String.valueOf(PM25Source));
 
                             dataServiceUtil.cacheIsSearchDensity(false);
                             dataServiceUtil.cachePMResult(PM25Density, PM25Source);

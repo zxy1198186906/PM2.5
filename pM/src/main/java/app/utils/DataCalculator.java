@@ -549,15 +549,23 @@ public class DataCalculator {
         if (datas.isEmpty()) return map;
         for (int i = 0; i != datas.size(); i++) {
             List<State> state = datas.get(i);
-            if (state.isEmpty())
+            if (state.isEmpty()){
                 map.put(i, 0.0f);
-            else
+//                Log.e("BreathZeroday",Integer.toString(i));
+            }
+            else{
                 PM25Today = 0;
                 for (int j = 0; j < state.size();j++){
                     PM25Today += Float.parseFloat(state.get(j).getPm25());
                 }
                 map.put(i, PM25Today);
+            }
         }
+//        for(Integer key :map.keySet()){
+//            Float value = map.get(key);
+//            Log.e("day",String.valueOf(key));
+//            Log.e("PM25Today",String.valueOf(value));
+//        }
         return map;
     }
 
