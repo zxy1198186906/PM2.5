@@ -179,7 +179,7 @@ public class ForegroundService extends Service {
                     if(stableCache.getAsString(Const.Cache_User_Wifi) == null){
                         searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
                                 String.valueOf(dataServiceUtil.getLatitudeFromCache()));
-                        Log.e("ForegroundService","Now using data from server");
+                        Log.e("ForegroundService","Now using data from server 1");
                     } else {
                         if(stableCache.getAsString(Const.Cache_User_Wifi).equals(currentWifiId.replaceAll("\"",""))){
                             searchPMResult(stableCache.getAsString(Const.Cache_User_Device));
@@ -187,15 +187,17 @@ public class ForegroundService extends Service {
                         } else {
                             searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
                                     String.valueOf(dataServiceUtil.getLatitudeFromCache()));
-                            Log.e("ForegroundService","Now using data from server");
+                            Log.e("ForegroundService","Now using data from server 2");
                         }
-                     }
+                    }
 
                     aCache.put(Const.Cache_DB_Lastime_Upload, String.valueOf(System.currentTimeMillis()));
 
                 }
 
                 isBackground = aCache.getAsString(Const.Cache_Is_Background);
+//                if(DBRunTime == 1)
+//                {isBackground = null; }
                 if (isBackground == null) { //App first run
                     isBackground = "false";
                     aCache.put(Const.Cache_Is_Background, isBackground);
@@ -759,9 +761,9 @@ public class ForegroundService extends Service {
                             searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
                                     String.valueOf(dataServiceUtil.getLatitudeFromCache()));
                             Log.e("ForeGroundService","ilab服务器数据过期");
-                         }
+                        }
 
-                     } else {
+                    } else {
                         Toast.makeText(getApplicationContext(), "设备号有误", Toast.LENGTH_SHORT).show();
                         dataServiceUtil.cacheSearchPMFailed(
                                 dataServiceUtil.getSearchFailedCountFromCache() + 1);
@@ -769,39 +771,39 @@ public class ForegroundService extends Service {
                         searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
                                 String.valueOf(dataServiceUtil.getLatitudeFromCache()));
                         Log.e("ForeGroundService","设备号有误");
-                      }
-                 } catch (JSONException e) {
+                    }
+                } catch (JSONException e) {
                     e.printStackTrace();
                     Log.i("response from ilab:","error");
                     FileUtil.appendErrorToFile(TAG, "searchPMResult failed, JSON parsing error");
                     Log.e("ForeGroundService","searchPMResult failed, JSON parsing error");
                     searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
                             String.valueOf(dataServiceUtil.getLatitudeFromCache()));
-                    } catch (ParseException e) {
+                } catch (ParseException e) {
                     e.printStackTrace();
-                    }
                 }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(getApplicationContext(), "ilab服务器请求出错", Toast.LENGTH_SHORT).show();
-                    dataServiceUtil.cacheSearchPMFailed(dataServiceUtil.getSearchFailedCountFromCache() + 1);
-                    Log.i("response from ilab:","error");
-                    FileUtil.appendErrorToFile(TAG, "searchPMResult failed error msg == " +
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), "ilab服务器请求出错", Toast.LENGTH_SHORT).show();
+                dataServiceUtil.cacheSearchPMFailed(dataServiceUtil.getSearchFailedCountFromCache() + 1);
+                Log.i("response from ilab:","error");
+                FileUtil.appendErrorToFile(TAG, "searchPMResult failed error msg == " +
                         error.getMessage() + " " + error);
-                    Log.e("ForeGroundService","ilab服务器请求出错");
-                    searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
+                Log.e("ForeGroundService","ilab服务器请求出错");
+                searchPMResult(String.valueOf(dataServiceUtil.getLongitudeFromCache()),
                         String.valueOf(dataServiceUtil.getLatitudeFromCache()));
-                }
-            });
+            }
+        });
 
-            jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
-                        Const.Default_Timeout,
-                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
+                Const.Default_Timeout,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         VolleyQueue.getInstance(
                 ForegroundService.this.getApplicationContext()).addToRequestQueue(jsonObjectRequest);
-        }
+    }
 
     /**
      * Get and Update Current PM info.

@@ -45,7 +45,7 @@ public class DataServiceUtil {
 
     private State state = null; // a stable holding of current state of DB
 
-    private double venVolToday;
+    private double venVolToday = 0.0;
 
     private long IDToday;
 
@@ -104,6 +104,8 @@ public class DataServiceUtil {
             venVolToday = 0.0;
             IDToday = 0L;
         } else {
+            PM25Today = 0.0;
+            venVolToday = 0.0;
             State state = states.get(states.size() - 1);
             this.state = state;
             state.print();
@@ -111,7 +113,7 @@ public class DataServiceUtil {
             for(int i = 0;i < states.size();i++){
                 State theState = states.get(i);
                 PM25Today += Double.parseDouble(theState.getPm25());
-                venVolToday += Double.parseDouble(theState.getVentilation_volume());
+                venVolToday += Double.parseDouble(theState.getVentilation_rate());
             }
 //            Log.v("Crysa_log", "print97");
 //            PM25Today = Double.parseDouble(state.getPm25());
@@ -163,19 +165,19 @@ public class DataServiceUtil {
             breath = static_breath * 6;
         }
 
-        breath = breath / 1000; //change L/min to m3/min
-        BigDecimal new_breath = new BigDecimal(breath);
-        breath = new_breath.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
-
         venVolToday += breath;
         BigDecimal new_venVolToday = new BigDecimal(venVolToday);
         venVolToday = new_venVolToday.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
 
-        double pm25_intake = density * breath;
+        Double cal_breath = breath / 1000; //change L/min to m3/min
+        BigDecimal new_breath = new BigDecimal(cal_breath);
+        cal_breath = new_breath.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
+
+        double pm25_intake = density * cal_breath;
         BigDecimal new_pm25_intake = new BigDecimal(pm25_intake);
         pm25_intake = new_pm25_intake.setScale(5,BigDecimal.ROUND_HALF_UP).doubleValue();
 
-        PM25Today += density * breath;
+        PM25Today += density * cal_breath;
 //        boolean source = Const.IS_USE_805;
         String data_source = aCache.getAsString(Const.Cache_Data_Source);
         if(data_source.equals("3")) {

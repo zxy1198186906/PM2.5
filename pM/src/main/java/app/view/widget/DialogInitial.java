@@ -99,29 +99,7 @@ public class DialogInitial extends Dialog implements View.OnClickListener{
         mContext = context;
         dataServiceUtil = DataServiceUtil.getInstance(context);
         locationServiceUtil = LocationServiceUtil.getInstance(context);
-//        Toast.makeText(mActivity,"请将APP加入白名单！",Toast.LENGTH_SHORT).show();
-//        Handler mhandler = new Handler(Looper.getMainLooper());
-//        Runnable runnable= new Runnable() {
-//            @Override
-//            public void run() {
-//                AlertDialog isExit = new AlertDialog.Builder(mActivity)   //添加弹窗提醒
-//                        .setTitle("系统提示")
-//                        .setMessage("请将app加入白名单！")
-//                        .setPositiveButton("确认", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialogInterface, int i) {
-//                                Intent intent = new Intent(Intent.ACTION_POWER_USAGE_SUMMARY);  //跳转到设置页面
-//                                ResolveInfo resolveInfo = getContext().getPackageManager().resolveActivity(intent, 0);
-//                                if (resolveInfo != null) {
-//                                    getOwnerActivity().startActivity(intent);
-//                                }
-//                            }
-//                        })
-//                        .create();
-//                isExit.show();
-//            }
-//        };
-//        mhandler.post(runnable);
+
     }
 
 
@@ -169,10 +147,12 @@ public class DialogInitial extends Dialog implements View.OnClickListener{
                 break;
             case R.id.initial_search_location:
                 searchLocation();
-                Intent intent = new Intent(Settings.ACTION_SETTINGS);  //跳转到设置页面
-                ResolveInfo resolveInfo = getContext().getPackageManager().resolveActivity(intent, 0);
-                if (resolveInfo != null) {
-                    mActivity.startActivity(intent);
+                if (Build.VERSION.SDK_INT >= 23) {
+                    Intent intent = new Intent(Settings.ACTION_SETTINGS);  //跳转到设置页面
+                    ResolveInfo resolveInfo = getContext().getPackageManager().resolveActivity(intent, 0);
+                    if (resolveInfo != null) {
+                        mActivity.startActivity(intent);
+                    }
                 }
                 break;
             case R.id.initial_success:

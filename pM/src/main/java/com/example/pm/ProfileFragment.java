@@ -127,7 +127,7 @@ public class ProfileFragment extends Fragment implements
         mGender = (TextView) view.findViewById(R.id.profile_gender);
         mLogin = (Button) view.findViewById(R.id.profile_login);
         mExit = (Button) view.findViewById(R.id.profile_exit);
-        mTurnOffUpload = (Button) view.findViewById(R.id.profile_turnoff_upload);
+//        mTurnOffUpload = (Button) view.findViewById(R.id.profile_turnoff_upload);
         //mTurnOffService = (Button) view.findViewById(R.id.profile_turnoff_service);
         mHelp = (Button)view.findViewById(R.id.profile_help);
         mClear = (Button) view.findViewById(R.id.profile_clear_data);
@@ -197,7 +197,7 @@ public class ProfileFragment extends Fragment implements
         mLogin.setOnClickListener(this);
         mExit.setOnClickListener(this);
         mHelp.setOnClickListener(this);
-        mTurnOffUpload.setOnClickListener(this);
+//        mTurnOffUpload.setOnClickListener(this);
         mClear.setOnClickListener(this);
         mRegister.setOnClickListener(this);
         mBluetooth.setOnClickListener(this);
@@ -278,19 +278,19 @@ public class ProfileFragment extends Fragment implements
                 helpDialog.setResId(R.layout.widget_dialog_help);
                 helpDialog.show();
                 break;
-            case R.id.profile_turnoff_upload:
-                if (v.getTag() == null || v.getTag().equals("on")) {
-                    v.setTag("off");
-                    ((TextView) v).setText(Const.Info_Turn_On_Upload);
-                    Toast.makeText(mActivity, Const.Info_Turn_Off_Upload, Toast.LENGTH_SHORT).show();
-                } else if (v.getTag().equals("off")) {
-                    v.setTag("on");
-                    intent = new Intent(mActivity, ForegroundService.class);
-                    mActivity.startService(intent);
-                    ((TextView) v).setText(Const.Info_Turn_Off_Upload);
-                    Toast.makeText(mActivity, Const.Info_Turn_On_Upload, Toast.LENGTH_SHORT).show();
-                }
-                break;
+//            case R.id.profile_turnoff_upload:
+//                if (v.getTag() == null || v.getTag().equals("on")) {
+//                    v.setTag("off");
+//                    ((TextView) v).setText(Const.Info_Turn_On_Upload);
+//                    Toast.makeText(mActivity, Const.Info_Turn_Off_Upload, Toast.LENGTH_SHORT).show();
+//                } else if (v.getTag().equals("off")) {
+//                    v.setTag("on");
+//                    intent = new Intent(mActivity, ForegroundService.class);
+//                    mActivity.startService(intent);
+//                    ((TextView) v).setText(Const.Info_Turn_Off_Upload);
+//                    Toast.makeText(mActivity, Const.Info_Turn_On_Upload, Toast.LENGTH_SHORT).show();
+//                }
+//                break;
             case R.id.profile_clear_data:
                 clearCache();
                 if (ShortcutUtil.isServiceWork(mActivity, Const.Name_DB_Service)) {

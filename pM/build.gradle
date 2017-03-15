@@ -2,12 +2,15 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "com.example.pm"
         minSdkVersion 17
         targetSdkVersion 23
+
+        // Enabling multidex support.
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -30,6 +33,10 @@ android {
         }
     }
 
+    dexOptions {
+        preDexLibraries = false
+    }
+
 }
 
 repositories {
@@ -47,4 +54,5 @@ dependencies {
     compile project(':umeng_share_library')
     compile files('libs/baidumapapi_v3_5_0.jar')
     compile files('libs/locSDK_6.13.jar')
+    compile 'com.android.support:multidex:1.0.0'
 }

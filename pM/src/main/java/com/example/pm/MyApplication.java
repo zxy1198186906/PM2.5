@@ -3,6 +3,8 @@ package com.example.pm;
 import android.app.Application;
 import android.app.Service;
 import android.os.Vibrator;
+import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
 import com.baidu.mapapi.SDKInitializer;
@@ -10,7 +12,7 @@ import com.baidu.mapapi.SDKInitializer;
 /**
  * Created by liuhaodong1 on 15/11/14.
  */
-public class MyApplication extends Application {
+public class MyApplication extends MultiDexApplication {
 
     public Vibrator mVibrator;
     public static boolean isExit=false;
@@ -40,5 +42,11 @@ public class MyApplication extends Application {
         mVibrator = (Vibrator) getApplicationContext().getSystemService(Service.VIBRATOR_SERVICE);
         SDKInitializer.initialize(getApplicationContext());
     }
+
+//    @Override
+//    protected void attachBaseContext(Context base) {
+//        super.attachBaseContext(base);
+//        MultiDex.install(this);
+//    }
 
 }
