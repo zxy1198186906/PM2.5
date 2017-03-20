@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Mar 20 16:14:03 CST 2017
+#Mon Mar 20 16:55:59 CST 2017
 20.base=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_
 143.base=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_
 493.base=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_

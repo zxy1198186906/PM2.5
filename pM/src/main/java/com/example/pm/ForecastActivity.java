@@ -14,6 +14,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -71,8 +72,25 @@ public class ForecastActivity extends Activity {
         HttpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest()
-                checkPMDataForUpload();
+                String url = HttpUtil.Predict_url + DataServiceUtil.getInstance(getApplicationContext()).getCityNameFromCache();
+                url = url.substring(0, url.length() - 1);
+                StringRequest request = new StringRequest(
+                        StringRequest.Method.GET,
+                        url,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                Log.e("Back_Weather", response.toString());
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                error.printStackTrace();
+                            }
+                });
+
+//                checkPMDataForUpload();
+                VolleyQueue.getInstance(getApplicationContext()).addToRequestQueue(request);
             }
         });
     }
