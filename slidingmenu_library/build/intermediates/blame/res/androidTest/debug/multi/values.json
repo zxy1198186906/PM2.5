@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "E:\\code\\android\\PM2.5_805\\slidingmenu_library\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\slidingmenu_library\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,31 @@
                     "endOffset": 1046
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\slidingmenu_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\slidingmenu_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1008,
+                        "endColumn": 42,
+                        "endOffset": 1046
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/hongjiayong/Desktop/PM2.5/slidingmenu_library/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1008,
+                    "endColumn": 42,
+                    "endOffset": 1046
+                },
+                "from": {
+                    "file": "/Users/hongjiayong/Desktop/PM2.5/slidingmenu_library/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,

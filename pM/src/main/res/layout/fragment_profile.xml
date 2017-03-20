@@ -208,6 +208,11 @@
                 android:text="@string/profile_btn_saving_battery_on"/>
 
             <Button
+                android:id="@+id/profile_forecast"
+                style="@style/main_left_button_style"
+                android:text="@string/profile_btn_forecast_tomorrow" />
+
+            <Button
                 android:id="@+id/profile_exit"
                 style="@style/main_left_button_style"
                 android:text="退出服务" />

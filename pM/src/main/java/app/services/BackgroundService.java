@@ -28,11 +28,13 @@ import org.json.JSONObject;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import app.Entity.Forecast;
 import app.Entity.State;
 import app.model.PMModel;
 import app.utils.Const;
@@ -81,6 +83,8 @@ public class BackgroundService extends BroadcastReceiver {
     private boolean isUploadFinished = true;
 
     private boolean isGetStepFinished = true;
+
+    private boolean isStoreInOutdoorFinished = true;
 
     private PowerManager.WakeLock wakeLock = null;
 
@@ -208,15 +212,18 @@ public class BackgroundService extends BroadcastReceiver {
             Log.e(s,sdf2+" ");
         }
         //every 1 hour to check if some data need to be uploaded
-        if (repeatingCycle % 119 == 0) {//119
+        if (repeatingCycle % 3 == 0) {//119
             FileUtil.appendStrToFile(repeatingCycle, "every 1 hour to check pm data for upload");
             isUploadFinished = false;
             checkPMDataForUpload();
             Date d3=new Date();
             String sdf3=sdf.format(d3);
             Log.e(s,sdf3+" ");
+            Toast.makeText(mContext, "上传", Toast.LENGTH_LONG).show();
         }
+
         onGetSteps();
+        saveInOutdoor(dataServiceUtil.getStateToday());
         saveValues();
         onFinished("saveValues");
     }
@@ -450,7 +457,7 @@ public class BackgroundService extends BroadcastReceiver {
     }
 
     /**
-     *
+     * save values
      */
     private void saveValues() {
 
@@ -472,6 +479,29 @@ public class BackgroundService extends BroadcastReceiver {
             dataServiceUtil.cacheSurpass(true);
         }
         Log.e(TAG, "repeating times: " + repeatingCycle);
+    }
+
+    /**
+     * save in and out times
+     */
+    private void saveInOutdoor(List<State> states){
+            Calendar calendar = Calendar.getInstance();
+            int year = calendar.get(Calendar.YEAR);
+            int month = calendar.get(Calendar.MONTH);
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
+            calendar.set(year, month, day, 10, 0, 0);
+            Long sevenClock = calendar.getTime().getTime();
+            calendar.set(year, month, day, 0, 0, 0);
+            Date date = new Date();
+            Long now = date.getTime();
+
+            if (now - sevenClock >= 0){
+
+                if (dataServiceUtil.getLastForecast()){
+                    dataServiceUtil.insertForecast(dataServiceUtil.calculateOutAndInTime(states));
+                    Log.v("insertForecast", "insert");
+                }
+            }
     }
 
     public void checkPMDataForUpload() {
@@ -590,7 +620,8 @@ public class BackgroundService extends BroadcastReceiver {
         if(isLocationFinished == true &&
                 isSearchDensityFinished == true &&
                 isUploadFinished == true
-                &&isGetStepFinished == true) {
+                &&isGetStepFinished == true
+                &&isStoreInOutdoorFinished == true) {
             if (wakeLock != null && wakeLock.isHeld()) {
                 wakeLock.release();
                 FileUtil.appendStrToFile(TAG, "all tasks finished,release wakelock");

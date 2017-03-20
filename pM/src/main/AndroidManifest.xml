@@ -53,9 +53,10 @@
 
 
         <!-- ######################Luo Yi############################# -->
-        <!--<meta-data-->
-            <!--android:name="com.baidu.lbsapi.API_KEY"-->
-            <!--android:value="2fVGi6VIr8dwoKofTl6Gd3L5" />-->
+        <!-- <meta-data -->
+        <!-- android:name="com.baidu.lbsapi.API_KEY" -->
+        <!-- android:value="2fVGi6VIr8dwoKofTl6Gd3L5" /> -->
+
 
         <!-- ######################Ding 2016.10.11############################# -->
         <meta-data
@@ -172,7 +173,9 @@
         <receiver
             android:name="app.services.AlarmCountStepReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true" />
+
+        <activity android:name=".ForecastActivity"></activity>
     </application>
 
 </manifest>

@@ -27,7 +27,7 @@ android {
 
     }
 
-    sourceSets{
+    sourceSets {
         main {
             jniLibs.srcDirs = ['libs']
         }
@@ -45,14 +45,16 @@ repositories {
 
 dependencies {
     compile project(':slidingmenu_library')
-    compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
-    compile 'com.mcxiaoke.volley:library:1.0.18'
-    compile 'nl.qbusict:cupboard:2.1.2'
-    compile 'com.github.orhanobut:logger:1.12'
     // compile files('src/main/jniLibs/BaiduLBS_Android.jar')
     // compile files('src/main/jniLibs/locSDK_6.03.jar')
     compile project(':umeng_share_library')
     compile files('libs/baidumapapi_v3_5_0.jar')
     compile files('libs/locSDK_6.13.jar')
+    compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    compile 'com.mcxiaoke.volley:library:1.0.18'
+    compile 'nl.qbusict:cupboard:2.1.2'
+    compile 'com.github.orhanobut:logger:1.12'
     compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
 }

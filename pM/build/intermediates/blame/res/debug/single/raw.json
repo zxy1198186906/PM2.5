@@ -1,6 +1,10 @@
 [
     {
-        "merged": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\raw\\shake_sound.mp3",
-        "source": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\raw\\shake_sound.mp3"
+        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\raw\\shake_sound.mp3",
+        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\raw\\shake_sound.mp3"
+    },
+    {
+        "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/raw/shake_sound.mp3",
+        "source": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/exploded-aar/PM2.5/umeng_share_library/unspecified/res/raw/shake_sound.mp3"
     }
 ]
