@@ -2,6 +2,8 @@ package app.services;
 
 import android.app.Activity;
 import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -44,8 +46,12 @@ import app.utils.ShortcutUtil;
 import app.utils.StableCache;
 import app.utils.VolleyQueue;
 import app.utils.ACache;
-import com.example.pm.ProfileFragment;
 
+import com.example.pm.ForecastActivity;
+import com.example.pm.ProfileFragment;
+import com.example.pm.R;
+
+import static android.content.Context.NOTIFICATION_SERVICE;
 import static android.content.Context.WIFI_SERVICE;
 import static com.facebook.FacebookSdk.getApplicationContext;
 
@@ -212,7 +218,7 @@ public class BackgroundService extends BroadcastReceiver {
             Log.e(s,sdf2+" ");
         }
         //every 1 hour to check if some data need to be uploaded
-        if (repeatingCycle % 3 == 0) {//119
+        if (repeatingCycle % 9 == 0) {//119
             FileUtil.appendStrToFile(repeatingCycle, "every 1 hour to check pm data for upload");
             isUploadFinished = false;
             checkPMDataForUpload();
@@ -223,6 +229,8 @@ public class BackgroundService extends BroadcastReceiver {
         }
 
         onGetSteps();
+//        pmWarningDetecter();
+//        notifyUser();
         saveInOutdoor(dataServiceUtil.getStateToday());
         saveValues();
         onFinished("saveValues");
@@ -485,25 +493,29 @@ public class BackgroundService extends BroadcastReceiver {
      * save in and out times
      */
     private void saveInOutdoor(List<State> states){
-            Calendar calendar = Calendar.getInstance();
-            int year = calendar.get(Calendar.YEAR);
-            int month = calendar.get(Calendar.MONTH);
-            int day = calendar.get(Calendar.DAY_OF_MONTH);
-            calendar.set(year, month, day, 10, 0, 0);
-            Long sevenClock = calendar.getTime().getTime();
-            calendar.set(year, month, day, 0, 0, 0);
-            Date date = new Date();
-            Long now = date.getTime();
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        calendar.set(year, month, day, 19, 0, 0);
+        Long sevenClock = calendar.getTime().getTime();
+        calendar.set(year, month, day, 0, 0, 0);
+        Date date = new Date();
+        Long now = date.getTime();
 
-            if (now - sevenClock >= 0){
+        if (now - sevenClock >= 0){
 
-                if (dataServiceUtil.getLastForecast()){
-                    dataServiceUtil.insertForecast(dataServiceUtil.calculateOutAndInTime(states));
-                    Log.v("insertForecast", "insert");
-                }
+            if (dataServiceUtil.getLastForecast()){
+                pmWarningDetecter();
+                dataServiceUtil.insertForecast(dataServiceUtil.calculateOutAndInTime(states));
+                Log.v("insertForecast", "insert");
             }
+        }
     }
 
+    /**
+     * find the data and upload the unupload data
+     */
     public void checkPMDataForUpload() {
         dataServiceUtil.cacheLastUploadTime(System.currentTimeMillis());
         FileUtil.appendStrToFile(repeatingCycle, "every 1 hour to check pm data for upload");
@@ -650,5 +662,66 @@ public class BackgroundService extends BroadcastReceiver {
         PendingIntent sender = PendingIntent.getBroadcast(context, 0, intent, 0);
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         alarmManager.cancel(sender);
+    }
+
+    /**
+     * If the PM is too high, the app will notify the user
+     */
+    public void notifyUser(){
+
+        try {
+            NotificationManager mNotifyMgr = (NotificationManager) mContext.getSystemService(NOTIFICATION_SERVICE);
+            PendingIntent contentIntent = PendingIntent.getActivity(mContext, 0, new Intent(mContext, ForecastActivity.class), 0);
+
+            Notification notification = new Notification.Builder(mContext)
+                    .setSmallIcon(R.drawable.icon)
+                    .setContentTitle("PM 警报")
+                    .setContentText("PM爆表了")
+                    .setTicker("PM爆表了")
+                    .setDefaults(Notification.DEFAULT_VIBRATE)
+                    .setDefaults(Notification.DEFAULT_SOUND)
+                    .setAutoCancel(true)
+                    .setContentIntent(contentIntent)
+                    .build();
+            mNotifyMgr.notify(1, notification);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void pmWarningDetecter(){
+        String url = HttpUtil.Predict_url + dataServiceUtil.getCityNameFromCache();
+        url = url.substring(0, url.length() - 1);
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, new JSONObject(), new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                Log.e("Wea_Back", response.toString());
+
+                try {
+                    String pm25 = response.getString("PM25");
+                    int pmVal =  Integer.valueOf(pm25);
+
+                    if (pmVal > 100){
+                        notifyUser();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        }) {
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
+            }
+        };
+
+        VolleyQueue.getInstance(mContext.getApplicationContext()).addToRequestQueue(request);
     }
 }
