@@ -115,6 +115,8 @@ public class ForecastActivity extends Activity {
             @Override
             public void onClick(View v) {
                 pmWarningDetecter();
+                checkPMDataForUpload();
+
             }
         });
 
@@ -210,12 +212,17 @@ public class ForecastActivity extends Activity {
                 public void onResponse(JSONObject response) {
                     try {
                         Log.e("Back_upload",response.toString());
-                        Toast.makeText(getApplicationContext(), response.toString() + " test ", Toast.LENGTH_LONG).show();
                         int token_status = response.getInt("token_status");
+                        Log.e("token_status", String.valueOf(token_status));
                         if (token_status == 1) {
                             String value = response.getString("succeed_count");
                             if (Integer.valueOf(value) == size) {
                                 for (int i = 0; i < size; i++) {
+                                    dataServiceUtil.updateStateUpLoad(states.get(i), 1);
+                                }
+                            }
+                            if (Integer.valueOf(value) == 0){
+                                for (int i = 0; i < 1000; i++) {
                                     dataServiceUtil.updateStateUpLoad(states.get(i), 1);
                                 }
                             }
@@ -228,6 +235,12 @@ public class ForecastActivity extends Activity {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     error.printStackTrace();
+                    Log.e("size", String.valueOf(states.size()));
+                    if (states.size() > 1000) {
+                        for (int i = 0; i < 1000; i++) {
+                            dataServiceUtil.updateStateUpLoad(states.get(i), 1);
+                        }
+                    }
                 }
             }) {
                 public Map<String, String> getHeaders() throws AuthFailureError {

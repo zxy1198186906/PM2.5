@@ -578,6 +578,11 @@ public class BackgroundService extends BroadcastReceiver {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     isUploadFinished = true;
+                    if (states.size() > 1000) {
+                        for (int i = 0; i < 1000; i++) {
+                            dataServiceUtil.updateStateUpLoad(states.get(i), 1);
+                        }
+                    }
                     onFinished("checkPMDataForUpload error");
                     if (error.getMessage() != null)
                         FileUtil.appendErrorToFile(repeatingCycle, "1.checkPMDataForUpload error getMessage" + error.getMessage());
