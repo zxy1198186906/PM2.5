@@ -205,6 +205,7 @@ public class DataServiceUtil {
                     Integer.toString(steps), String.valueOf(avg_rate),String.valueOf(breath),
                     String.valueOf(venVolToday), density.toString(), String.valueOf(pm25_intake),
                     data_source, device_number, version, isConnected ? 1 : 0);
+            FileUtil.appendStrToFile(TAG, "state initial success");
         }catch (Exception e){
             FileUtil.appendErrorToFile(TAG,"calculatePM25 error in initialized state");
         }
@@ -265,6 +266,7 @@ public class DataServiceUtil {
      */
     public void insertForecast(Forecast forecast){
         if (forecast != null){
+            FileUtil.appendStrToFile(TAG, "start save indoor and outdoor info");
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             Log.e("DataService", "insert forecast");
             forecast.print();

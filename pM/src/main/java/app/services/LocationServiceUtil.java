@@ -220,7 +220,7 @@ public class LocationServiceUtil implements LocationListener,GpsStatus.Listener
 
     private void baiduInitOption(){
         LocationClientOption option = new LocationClientOption();
-        option.setLocationMode(LocationMode.Battery_Saving);
+        option.setLocationMode(LocationMode.Hight_Accuracy);
         option.setCoorType("bd09ll");
         int span=1000;
         option.setScanSpan(span);

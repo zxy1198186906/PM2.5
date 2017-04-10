@@ -126,6 +126,7 @@ public class BackgroundService extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         mContext = context;
+        FileUtil.appendStrToFile(TAG, "start get wakeLock acquire");
         PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         wakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "backgroundWake");
         wakeLock.acquire();
@@ -183,7 +184,7 @@ public class BackgroundService extends BroadcastReceiver {
     private void startInner() {
 
         getLastParams();
-        Log.e(TAG, repeatingCycle + " ");
+        FileUtil.appendStrToFile(TAG, repeatingCycle + " ");
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
 //        WifiManager wifi_service = (WifiManager)getApplicationContext().getSystemService(WIFI_SERVICE);
 //        WifiInfo wifiInfo = wifi_service.getConnectionInfo();
@@ -219,7 +220,6 @@ public class BackgroundService extends BroadcastReceiver {
         }
         //every 1 hour to check if some data need to be uploaded
         if (repeatingCycle % 9 == 0) {//119
-            FileUtil.appendStrToFile(repeatingCycle, "every 1 hour to check pm data for upload");
             isUploadFinished = false;
             checkPMDataForUpload();
             Date d3=new Date();
@@ -229,11 +229,10 @@ public class BackgroundService extends BroadcastReceiver {
         }
 
         onGetSteps();
-//        pmWarningDetecter();
-//        notifyUser();
         saveInOutdoor(dataServiceUtil.getStateToday());
         saveValues();
         onFinished("saveValues");
+        onFinished(repeatingCycle + "end");
     }
 
     /**
@@ -301,6 +300,7 @@ public class BackgroundService extends BroadcastReceiver {
 
     private void onGetSteps(){
         isGetStepFinished = false;
+        FileUtil.appendStrToFile(TAG, "start get steps");
         motionServiceUtil.setOnGetStepListener(new MotionServiceUtil.onGetStepListener() {
             @Override
             public void onGetStep(int type, int num) {
@@ -508,7 +508,7 @@ public class BackgroundService extends BroadcastReceiver {
             if (dataServiceUtil.getLastForecast()){
                 pmWarningDetecter();
                 dataServiceUtil.insertForecast(dataServiceUtil.calculateOutAndInTime(states));
-                Log.v("insertForecast", "insert");
+                onFinished("save indoor and outdoor");
             }
         }
     }
@@ -518,13 +518,12 @@ public class BackgroundService extends BroadcastReceiver {
      */
     public void checkPMDataForUpload() {
         dataServiceUtil.cacheLastUploadTime(System.currentTimeMillis());
-        FileUtil.appendStrToFile(repeatingCycle, "every 1 hour to check pm data for upload");
+        FileUtil.appendStrToFile(TAG, "every 10min to check pm data for upload");
         int idStr = dataServiceUtil.getUserIdFromCache();
         String tokenStr=dataServiceUtil.getTokenFromCache();
 
         if (idStr != 0) {
             final List<State> states = dataServiceUtil.getPMDataForUpload();
-            //FileUtil.appendStrToFile(DBRunTime, "1.checkPMDataForUpload upload batch start size = " + states.size());
             String url = HttpUtil.UploadBatch_url;
             JSONArray array = new JSONArray();
             final int size = states.size() < 1000 ? states.size() : 1000;
@@ -549,8 +548,8 @@ public class BackgroundService extends BroadcastReceiver {
                         int token_status = response.getInt("token_status");
                         if (token_status == 1) {
                             String value = response.getString("succeed_count");
-                            FileUtil.appendStrToFile(repeatingCycle, "1.checkPMDataForUpload upload success value = " + value);
-                            FileUtil.appendStrToFile(repeatingCycle, "2.checkTokenStatus upload value = " + token_status);
+                            FileUtil.appendStrToFile(TAG, "1.checkPMDataForUpload upload success value = " + value);
+                            FileUtil.appendStrToFile(TAG, "2.checkTokenStatus upload value = " + token_status);
                             if (Integer.valueOf(value) == size) {
                                 for (int i = 0; i < size; i++) {
                                     dataServiceUtil.updateStateUpLoad(states.get(i), 1);
@@ -578,6 +577,7 @@ public class BackgroundService extends BroadcastReceiver {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     isUploadFinished = true;
+                    FileUtil.appendStrToFile(TAG, "delete 1000 uploaded states");
                     if (states.size() > 1000) {
                         for (int i = 0; i < 1000; i++) {
                             dataServiceUtil.updateStateUpLoad(states.get(i), 1);
