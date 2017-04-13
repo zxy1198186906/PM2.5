@@ -470,7 +470,7 @@ public class BackgroundService extends BroadcastReceiver {
     private void saveValues() {
 
         State last = state;
-        state = dataServiceUtil.calculatePM25(mLocation.getLatitude(), mLocation.getLongitude(),stepNum);
+        state = dataServiceUtil.calculatePM25(mLocation.getLongitude(), mLocation.getLatitude(),stepNum);
 //        Log.v("Crysa_location","saveValues()lati"+mLocation.getLatitude()+"||"+"longi"+ mLocation.getLongitude());
         Log.e("Back","save state");
         state.print();
