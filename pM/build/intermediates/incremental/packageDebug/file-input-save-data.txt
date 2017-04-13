@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Apr 10 20:35:38 CST 2017
+#Thu Apr 13 21:55:26 CST 2017
 20.base=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_
 143.base=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar
 493.base=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_
@@ -334,7 +334,7 @@
 155.file=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_/res/layout/umeng_socialize_comment_item.xml
 299.set=ANDROID_RESOURCE
 309.base=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_
-326.file=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png
+326.file=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png
 222.set=ANDROID_RESOURCE
 39.base=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 188.file=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_/res/layout/umeng_bak_at_list.xml
@@ -985,7 +985,7 @@
 478.base=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_
 154.file=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_/res/layout/com_facebook_activity_layout.xml
 289.set=ANDROID_RESOURCE
-325.file=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png
+325.file=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png
 212.set=ANDROID_RESOURCE
 38.base=/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/resources-debug.ap_
 167.set=ANDROID_RESOURCE

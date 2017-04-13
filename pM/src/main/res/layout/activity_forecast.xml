@@ -80,6 +80,18 @@
                     android:textSize="28dp"
                     android:id="@+id/PM25"/>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="明日吸入PM25预测:"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Orange"
+                    android:textSize="28dp"
+                    android:id="@+id/TOMO_PM25"/>
+
 
             </LinearLayout>
 

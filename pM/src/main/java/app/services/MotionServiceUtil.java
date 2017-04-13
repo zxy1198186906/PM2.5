@@ -124,6 +124,7 @@ public class MotionServiceUtil implements SensorEventListener{
                 numStepsForRecord = numSteps;
                 listener.onGetStep(TYPE_ALGORITHM,numStepsForRecord*6);
                 Log.v("Crysa_motion", "numStepsForRecord" + numStepsForRecord + "*6");
+                FileUtil.appendStrToFile(TAG, "Don't have sensor, numStepsForRecord:" + numStepsForRecord + "*6");
                 if (isStartOnce) stop();
                 numSteps = 0;
                 time1 = time2;
@@ -132,6 +133,7 @@ public class MotionServiceUtil implements SensorEventListener{
             valueFromStepCounter = (int)event.values[0];
             listener.onGetStep(TYPE_STEP_COUNTER, valueFromStepCounter);//TYPE_ALGORITHM
             Log.v("Crysa_motion", "valueFromStepCounter" + valueFromStepCounter +"event.values"+(int)event.values[0]);
+            FileUtil.appendStrToFile(TAG, "Have sensor, numStepsForRecord:" + valueFromStepCounter);
             if (isStartOnce) stop();
         }
     }

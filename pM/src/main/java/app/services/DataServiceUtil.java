@@ -315,6 +315,31 @@ public class DataServiceUtil {
     }
 
     /**
+     * return tomorrow's PM25 value by last seven days
+     * @return
+     */
+    public int[] getTomorrowForecast(){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        List<Forecast> forecasts = new ArrayList<>();
+        forecasts = cupboard().withDatabase(db).query(Forecast.class).list();
+        int num = 0;
+        if (forecasts.size() > 7){
+            forecasts = forecasts.subList(0, 6);
+            num = 7;
+        }else{
+            num = forecasts.size();
+        }
+        int indoors = 0;
+        int outdoors = 0;
+        for (Forecast forecast : forecasts){
+            indoors += Integer.valueOf(forecast.getIndoor());
+            outdoors += Integer.valueOf(forecast.getOutdoor());
+        }
+
+        return new int[]{indoors / num, outdoors / num};
+    }
+
+    /**
      * get last indoor and outdoor ratio during last seven days
      * @return the ratio of last week.
      */

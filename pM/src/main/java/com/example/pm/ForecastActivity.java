@@ -53,10 +53,12 @@ public class ForecastActivity extends Activity {
     private TextView LTEMPText;
     private TextView PM25Text;
     private TextView confirm;
+    private TextView TOMOPM25Text;
     private String AQI = "-";
     private String HTEMP = "-";
     private String LTEMP = "-";
     private String PM25 = "-";
+    private String TOMOPM25 = "";
 
     private NotificationManager mNotifyMgr;
     private Notification notification;
@@ -91,6 +93,7 @@ public class ForecastActivity extends Activity {
         HTEMPText = (TextView) findViewById(R.id.HTEMP);
         LTEMPText = (TextView) findViewById(R.id.LTEMP);
         PM25Text = (TextView) findViewById(R.id.PM25);
+        TOMOPM25Text = (TextView) findViewById(R.id.TOMO_PM25);
         confirm = (TextView) findViewById(R.id.forecast_sure);
 
         AQIText.setText(AQI);
@@ -170,6 +173,10 @@ public class ForecastActivity extends Activity {
 
         VolleyQueue.getInstance(getApplicationContext()).addToRequestQueue(request);
 
+        // Get predict data from database
+        int[] inOutData = DataServiceUtil.getInstance(getApplicationContext()).getTomorrowForecast();
+        TOMOPM25 = "in:" + String.valueOf(inOutData[0]) + " out:" + String.valueOf(inOutData[1]);
+        TOMOPM25Text.setText(TOMOPM25);
 
     }
 

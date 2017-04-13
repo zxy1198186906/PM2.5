@@ -16,20 +16,20 @@
         "source": "/Users/hongjiayong/Desktop/PM2.5/pM/src/main/res/layout/widget_dialog_bluetooth.xml"
     },
     {
-        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_full_alert_dialog_item.xml",
-        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_full_alert_dialog_item.xml"
-    },
-    {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/com_facebook_activity_layout.xml",
         "source": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/exploded-aar/PM2.5/umeng_share_library/unspecified/res/layout/com_facebook_activity_layout.xml"
     },
     {
-        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_small.xml",
-        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_white_small.xml"
+        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_full_alert_dialog_item.xml",
+        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_full_alert_dialog_item.xml"
     },
     {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/activity_map.xml",
         "source": "/Users/hongjiayong/Desktop/PM2.5/pM/src/main/res/layout/activity_map.xml"
+    },
+    {
+        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_small.xml",
+        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\messenger_button_send_white_small.xml"
     },
     {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
@@ -72,12 +72,12 @@
         "source": "/Users/hongjiayong/Desktop/PM2.5/pM/src/main/res/layout/view_top_chart_2.xml"
     },
     {
-        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_expanded_menu_layout.xml"
-    },
-    {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
         "source": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
@@ -88,12 +88,12 @@
         "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\com_facebook_login_fragment.xml"
     },
     {
-        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\shake_umeng_socialize_scrshot_snapshot.xml",
-        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\shake_umeng_socialize_scrshot_snapshot.xml"
-    },
-    {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_base_alert_dialog.xml",
         "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_base_alert_dialog.xml"
+    },
+    {
+        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\shake_umeng_socialize_scrshot_snapshot.xml",
+        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\shake_umeng_socialize_scrshot_snapshot.xml"
     },
     {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
@@ -104,12 +104,12 @@
         "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_full_alert_dialog.xml",
-        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_full_alert_dialog.xml"
-    },
-    {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
         "source": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_full_alert_dialog.xml",
+        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_full_alert_dialog.xml"
     },
     {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/activity_main.xml",
@@ -184,12 +184,12 @@
         "source": "/Users/hongjiayong/Desktop/PM2.5/pM/src/main/res/layout/widget_dialog_info.xml"
     },
     {
-        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\select_dialog_item_material.xml"
-    },
-    {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/listitem_device.xml",
         "source": "/Users/hongjiayong/Desktop/PM2.5/pM/src/main/res/layout/listitem_device.xml"
+    },
+    {
+        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\select_dialog_item_material.xml"
     },
     {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/activity_data_result.xml",
@@ -220,16 +220,16 @@
         "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_titile_bar_comment.xml",
-        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_titile_bar_comment.xml"
+        "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/umeng_bak_platform_item_simple.xml",
+        "source": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/exploded-aar/PM2.5/umeng_share_library/unspecified/res/layout/umeng_bak_platform_item_simple.xml"
     },
     {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
         "source": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/select_dialog_item_material.xml"
     },
     {
-        "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/umeng_bak_platform_item_simple.xml",
-        "source": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/exploded-aar/PM2.5/umeng_share_library/unspecified/res/layout/umeng_bak_platform_item_simple.xml"
+        "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_titile_bar_comment.xml",
+        "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\PM2.5_805\\umeng_share_library\\unspecified\\res\\layout\\umeng_socialize_titile_bar_comment.xml"
     },
     {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
@@ -288,12 +288,12 @@
         "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/hongjiayong/Desktop/PM2.5/pM/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "/Users/hongjiayong/Desktop/PM2.5/E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_comment_detail_nomap.xml",
