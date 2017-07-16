@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+        "outputFile": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
         "map": [
             {
                 "to": {
@@ -12,14 +12,14 @@
                     "endOffset": 153
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\pM\\src\\main\\res\\values-v14\\styles.xml",
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\values-v14\\styles.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 227,
+                        "startOffset": 220,
                         "endLine": 9,
                         "endColumn": 12,
-                        "endOffset": 327
+                        "endOffset": 318
                     }
                 }
             },
@@ -33,14 +33,14 @@
                     "endOffset": 429
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v14\\values-v14.xml",
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 297,
-                        "endLine": 8,
+                        "startOffset": 55,
+                        "endLine": 6,
                         "endColumn": 12,
-                        "endOffset": 568
+                        "endOffset": 326
                     }
                 }
             },
@@ -53,13 +53,13 @@
                     "endOffset": 500
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v14\\values-v14.xml",
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
                     "position": {
-                        "startLine": 11,
+                        "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 810,
+                        "startOffset": 331,
                         "endColumn": 70,
-                        "endOffset": 876
+                        "endOffset": 397
                     }
                 }
             },
@@ -72,13 +72,13 @@
                     "endOffset": 583
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v14\\values-v14.xml",
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
                     "position": {
-                        "startLine": 12,
+                        "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 881,
+                        "startOffset": 402,
                         "endColumn": 82,
-                        "endOffset": 959
+                        "endOffset": 480
                     }
                 }
             },
@@ -92,14 +92,14 @@
                     "endOffset": 993
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v14\\values-v14.xml",
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 964,
-                        "endLine": 18,
+                        "startOffset": 485,
+                        "endLine": 14,
                         "endColumn": 12,
-                        "endOffset": 1369
+                        "endOffset": 890
                     }
                 }
             },
@@ -113,14 +113,14 @@
                     "endOffset": 1415
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v14\\values-v14.xml",
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
                     "position": {
-                        "startLine": 19,
+                        "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1374,
-                        "endLine": 24,
+                        "startOffset": 895,
+                        "endLine": 20,
                         "endColumn": 12,
-                        "endOffset": 1791
+                        "endOffset": 1312
                     }
                 }
             },
@@ -133,13 +133,13 @@
                     "endOffset": 1535
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v14\\values-v14.xml",
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
                     "position": {
-                        "startLine": 27,
+                        "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 2028,
+                        "startOffset": 1317,
                         "endColumn": 119,
-                        "endOffset": 2143
+                        "endOffset": 1432
                     }
                 }
             },
@@ -152,13 +152,13 @@
                     "endOffset": 1598
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v14\\values-v14.xml",
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
                     "position": {
-                        "startLine": 28,
+                        "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 2148,
+                        "startOffset": 1437,
                         "endColumn": 62,
-                        "endOffset": 2206
+                        "endOffset": 1495
                     }
                 }
             },
@@ -172,14 +172,14 @@
                     "endOffset": 1752
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v14\\values-v14.xml",
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
                     "position": {
-                        "startLine": 29,
+                        "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 2211,
-                        "endLine": 31,
+                        "startOffset": 1500,
+                        "endLine": 25,
                         "endColumn": 12,
-                        "endOffset": 2360
+                        "endOffset": 1649
                     }
                 }
             },
@@ -192,13 +192,13 @@
                     "endOffset": 1815
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v14\\values-v14.xml",
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
                     "position": {
-                        "startLine": 32,
+                        "startLine": 26,
                         "startColumn": 4,
-                        "startOffset": 2365,
+                        "startOffset": 1654,
                         "endColumn": 62,
-                        "endOffset": 2423
+                        "endOffset": 1712
                     }
                 }
             },
@@ -211,13 +211,13 @@
                     "endOffset": 1947
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v14\\values-v14.xml",
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v14\\values-v14.xml",
                     "position": {
-                        "startLine": 33,
+                        "startLine": 27,
                         "startColumn": 4,
-                        "startOffset": 2428,
+                        "startOffset": 1717,
                         "endColumn": 131,
-                        "endOffset": 2555
+                        "endOffset": 1844
                     }
                 }
             }

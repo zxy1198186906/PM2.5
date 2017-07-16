@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import app.Entity.Forecast;
 import app.Entity.State;
 
 import static nl.qbusict.cupboard.CupboardFactory.cupboard;
@@ -20,6 +21,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     static {
         cupboard().register(State.class);
+        cupboard().register(Forecast.class);
     }
 
     @Override

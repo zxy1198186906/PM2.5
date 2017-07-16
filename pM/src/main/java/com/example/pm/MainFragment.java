@@ -33,6 +33,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import app.model.PMModel;
 import app.services.CountStepService;
@@ -853,8 +854,8 @@ public class MainFragment extends Fragment implements OnClickListener {
                 chart12Date = (ArrayList) aCache.getAsObject(Const.Cache_Chart_12_Date);
                 chartInitial(current_chart1_index, current_chart2_index);
             } else if (intent.getAction().equals(Const.Action_DB_MAIN_Location)) {
-                String lati = intent.getStringExtra(Const.Intent_DB_PM_Lati);
-                String longi = intent.getStringExtra(Const.Intent_DB_PM_Longi);
+                String lati = String.valueOf(intent.getStringExtra(Const.Intent_DB_PM_Lati));
+                String longi = String.valueOf(intent.getStringExtra(Const.Intent_DB_PM_Longi));
                 searchCityRequest(lati,longi);
 
             } else if (intent.getAction().equals(Const.Action_Chart_Result_1)) {

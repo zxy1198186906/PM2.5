@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w600dp-v13\\values-w600dp-v13.xml",
+        "outputFile": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w600dp-v13\\values-w600dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 114
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-w600dp\\values-w600dp.xml",
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-w600dp-v13\\values-w600dp-v13.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 290,
+                        "startOffset": 55,
                         "endColumn": 63,
-                        "endOffset": 349
+                        "endOffset": 114
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 169
                 },
                 "from": {
-                    "file": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-w600dp\\values-w600dp.xml",
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-w600dp-v13\\values-w600dp-v13.xml",
                     "position": {
-                        "startLine": 5,
+                        "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 354,
+                        "startOffset": 119,
                         "endColumn": 54,
-                        "endOffset": 404
+                        "endOffset": 169
                     }
                 }
             }

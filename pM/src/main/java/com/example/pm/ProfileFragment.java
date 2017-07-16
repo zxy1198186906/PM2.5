@@ -71,6 +71,7 @@ public class ProfileFragment extends Fragment implements
     private Button mModifyPwd;
     private Button mShare;
     private Button mSavingBattery;
+    private Button mForecastTomorrow;
     private TextView mResetPwd;
     private TextView mNotification;
     private TextView mModifyAndView;
@@ -140,6 +141,7 @@ public class ProfileFragment extends Fragment implements
         mModifyAndView = (TextView)view.findViewById(R.id.profile_modify_personal_state);
         mLogOff = (TextView)view.findViewById(R.id.profile_logoff);
         mSavingBattery = (Button)view.findViewById(R.id.profile_saving_battery);
+        mForecastTomorrow = (Button)view.findViewById(R.id.profile_forecast);
         setSizeByWidth();
         checkCache();
         setListener();
@@ -207,6 +209,7 @@ public class ProfileFragment extends Fragment implements
         mModifyAndView.setOnClickListener(this);
         mLogOff.setOnClickListener(this);
         mSavingBattery.setOnClickListener(this);
+        mForecastTomorrow.setOnClickListener(this);
     }
 
     @Override
@@ -326,6 +329,10 @@ public class ProfileFragment extends Fragment implements
                 } else {
                     Toast.makeText(mActivity.getApplicationContext(), Const.Info_Login_First, Toast.LENGTH_SHORT).show();
                 }
+                break;
+            case R.id.profile_forecast:
+                intent = new Intent(mActivity, ForecastActivity.class);
+                startActivity(intent);
                 break;
         }
     }

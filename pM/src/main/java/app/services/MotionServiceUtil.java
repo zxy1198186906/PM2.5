@@ -25,9 +25,9 @@ public class MotionServiceUtil implements SensorEventListener{
 
     public static final int Motion_Detection_Interval = 10 * 1000; //10 seconds
 
-    public static final int Motion_Run_Thred = 12; // step / 10s
+    public static final int Motion_Run_Thred = 72; // step / 10s
 
-    public static final int Motion_Walk_Thred = 3; // > 10 step / seconds -- walk
+    public static final int Motion_Walk_Thred = 18; // > 10 step / seconds -- walk
 
     public static final int TYPE_ALGORITHM = 0;
 
@@ -124,15 +124,27 @@ public class MotionServiceUtil implements SensorEventListener{
                 numStepsForRecord = numSteps;
                 listener.onGetStep(TYPE_ALGORITHM,numStepsForRecord*6);
                 Log.v("Crysa_motion", "numStepsForRecord" + numStepsForRecord + "*6");
+                FileUtil.appendStrToFile(TAG, "Don't have sensor, numStepsForRecord:" + numStepsForRecord + "*6");
                 if (isStartOnce) stop();
                 numSteps = 0;
                 time1 = time2;
             }
         }else if(event.sensor.getType() == Sensor.TYPE_STEP_COUNTER){
+            int step = (int)event.values[0] - valueFromStepCounter;
             valueFromStepCounter = (int)event.values[0];
-            listener.onGetStep(TYPE_STEP_COUNTER, valueFromStepCounter);//TYPE_ALGORITHM
+            if (step > 1000){
+                step = 0;
+            }
+            if (step > 0){
+                listener.onGetStep(TYPE_STEP_COUNTER, step);//TYPE_ALGORITHM
+            }else{
+                listener.onGetStep(TYPE_STEP_COUNTER, 0);
+            }
             Log.v("Crysa_motion", "valueFromStepCounter" + valueFromStepCounter +"event.values"+(int)event.values[0]);
+            FileUtil.appendStrToFile(TAG, "Have sensor, numStepsForRecord:" + valueFromStepCounter + "step:" +  step);
             if (isStartOnce) stop();
+        }else if(event.sensor.getType() == Sensor.TYPE_STEP_DETECTOR){
+            FileUtil.appendStrToFile(TAG, "Step detector: " + event.values[0]);
         }
     }
 

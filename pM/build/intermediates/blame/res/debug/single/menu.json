@@ -1,10 +1,10 @@
 [
     {
-        "merged": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "E:\\code\\android\\PM2.5_805\\pM\\src\\main\\res\\menu\\main.xml"
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\menu\\gatt_services.xml",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\menu\\gatt_services.xml"
     },
     {
-        "merged": "E:\\code\\android\\PM2.5_805\\pM\\build\\intermediates\\res\\merged\\debug\\menu\\gatt_services.xml",
-        "source": "E:\\code\\android\\PM2.5_805\\pM\\src\\main\\res\\menu\\gatt_services.xml"
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\menu\\main.xml"
     }
 ]
