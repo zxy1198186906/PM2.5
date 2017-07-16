@@ -87,4 +87,5 @@
     <string name="str_to">到</string>
     <string name="share_title">自由呼吸(Bio³Air)的分享</string>
     <string name="share_content">生态 健康 生活</string>
+    <string name="profile_btn_forecast_tomorrow">明日预测</string>
 </resources>

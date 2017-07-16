@@ -26,9 +26,16 @@ public class DBConstants {
         public static final String STATE_HAS_UPLOAD = "upload";
         public static final String STATE_CONNECTION = "connection";
         public static final String DEFAULT_ORDER = "_id desc";
-//        public static final String STATE_VENTILATION_RATE_COL = "ventilation_rate"; //⤵️ not sure, to be fixed!
-//        public static final String STATE_MONITOR_COL = "pm25_monitor";
-//        public static final String STATE_PM25_INTAKE_COL = "pm25_intake";
+
+        /**
+         * @author Hong Jiayong
+         * for forecasting
+         */
+        public static final String FORECAST_COL_ID = "_id";
+        public static final String FORECAST_USER_ID = "user_id";
+        public static final String FORECAST_DATE = "date";
+        public static final String FORECAST_OUTDOOR_TIME = "outdoor";
+        public static final String FORECAST_INDOOR_TIME = "indoor";
     }
 
 }

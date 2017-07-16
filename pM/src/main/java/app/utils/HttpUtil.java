@@ -49,6 +49,8 @@ public class HttpUtil {
 
     public static final String UploadBatch_url = base_url + "new-mobile-data/upload";
 
+    public static final String Predict_url = "http://106.14.63.93:8080/predict?city=";
+
     //jiangph for 805
     public static final String SERVERIP="255.255.255.255";
 

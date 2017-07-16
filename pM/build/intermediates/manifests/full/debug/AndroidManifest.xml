@@ -178,6 +178,8 @@
             android:name="app.services.AlarmCountStepReceiver"
             android:enabled="true"
             android:exported="true" />
+
+        <activity android:name="com.example.pm.ForecastActivity" />
     </application>
 
 </manifest>

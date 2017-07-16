@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import app.Entity.Forecast;
 import app.Entity.State;
 import app.utils.ACache;
 import app.utils.Const;
@@ -87,17 +88,8 @@ public class DataServiceUtil {
         if (null == dbHelper)
             dbHelper = new DBHelper(mContext.getApplicationContext());
 
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
-        Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH);
-        int day = calendar.get(Calendar.DAY_OF_MONTH);
-        calendar.set(year, month, day, 0, 0, 0);
-        Long nowTime = calendar.getTime().getTime();
-        calendar.set(year, month, day, 23, 59, 59);
-        Long nextTime = calendar.getTime().getTime();
         /**Get states of today **/
-        List<State> states = cupboard().withDatabase(db).query(State.class).withSelection("time_point > ? AND time_point < ?", nowTime.toString(), nextTime.toString()).list();
+        List<State> states = getStateToday();
         if (states.isEmpty()) {
             state = null;
             PM25Today = 0.0;
@@ -122,6 +114,25 @@ public class DataServiceUtil {
         }
     }
 
+    /**
+     * get states today
+     * @return
+     */
+    public List<State> getStateToday(){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        calendar.set(year, month, day, 0, 0, 0);
+        Long nowTime = calendar.getTime().getTime();
+        calendar.set(year, month, day, 23, 59, 59);
+        Long nextTime = calendar.getTime().getTime();
+        /**Get states of today **/
+        List<State> states = cupboard().withDatabase(db).query(State.class).withSelection("time_point > ? AND time_point < ?", nowTime.toString(), nextTime.toString()).list();
+
+        return states;
+    }
 
 
     /**
@@ -194,10 +205,47 @@ public class DataServiceUtil {
                     Integer.toString(steps), String.valueOf(avg_rate),String.valueOf(breath),
                     String.valueOf(venVolToday), density.toString(), String.valueOf(pm25_intake),
                     data_source, device_number, version, isConnected ? 1 : 0);
+            FileUtil.appendStrToFile(TAG, "state initial success");
         }catch (Exception e){
             FileUtil.appendErrorToFile(TAG,"calculatePM25 error in initialized state");
         }
         return state;
+    }
+
+    /**
+     * Caculate user's outdoor and indoor time
+     * @return
+     */
+    public Forecast calculateOutAndInTime(List<State> states){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        calendar.set(year, month, day, 0, 0, 0);
+        Long nowTime = calendar.getTime().getTime();
+
+        int outdoorTime = 0;
+        int indoorTime = 0;
+
+        for (State state: states){
+            if (Integer.valueOf(state.getUserid()) == getUserIdFromCache()){
+                // 计算在室外的时间
+                if (state.getOutdoor().equals("1")){
+                    outdoorTime++;
+                }
+                // 计算在室内的时间
+                if (state.getOutdoor().equals("0")){
+                    indoorTime++;
+                }
+            }
+        }
+        try{
+            Forecast forecast = new Forecast(nowTime, Long.valueOf(getUserIdFromCache()), states.get(states.size() - 1).getTime_point(), String.valueOf(outdoorTime), String.valueOf(indoorTime));
+            return forecast;
+        }catch (Exception e){
+            return null;
+        }
     }
 
     /**
@@ -213,6 +261,48 @@ public class DataServiceUtil {
     }
 
     /**
+     * DB Operations, insert a forecast entity
+     * @param forecast
+     */
+    public void insertForecast(Forecast forecast){
+        if (forecast != null){
+            FileUtil.appendStrToFile(TAG, "start save indoor and outdoor info");
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            Log.e("DataService", "insert forecast");
+            forecast.print();
+            cupboard().withDatabase(db).put(forecast);
+        }
+    }
+
+    /**
+     * for testing
+     * @return
+     */
+    public List<Forecast> getAllForecast(){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        return cupboard().withDatabase(db).query(Forecast.class).list();
+    }
+
+    public boolean getLastForecast(){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        calendar.set(year, month, day, 0, 0, 0);
+        Long nowTime = calendar.getTime().getTime();
+        calendar.set(year, month, day, 23, 59, 59);
+        Long nextTime = calendar.getTime().getTime();
+        /**Get forcast of today **/
+        List<Forecast> forecasts = cupboard().withDatabase(db).query(Forecast.class).withSelection("time > ? AND time < ?", nowTime.toString(), nextTime.toString()).list();
+
+        if (forecasts.size() > 0)
+            return false;
+
+        return true;
+    }
+
+    /**
      * DB Operations, update the upload value of state
      * @param state the state to update
      * @param upload the value to update
@@ -222,6 +312,33 @@ public class DataServiceUtil {
         ContentValues values = new ContentValues();
         values.put(DBConstants.DB_MetaData.STATE_HAS_UPLOAD, upload);
         cupboard().withDatabase(db).update(State.class, values, "id = ?", state.getId() + "");
+    }
+
+    /**
+     * return tomorrow's PM25 value by last seven days
+     * @return
+     */
+    public int[] getTomorrowForecast(){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        List<Forecast> forecasts = new ArrayList<>();
+        forecasts = cupboard().withDatabase(db).query(Forecast.class).list();
+        int num = 0;
+        if (forecasts.size() > 7){
+            forecasts = forecasts.subList(0, 7);
+            num = 7;
+        }else{
+            num = forecasts.size();
+        }
+        int indoors = 0;
+        int outdoors = 0;
+        for (Forecast forecast : forecasts){
+            outdoors += Integer.valueOf(forecast.getOutdoor()) * 1.0 / (Integer.valueOf(forecast.getOutdoor()) + Integer.valueOf(forecast.getIndoor())) * 1440;
+        }
+        if (num == 0) {
+            return new int[]{0, 0};
+        }else {
+            return new int[]{(1440 * 7 - outdoors) / 7, outdoors / num};
+        }
     }
 
     /**
@@ -263,6 +380,16 @@ public class DataServiceUtil {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         return cupboard().withDatabase(db).query(State.class).withSelection(DBConstants.DB_MetaData.STATE_HAS_UPLOAD +
                 "=? AND " + DBConstants.DB_MetaData.STATE_CONNECTION + "=?", "0", "1").list();
+    }
+
+    /**
+     * see the number of unupload
+     * @return
+     */
+    public Integer seeUnUploadStatesNumber(){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        return cupboard().withDatabase(db).query(State.class).withSelection(DBConstants.DB_MetaData.STATE_HAS_UPLOAD +
+                "=? AND " + DBConstants.DB_MetaData.STATE_CONNECTION + "=?", "0", "1").list().size();
     }
 
     /*
