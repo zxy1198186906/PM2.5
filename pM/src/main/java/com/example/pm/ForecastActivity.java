@@ -180,8 +180,14 @@ public class ForecastActivity extends Activity {
         VolleyQueue.getInstance(getApplicationContext()).addToRequestQueue(request);
 
         // Get predict data from database
-        int[] inOutData = DataServiceUtil.getInstance(getApplicationContext()).getTomorrowForecast();
-        TOMOPM25 = "in:" + String.valueOf(inOutData[0]) + " out:" + String.valueOf(inOutData[1]);
+        double[] inOutData = DataServiceUtil.getInstance(getApplicationContext()).getTomorrowForecast();
+
+        if (inOutData[1] < 1.0) {
+            TOMOPM25 = "运行时间过短，无法预测！";
+        }else {
+            TOMOPM25 = "in:" + String.valueOf(inOutData[0]) + " out:" + String.valueOf(inOutData[1]);
+        }
+
         TOMOPM25Text.setText(TOMOPM25);
 
     }

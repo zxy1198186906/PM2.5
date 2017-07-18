@@ -23,26 +23,32 @@ public class Forecast {
     private String outdoor;
     @Column(DBConstants.DB_MetaData.FORECAST_INDOOR_TIME)
     private String indoor;
+    @Column(DBConstants.DB_MetaData.FORECAST_VENTILATION_VOL_INDOOR)
+    private String ventilationVolIndoor;
+
+    @Column(DBConstants.DB_MetaData.FORECAST_VENTILATION_VOL_OUTDOOR)
+    private String ventilationVolOutdoor;
 
     public Forecast(){}
 
-    public Forecast(Long id, Long userid, String time, String outdoor, String indoor) {
+    public Forecast(Long id, Long userid, String time, String outdoor, String indoor,
+                    String ventilationVolIndoor, String ventilationVolOutdoor) {
         this.id = id;
         this.userid = userid;
         this.time = time;
         this.outdoor = outdoor;
         this.indoor = indoor;
+        this.ventilationVolIndoor = ventilationVolIndoor;
+        this.ventilationVolOutdoor = ventilationVolOutdoor;
     }
 
     /**
      * for debugging
      */
     public void print(){
-        Log.e("id", String.valueOf(id));
-        Log.e("userid", String.valueOf(userid));
-        Log.e("time", String.valueOf(time));
-        Log.e("outdoor", String.valueOf(outdoor));
-        Log.e("indoor", String.valueOf(indoor));
+        Log.e(String.valueOf(id) + " " + time, "userId:" + String.valueOf(userid) + " outdoor:" +
+                outdoor + " indoor: " + indoor + " ventilation_vol" + ventilationVolIndoor +
+                " outdoor:" + ventilationVolOutdoor);
     }
 
 
@@ -53,6 +59,8 @@ public class Forecast {
             object.put("time", forcast.getTime());
             object.put("outdoor", forcast.getOutdoor());
             object.put("indoor", forcast.getIndoor());
+            object.put("ventilation_vol_Indoor", forcast.getVentilationVolIndoor());
+            object.put("ventilation_vol_Outdoor", forcast.getVentilationVolOutdoor());
         }catch (JSONException e){
             e.printStackTrace();
         }
@@ -60,6 +68,21 @@ public class Forecast {
         return object;
     }
 
+    public String getVentilationVolIndoor() {
+        return ventilationVolIndoor;
+    }
+
+    public void setVentilationVolIndoor(String ventilationVolIndoor) {
+        this.ventilationVolIndoor = ventilationVolIndoor;
+    }
+
+    public String getVentilationVolOutdoor() {
+        return ventilationVolOutdoor;
+    }
+
+    public void setVentilationVolOutdoor(String ventilationVolOutdoor) {
+        this.ventilationVolOutdoor = ventilationVolOutdoor;
+    }
 
     public String getTime() {
         return time;

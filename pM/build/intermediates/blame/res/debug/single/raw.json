@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\raw\\shake_sound.mp3",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\exploded-aar\\PM2.5\\umeng_share_library\\unspecified\\res\\raw\\shake_sound.mp3"
+    },
+    {
         "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\raw\\shake_sound.mp3",
         "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\exploded-aar\\PM2.5-hong\\umeng_share_library\\unspecified\\res\\raw\\shake_sound.mp3"
     }
