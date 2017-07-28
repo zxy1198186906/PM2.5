@@ -36,6 +36,8 @@ public class DBConstants {
         public static final String FORECAST_DATE = "date";
         public static final String FORECAST_OUTDOOR_TIME = "outdoor";
         public static final String FORECAST_INDOOR_TIME = "indoor";
+        public static final String FORECAST_VENTILATION_VOL_INDOOR = "ventilation_vol_indoor";
+        public static final String FORECAST_VENTILATION_VOL_OUTDOOR = "ventilation_vol_outdoor";
     }
 
 }

@@ -8,6 +8,18 @@
         "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-xxhdpi\\test_pm.png"
     },
     {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\test_pm.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-xxhdpi\\test_pm.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\icon.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-xxhdpi\\icon.png"
+    },
+    {
         "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
         "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
     }

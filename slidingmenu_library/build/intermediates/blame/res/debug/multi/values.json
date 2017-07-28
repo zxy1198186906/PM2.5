@@ -22,5 +22,29 @@
                 }
             }
         ]
+    },
+    {
+        "outputFile": "C:\\Users\\I332329\\Desktop\\PM2.5\\slidingmenu_library\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1008,
+                    "endColumn": 42,
+                    "endOffset": 1046
+                },
+                "from": {
+                    "file": "C:\\Users\\I332329\\Desktop\\PM2.5\\slidingmenu_library\\src\\main\\res\\values\\ids.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 43,
+                        "endOffset": 96
+                    }
+                }
+            }
+        ]
     }
 ]

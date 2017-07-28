@@ -2,6 +2,7 @@ package app.services;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
 import android.util.Log;
@@ -227,21 +228,31 @@ public class DataServiceUtil {
 
         int outdoorTime = 0;
         int indoorTime = 0;
+        double outdoorVol = 0.0;
+        double indoorVol = 0.0;
 
         for (State state: states){
             if (Integer.valueOf(state.getUserid()) == getUserIdFromCache()){
                 // 计算在室外的时间
                 if (state.getOutdoor().equals("1")){
                     outdoorTime++;
+                    outdoorVol += Double.valueOf(state.getVentilation_volume());
                 }
                 // 计算在室内的时间
                 if (state.getOutdoor().equals("0")){
                     indoorTime++;
+                    indoorVol += Double.valueOf(state.getVentilation_volume());
                 }
             }
         }
+
+        indoorVol /= indoorTime;
+        outdoorVol /= outdoorTime;
+
         try{
-            Forecast forecast = new Forecast(nowTime, Long.valueOf(getUserIdFromCache()), states.get(states.size() - 1).getTime_point(), String.valueOf(outdoorTime), String.valueOf(indoorTime));
+            Forecast forecast = new Forecast(nowTime, Long.valueOf(getUserIdFromCache()),
+                    states.get(states.size() - 1).getTime_point(), String.valueOf(outdoorTime),
+                    String.valueOf(indoorTime), String.valueOf(indoorVol), String.valueOf(outdoorVol));
             return forecast;
         }catch (Exception e){
             return null;
@@ -318,7 +329,7 @@ public class DataServiceUtil {
      * return tomorrow's PM25 value by last seven days
      * @return
      */
-    public int[] getTomorrowForecast(){
+    public double[] getTomorrowForecast(){
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         List<Forecast> forecasts = new ArrayList<>();
         forecasts = cupboard().withDatabase(db).query(Forecast.class).list();
@@ -329,15 +340,34 @@ public class DataServiceUtil {
         }else{
             num = forecasts.size();
         }
-        int indoors = 0;
-        int outdoors = 0;
+
+//        ArrayList<Integer> indoorTime = new ArrayList<>();
+//        ArrayList<Integer> outdoorTime = new ArrayList<>();
+        int indoorTime = 0;
+        int outdoorTime = 0;
+        double indoorVol = 0.0;
+        double outdoorVol = 0.0;
+        ArrayList<Double> rates = new ArrayList<>();
         for (Forecast forecast : forecasts){
-            outdoors += Integer.valueOf(forecast.getOutdoor()) * 1.0 / (Integer.valueOf(forecast.getOutdoor()) + Integer.valueOf(forecast.getIndoor())) * 1440;
+            indoorTime += Integer.valueOf(forecast.getIndoor());
+            outdoorTime += Integer.valueOf(forecast.getOutdoor());
+            indoorVol += Double.valueOf(forecast.getVentilationVolIndoor());
+            outdoorVol += Double.valueOf(forecast.getVentilationVolOutdoor());
+            rates.add(outdoorTime * 1.0 / (indoorTime + outdoorTime));
         }
+
+        double proptionn = 0.0;
+        for (int i = 0; i < forecasts.size(); i++){
+            proptionn += rates.get(i) * (Integer.valueOf(forecasts.get(i).getIndoor()) + Integer.valueOf(forecasts.get(i).getOutdoor())) * 1.0 / (indoorTime + outdoorTime);
+        }
+
+        double outRes = 24 * 60 / 2 * proptionn * (outdoorVol / num);
+        double inRes = 24 * 60 / 2 * (1 - proptionn) * (indoorVol / num);
+
         if (num == 0) {
-            return new int[]{0, 0};
+            return new double[]{0.0, 0.0};
         }else {
-            return new int[]{(1440 * 7 - outdoors) / 7, outdoors / num};
+            return new double[]{outRes, inRes};
         }
     }
 
