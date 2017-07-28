@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_refresh_48pt.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\ic_refresh_48pt.png"
+    },
+    {
         "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_refresh_48pt.png",
         "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\ic_refresh_48pt.png"
     },
@@ -12,56 +16,64 @@
         "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\dialog_bocop_loaing_bg.9.png"
     },
     {
-        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\arrow_up.png",
-        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\arrow_up.png"
-    },
-    {
-        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\main_top_bg.9.png",
-        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\main_top_bg.9.png"
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_clear_white_48dp.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\ic_clear_white_48dp.png"
     },
     {
         "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\add.png",
         "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\add.png"
     },
     {
-        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\button_bg_pressed.9.png",
-        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\button_bg_pressed.9.png"
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\button_bg_normal.9.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\button_bg_normal.9.png"
     },
     {
         "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_feed_attention_click.9.png",
         "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\btn_feed_attention_click.9.png"
     },
     {
-        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ofm_location_icon.png",
-        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\ofm_location_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
-        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_feed_attention_click.9.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\btn_feed_attention_click.9.png"
     },
     {
         "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\card_avatar_bar.9.png",
         "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\card_avatar_bar.9.png"
     },
     {
-        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\card_whole.9.png",
-        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\card_whole.9.png"
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\card_whole.9.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\card_whole.9.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ofm_location_icon.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\ofm_location_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_add_circle_36pt_3x.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\ic_add_circle_36pt_3x.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\dialog_bocop_loaing_bg.9.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\dialog_bocop_loaing_bg.9.png"
     },
     {
         "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\avatar_default.png",
         "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\avatar_default.png"
     },
     {
-        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_add_circle_36pt_3x.png",
-        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\ic_add_circle_36pt_3x.png"
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\avatar_default.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\avatar_default.png"
     },
     {
         "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\dialog_bocop_loading_rotate_anim_img.png",
         "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\dialog_bocop_loading_rotate_anim_img.png"
     },
     {
-        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\button_bg_normal.9.png",
-        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\button_bg_normal.9.png"
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\main_top_bg.9.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\main_top_bg.9.png"
     },
     {
         "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_perm_scan_wifi_black_48dp.png",
@@ -74,6 +86,74 @@
     {
         "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\nav_refresh.png",
         "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\nav_refresh.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\arrow_up.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\arrow_up.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\add.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\add.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\main_top_bg.9.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\main_top_bg.9.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bg_event_detail_action_pressed.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\bg_event_detail_action_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\button_bg_pressed.9.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\button_bg_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ofm_location_icon.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\ofm_location_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\card_whole.9.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\card_whole.9.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\arrow_up.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\arrow_up.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_add_circle_36pt_3x.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\ic_add_circle_36pt_3x.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\button_bg_pressed.9.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\button_bg_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_clear_48pt.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\ic_clear_48pt.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\button_bg_normal.9.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\src\\main\\res\\drawable-hdpi\\button_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_perm_scan_wifi_black_48dp.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\ic_perm_scan_wifi_black_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\nav_refresh.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\nav_refresh.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\dialog_bocop_loading_rotate_anim_img.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\dialog_bocop_loading_rotate_anim_img.png"
+    },
+    {
+        "merged": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\card_avatar_bar.9.png",
+        "source": "C:\\Users\\I332329\\Desktop\\PM2.5\\pM\\src\\main\\res\\drawable-hdpi\\card_avatar_bar.9.png"
     },
     {
         "merged": "C:\\Users\\I332329\\Desktop\\PM2.5-hong\\pM\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_clear_white_48dp.png",
