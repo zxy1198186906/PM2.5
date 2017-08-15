@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/login_dialog_left"
             android:layout_marginTop="@dimen/login_dialog_top"
-            android:hint="账号"
+            android:hint="User name"
             android:text="test1"
             android:inputType="number|phone" />
 
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/login_dialog_left"
             android:layout_marginTop="@dimen/login_dialog_top"
-            android:hint="新密码" />
+            android:hint="New password" />
 
     </LinearLayout>
 
@@ -52,7 +52,7 @@
         android:layout_marginTop="@dimen/login_dialog_top"
         android:layout_marginLeft="@dimen/login_dialog_left2"
         android:background="@drawable/bg_event_detail_action_pressed"
-        android:text="确认"
+        android:text="Submit"
         android:textColor="@color/White" />
 
     <Button
@@ -62,7 +62,7 @@
         android:layout_marginTop="@dimen/login_dialog_top"
         android:layout_marginLeft="@dimen/login_dialog_left2"
         android:background="@drawable/btn_feed_attention_click"
-        android:text="取消"
+        android:text="Cancel"
         android:textColor="@color/White" />
 
     <LinearLayout

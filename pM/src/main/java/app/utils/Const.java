@@ -251,9 +251,9 @@ public class Const {
 
     public final static long Refresh_Chart_Interval = 1000 * 60 * 1; //1min
 
-    public static final String ERROR_NO_CITY_RESULT = "获取当前城市失败";
+    public static final String ERROR_NO_CITY_RESULT = "Fail to locate city";
 
-    public static final String ERROR_REGISTER_WRONG = "无法注册,请检查当前网络状态";
+    public static final String ERROR_REGISTER_WRONG = "Unvalid registration,check network";
     //breath according to state
     //public static double Global_boy_breath = 6.6; // L/min
     //public static double girl_breath = 6.0; // L/min
@@ -272,110 +272,109 @@ public class Const {
     /****/
     // TODO: 16/2/15 Change such hard code string to xml string of resource
 
-    public static final String Info_No_Network = "无法连接服务器，请检查网络设置";
+    public static final String Info_No_Network = "Unaccessible to server,check network settings";
 
-    public static final String Info_No_Initial = "系统检测到本机并无数据，请确保网络和GPS正常，按确认键进行初始化。";
+    public static final String Info_No_Initial = "No data in local devices,ensure connectivity of GPS/network, press the CONFIRM button to reset";
 
-    public static final String Info_Turn_Off_Service = "关闭后台服务";
+    public static final String Info_Turn_Off_Service = "Stop background service";
 
-    public static final String Info_Turn_On_Service = "开启后台服务";
+    public static final String Info_Turn_On_Service = "Start background service";
 
-    public static final String Info_Turn_Off_Upload = "关闭数据上传";
+    public static final String Info_Turn_Off_Upload = "Stop data uploading";
 
-    public static final String Info_Turn_On_Upload = "开启数据上传";
+    public static final String Info_Turn_On_Upload = "Start date uploading";
 
-    public static final String Info_Register_Success = "注册用户成功";
+    public static final String Info_Register_Success = "Register successfully";
 
-    public static final String Info_Register_Failed = "注册用户失败";
+    public static final String Info_Register_Failed = "Register fails";
 
-    public static final String Info_Register_pwdError = "两次输入的密码不一致";
+    public static final String Info_Register_pwdError = "Inconsistency between two input passwords";
 
-    public static final String Info_Register_InputEmpty = "请填入必要信息";
+    public static final String Info_Register_InputEmpty = "Input necessary information";
 
-    public static final String Info_Login_Success = "登录成功";
+    public static final String Info_Login_Success = "Login successfully";
 
-    public static final String Info_Login_Failed = "登录失败";
+    public static final String Info_Login_Failed = "Login fails";
 
-    public static final String Info_UserName_Empty = "请输入用户名";
+    public static final String Info_UserName_Empty = "Input user name";
 
-    public static final String Info_Login_Empty = "用户名或密码为空";
+    public static final String Info_Login_Empty = "Blank in user name or passord";
 
-    public static final String Info_Login_Short = "用户名或密码长度过短";
+    public static final String Info_Login_Short = "Too short of user name or password";
 
-    public static final String Info_Login_Space = "用户名或密码中有空格";
+    public static final String Info_Login_Space = "SPACE in user name or password";
 
-    public static final String Info_Login_First = "请先登录";
+    public static final String Info_Login_First = "Please login";
 
-    public static final String Info_GPS_Open = "定位服务已打开!";
+    public static final String Info_GPS_Open = "Location service is running";
 
-    public static final String Info_GPS_Turnoff = "请先打开定位!";
+    public static final String Info_GPS_Turnoff = "please start location service";
 
-    public static final String Info_PMDATA_Success = "获取PM2.5数据成功";
+    public static final String Info_PMDATA_Success = "Obtain PM2.5 data successfully";
 
-    public static final String Info_PMDATA_Failed = "获取PM2.5数据失败";
+    public static final String Info_PMDATA_Failed = "Obtain PM2.5 data fails";
 
-    public static final String Info_Upload_Success = "上传PM2.5数据成功";
+    public static final String Info_Upload_Success = "Upload PM2.5 data successfully";
 
-    public static final String Info_Upload_Failed = "上传PM2.5数据失败";
+    public static final String Info_Upload_Failed = "Upload PM2.5 data fails";
 
-    public static final String Info_Modify_Pwd_Success = "修改密码成功";
+    public static final String Info_Modify_Pwd_Success = "Correct password successfully";
 
-    public static final String Info_Modify_Pwd_Error = "用户不存在或验证失败";
+    public static final String Info_Modify_Pwd_Error = "Incorrect user or confirmation fails";
 
-    public static final String Info_Reset_Confirm = "是否发送重置密码邮件？";
+    public static final String Info_Reset_Confirm = "Sending reset Email?";
 
-    public static final String Info_Reset_Success = "发送重置密码邮件成功";
+    public static final String Info_Reset_Success = "Sending reset Email successfully";
 
-    public static final String Info_Reset_Username_Fail = "缺少用户名参数";
+    public static final String Info_Reset_Username_Fail = "Lack user name param";
 
-    public static final String Info_Reset_NoUser_Fail = "用户名不存在";
+    public static final String Info_Reset_NoUser_Fail = "User name inexists";
 
-    public static final String Info_Reset_Unknown_Fail = "发送重置密码邮件失败";
+    public static final String Info_Reset_Unknown_Fail = "Sending reset Email fails";
 
-    public static final String Info_GPS_Available = "当前GPS状态：可用的";
+    public static final String Info_GPS_Available = "Current GPS：available";
 
-    public static final String Info_GPS_OutOFService = "当前GPS状态：服务区外";
+    public static final String Info_GPS_OutOFService = "Current GPS：out of service";
 
-    public static final String Info_GPS_Pause = "当前GPS状态：暂停服务";
+    public static final String Info_GPS_Pause = "Current GPS：suspend service";
 
-    public static final String Info_GPS_No_Cache = "无法获取上次定位信息";
+    public static final String Info_GPS_No_Cache = "Unable to get last location";
 
-    public static final String Info_DB_Not_Running = "后台并没有运行，请退出重试";
+    public static final String Info_DB_Not_Running = "Not running background, please quit and retry";
 
-    public static final String Info_DB_Not_Location = "当前正用上次获取的位置与浓度进行计算";
+    public static final String Info_DB_Not_Location = "Calculate with last location and concentration";
 
-    public static final String Info_Chart_Data_Lost = "当前图表显示的是非连续的信息，请保持程序长时间开启";
+    public static final String Info_Chart_Data_Lost = "Dispersed information in current chart, please keep running";
 
-    public static final String Info_DB_Insert_Date_Conflict = "失败,插入数据库时间与当前时间不一致";
+    public static final String Info_DB_Insert_Date_Conflict = "Failed, time inconsistency between database and now";
 
-    public static final String Info_Bluetooth_ptc_Not_Support = "当前设备不支持蓝牙4.3协议";
+    public static final String Info_Bluetooth_ptc_Not_Support = "Unavailable for Bluetooth 4.3";
 
-    public static final String Info_Bluetooth_Not_Support = "当前设备不支持蓝牙";
+    public static final String Info_Bluetooth_Not_Support = "Unavailable for Bluetooth";
 
-    public static final String Info_Away_Station_Range = "尊敬的用户，您目前所处位置，已经距最近的大气污染物监测台站超过60公里，您PM2.5吸入量的测算值的准确度有可能下降";
+    public static final String Info_Away_Station_Range = "Dear, You are more than 60 km away from the nearest air pollutant monitoring station, the accuracy of your PM2.5 intake is likely to decline";
 
-    public static final String Info_Data_Lost = "下图显示数据存在缺失情况，请保持APP长期且持续运行";
+    public static final String Info_Data_Lost = "Data loss shown in chart,please keep APP running";
 
-    public static final String Info_Input_Weight_Error = "体重输入有误，请重新输入.";
+    public static final String Info_Input_Weight_Error = "Wrong weight input, please retry.";
 
-    public static final String Info_Input_Weight_Saved = "体重数据已保存";
+    public static final String Info_Input_Weight_Saved = "Weight is saved";
 
-    public static final String Info_Input_WIFI_Error = "wifi或设备号输入有误，请重新输入.";
+    public static final String Info_Weight_Null = "Current weight is 0, please input weight in the STATE option";
 
-    public static final String Info_Input_WIFI_Saved = "wifi和设备号已保存";
+    public static final String Info_No_PMDensity = "Inaccessiblity to get PM density in this location";
 
-    public static final String Info_Weight_Null = "当前体重数据为零，请在状态栏中输入相关体重数据";
+    public static final String Info_Input_WIFI_Error = "wifi or device id error,please input again";
 
-    public static final String Info_No_PMDensity = "当前地区无法获得有关PM浓度信息";
+    public static final String Info_Input_WIFI_Saved = "wifi & device id saved";
 
-    public static final String Info_Failed_PMDensity = "获取PM2.5浓度信息失败";
+    public static final String Info_Failed_PMDensity = "Fail to get PM2.5 density";
 
-    public static final String Info_Failed_Location = "获取地理位置信息失败";
+    public static final String Info_Failed_Location = "Fail to get location";
 
-    public static final String Info_Location_Saved = "地理位置信息保存成功";
+    public static final String Info_Location_Saved = "Location is saved successfully";
 
-    public static final String Info_Refresh_Chart_Success = "更新图表成功";
-
+    public static final String Info_Refresh_Chart_Success = " Chart update succcessfully";
     //服务端网络定位失败，可以反馈IMEI号和大体定位时间到loc-bugs@baidu.com，会有人追查原因
     public static final int code_file_baidu_exception1 = -21;
     //网络不通导致定位失败，请检查网络是否通畅
@@ -398,19 +397,19 @@ public class Const {
 
 
     public static String[] airQuality = {
-            "优", "良", "轻度污染", "中度污染", "重度污染", "严重污染"
+            "Excellent", "Good", "Mild pollution", "Medium pollution", "Heavy pollution", "Severe pollution"
     };
 
     public static String[] heathHint = {
-            "适合户外活动", "易感人群减少户外活动", "适量减少户外活动", "避免户外活动"
+            "Suitable for outdoor activities", "Reduce outdoor activities for the susceptible ", "Reduce outdoor activities for the susceptible suggested", "Avoid outdoor activities"
     };
 
     public static String[] ringState = {
-            "Bio3手环未配置", "Bio3手环已配置", "Bio3手环已连接"
+            "Bio3 bracelet unset", "Bio3 bracelet set", "Bio3 bracelet connected"
     };
 
     public static String[] ringState2 = {
-            "Bio3检测盒未连接", "Bio3检测盒已经连接"
+            "Bio3 box disconnected", "Bio3 box connected"
     };
 
     public static int[] profileImg = {

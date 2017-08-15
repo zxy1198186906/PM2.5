@@ -36,6 +36,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import app.model.PMModel;
+import app.model.PMModel_USA;
 import app.services.DataServiceUtil;
 import app.services.ForegroundService;
 import app.services.LocationServiceUtil;
@@ -234,7 +235,11 @@ public class DialogInitial extends Dialog implements View.OnClickListener{
 
         String url = HttpUtil.Search_PM_url;
         String token = dataServiceUtil.getTokenFromCache();
-        url = url + "?longitude=" + longitude + "&latitude=" + latitude + "&access_token=" + token;
+        if(token == null) {
+            url = url + "?longitude=" + longitude + "&latitude=" + latitude + "&access_token=";
+        }else{
+            url = url + "?longitude=" + longitude + "&latitude=" + latitude + "&access_token=" + token;
+        }
         FileUtil.appendStrToFile(TAG,"searchPMResult " + url);
         Log.e(TAG,url);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, new Response.Listener<JSONObject>() {
@@ -242,35 +247,47 @@ public class DialogInitial extends Dialog implements View.OnClickListener{
             public void onResponse(JSONObject response) {
                 try {
                     Log.e("Dialog_ini_search",response.toString());
-                    int token_status = response.getInt("token_status");
-                    if (token_status != 2) {
-                        int status = response.getInt("status");
-                        if (status == 1) {
-                            Const.IS_USE_805 = false;
-                            PMModel pmModel = PMModel.parse(response.getJSONObject("data"));
-                            NotifyServiceUtil.notifyDensityChanged(mContext, pmModel.getPm25());
 
-                            double PM25Density = Double.valueOf(pmModel.getPm25());
-                            int PM25Source = pmModel.getSource();
+                    Const.IS_USE_805 = false;
+                    PMModel_USA pmModel = PMModel_USA.parse(response.getJSONObject("data"));
+                    NotifyServiceUtil.notifyDensityChanged(mContext, pmModel.getPm25());
+
+                    double PM25Density = Double.valueOf(pmModel.getPm25());
+                    int PM25Source = pmModel.getSource();
 //                            aCache.put(Const.Cache_Data_Source,String.valueOf(PM25Source));
 
-                            dataServiceUtil.cachePMResult(PM25Density, PM25Source);
-                            FileUtil.appendStrToFile(TAG, "3.search pm density success, density: " + PM25Density);
-                        } else {
-                            Toast.makeText(mContext, Const.Info_Failed_PMDensity, Toast.LENGTH_SHORT).show();
-                            FileUtil.appendErrorToFile(-1, "search pm density failed, status != 1");
-                        }
-                    }else if (token_status == 2){
-                        backgroundService.checkPMDataForUpload();
-                        aCache.remove(Const.Cache_User_Id);
-                        aCache.remove(Const.Cache_Access_Token);
-                        aCache.remove(Const.Cache_User_Name);
-                        aCache.remove(Const.Cache_User_Nickname);
-                        aCache.remove(Const.Cache_User_Gender);
-                        Activity mActivity = (Activity)mContext;
-                        Intent intent = new Intent(mActivity, ForegroundService.class);
-                        mActivity.stopService(intent);
-                    }
+                    dataServiceUtil.cachePMResult(PM25Density, PM25Source);
+                    FileUtil.appendStrToFile(TAG, "3.search pm density success, density: " + PM25Density);
+
+//                    int token_status = response.getInt("token");
+//                    if (token_status != 2) {
+//                        int status = response.getInt("status");
+//                        if (status == 1) {
+//                            Const.IS_USE_805 = false;
+//                            PMModel_USA pmModel = PMModel_USA.parse(response.getJSONObject("data"));
+//                            NotifyServiceUtil.notifyDensityChanged(mContext, pmModel.getPm25());
+//
+//                            double PM25Density = Double.valueOf(pmModel.getPm25());
+//                            int PM25Source = pmModel.getSource();
+////                            aCache.put(Const.Cache_Data_Source,String.valueOf(PM25Source));
+//
+//                            dataServiceUtil.cachePMResult(PM25Density, PM25Source);
+//                            FileUtil.appendStrToFile(TAG, "3.search pm density success, density: " + PM25Density);
+//                        } else {
+//                            Toast.makeText(mContext, Const.Info_Failed_PMDensity, Toast.LENGTH_SHORT).show();
+//                            FileUtil.appendErrorToFile(-1, "search pm density failed, status != 1");
+//                        }
+//                    }else if (token_status == 2){
+//                        backgroundService.checkPMDataForUpload();
+//                        aCache.remove(Const.Cache_User_Id);
+//                        aCache.remove(Const.Cache_Access_Token);
+//                        aCache.remove(Const.Cache_User_Name);
+//                        aCache.remove(Const.Cache_User_Nickname);
+//                        aCache.remove(Const.Cache_User_Gender);
+//                        Activity mActivity = (Activity)mContext;
+//                        Intent intent = new Intent(mActivity, ForegroundService.class);
+//                        mActivity.stopService(intent);
+//                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

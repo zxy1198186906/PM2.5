@@ -33,8 +33,8 @@ public class DialogGetCity extends Dialog implements View.OnClickListener{
 
     public static final String TAG = "DialogGetCity";
 
-    public static final String loadingText = "正在搜索";
-    public static final String successText = "搜索成功";
+    public static final String loadingText = "Searching";
+    public static final String successText = "Search success";
 
     private Context mContext;
     private Handler mHandler;

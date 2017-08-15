@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_device_address"
+            android:text="Device address:"
             android:textSize="18sp" />
 
         <Space
@@ -50,7 +50,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_state"
+            android:text="Connectivity"
             android:textSize="18sp" />
 
         <Space
@@ -61,7 +61,7 @@
             android:id="@+id/connection_state"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/disconnected"
+            android:text="Disconnected"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -74,7 +74,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_data"
+            android:text="Select accepted data"
             android:textSize="18sp" />
 
         <Space

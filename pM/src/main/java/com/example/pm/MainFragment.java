@@ -854,8 +854,8 @@ public class MainFragment extends Fragment implements OnClickListener {
                 chart12Date = (ArrayList) aCache.getAsObject(Const.Cache_Chart_12_Date);
                 chartInitial(current_chart1_index, current_chart2_index);
             } else if (intent.getAction().equals(Const.Action_DB_MAIN_Location)) {
-                String lati = String.valueOf(intent.getStringExtra(Const.Intent_DB_PM_Lati));
-                String longi = String.valueOf(intent.getStringExtra(Const.Intent_DB_PM_Longi));
+                String lati = String.valueOf(intent.getDoubleExtra(Const.Intent_DB_PM_Lati,0));
+                String longi = String.valueOf(intent.getDoubleExtra(Const.Intent_DB_PM_Longi,0));
                 searchCityRequest(lati,longi);
 
             } else if (intent.getAction().equals(Const.Action_Chart_Result_1)) {

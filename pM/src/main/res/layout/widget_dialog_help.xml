@@ -5,116 +5,116 @@
     android:layout_height="match_parent"
     android:background="@color/White">
 
-<RelativeLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/White">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/help_para_title"
-        android:id="@+id/textView2"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_dark"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help"
+            android:id="@+id/textView2"
+            android:layout_marginTop="5dip"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/help_para_1"
-        android:id="@+id/textView3"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView2"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:textSize="17sp"
-        android:textColor="@android:color/background_dark"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Click LOCATE, you can manually locate current city"
+            android:id="@+id/textView3"
+            android:layout_marginTop="5dip"
+            android:layout_below="@+id/textView2"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:textSize="17sp"
+            android:textColor="@android:color/background_dark"/>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/help_para_2"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView3"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:textSize="17sp"
-        android:textColor="@android:color/background_dark"/>
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Click CURRENT AIR QUALITY, you can view the current density and obtain the density around manually  "
+            android:layout_marginTop="5dip"
+            android:layout_below="@+id/textView3"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:textSize="17sp"
+            android:textColor="@android:color/background_dark"/>
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/help_para_3"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView4"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:textSize="17sp"
-        android:textColor="@android:color/background_dark"/>
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Registration requires invitation code, the data will be uploaded to the server after successful login."
+            android:layout_marginTop="5dip"
+            android:layout_below="@+id/textView4"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:textSize="17sp"
+            android:textColor="@android:color/background_dark"/>
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/help_para_4"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView5"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:textSize="17sp"
-        android:textColor="@android:color/background_dark"/>
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. MODIFY VIEW in side menu can be used to re-locate, which supports GPS/network"
+            android:layout_marginTop="5dip"
+            android:layout_below="@+id/textView5"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:textSize="17sp"
+            android:textColor="@android:color/background_dark"/>
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/help_para_5"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView6"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:textSize="17sp"
-        android:textColor="@android:color/background_dark"/>
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. BLUETOOTH in side menu,bracelet is connected to calculate the heart rate, the 803 device is connected to obtain accurate PM2.5 density indoor"
+            android:layout_marginTop="5dip"
+            android:layout_below="@+id/textView6"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:textSize="17sp"
+            android:textColor="@android:color/background_dark"/>
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/help_para_6"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView7"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:textSize="17sp"
-        android:textColor="@android:color/background_dark"/>
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6. In order to keep APP running continuously in the background, please ensure enough battery and close low-battery mode to get the most accurate data"
+            android:layout_marginTop="5dip"
+            android:layout_below="@+id/textView7"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:textSize="17sp"
+            android:textColor="@android:color/background_dark"/>
 
-    <TextView
-        android:layout_marginTop="5dip"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:id="@+id/help_version_textview"
-        android:layout_below="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="17sp"
-        android:text="@string/help_para_ver"/>
+        <TextView
+            android:layout_marginTop="5dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:id="@+id/help_version_textview"
+            android:layout_below="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="APP Version 3.16"/>
 
-    <Button
-        android:id="@+id/dialog_notification_back"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:text="@string/dialog_base_back"
-        android:layout_below="@+id/help_version_textview"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"/>
+        <Button
+            android:id="@+id/dialog_notification_back"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_below="@+id/help_version_textview"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"/>
 
-</RelativeLayout>
+    </RelativeLayout>
 
 </ScrollView>

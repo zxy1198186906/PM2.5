@@ -191,7 +191,7 @@ public class DataServiceUtil {
         PM25Today += density * cal_breath;
 //        boolean source = Const.IS_USE_805;
         String data_source = aCache.getAsString(Const.Cache_Data_Source);
-        if(data_source.equals("3")) {
+        if((data_source != null) && data_source.equals("3")) {
             data_source = "3";
             device_number = aCache.getAsString(Const.Device_Id);
         }

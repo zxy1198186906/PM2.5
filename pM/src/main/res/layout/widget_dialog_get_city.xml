@@ -15,14 +15,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/str_re_localization"
+            android:text="Re-locate"
             android:id="@+id/get_city_localization" />
 
         <TextView
             android:layout_marginTop="6dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/str_current_lati"
+            android:text="Latitude"
             android:layout_toRightOf="@+id/get_city_localization"
             android:textColor="@android:color/black"
             android:id="@+id/textView13" />
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/textView13"
-            android:text="@string/str_current_longi"
+            android:text="Longtitude"
             android:textColor="@android:color/black"
             android:id="@+id/textView14" />
 
@@ -65,7 +65,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="正在搜索"
+            android:text="Searching"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
@@ -73,7 +73,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="当前城市"
+            android:text="City"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
@@ -99,7 +99,7 @@
         <Button
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="返回"
+            android:text="Back"
             android:layout_marginTop="8dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
@@ -110,7 +110,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:id="@+id/localization_confirm"
-            android:text="确认"
+            android:text="Confirm"
             android:layout_centerHorizontal="true"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="8dp"

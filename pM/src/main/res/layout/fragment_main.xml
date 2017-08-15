@@ -18,7 +18,7 @@
         <TextView
             android:id="@+id/textView1"
             style="@style/main_top_center_style"
-            android:text="@string/main_top_title" />
+            android:text="ECOLOGY   HEALTH     LIFE" />
 
         <ImageView
             android:id="@+id/main_hot_map"
@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dip"
                     android:layout_marginTop="10dip"
-                    android:text="@string/main_top_f_left"
+                    android:text="Time"
                     android:textSize="14dp" />
 
                 <TextView
@@ -84,7 +84,7 @@
                     android:layout_alignLeft="@+id/textView2"
                     android:layout_below="@+id/textView2"
                     android:layout_marginTop="20dip"
-                    android:text="@string/main_top_s_left"
+                    android:text="City"
                     android:textSize="14dp" />
 
                 <TextView
@@ -106,24 +106,24 @@
                     android:src="@drawable/ic_add_circle_36pt_3x" />
 
                 <!--<TextView-->
-                    <!--android:id="@+id/textView9"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_alignLeft="@+id/textView2"-->
-                    <!--android:layout_below="@+id/textView4"-->
-                    <!--android:layout_marginTop="20dip"-->
-                    <!--android:text="步数"-->
-                    <!--android:textSize="14dp" />-->
+                <!--android:id="@+id/textView9"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/textView2"-->
+                <!--android:layout_below="@+id/textView4"-->
+                <!--android:layout_marginTop="20dip"-->
+                <!--android:text="步数"-->
+                <!--android:textSize="14dp" />-->
 
                 <!--<TextView-->
-                    <!--android:id="@+id/main_current_step"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_alignBaseline="@id/textView9"-->
-                    <!--android:layout_marginLeft="10dip"-->
-                    <!--android:layout_toRightOf="@id/textView9"-->
-                    <!--android:text="0"-->
-                    <!--android:textSize="14dp" />-->
+                <!--android:id="@+id/main_current_step"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignBaseline="@id/textView9"-->
+                <!--android:layout_marginLeft="10dip"-->
+                <!--android:layout_toRightOf="@id/textView9"-->
+                <!--android:text="0"-->
+                <!--android:textSize="14dp" />-->
 
             </RelativeLayout>
 
@@ -137,7 +137,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dip"
-                    android:text="@string/main_top_f_right"
+                    android:text="Air Quality"
                     android:textSize="14dp" />
 
                 <TextView
@@ -156,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView3"
                     android:layout_marginTop="20dip"
-                    android:text="@string/main_top_s_right"
+                    android:text="Health Tips"
                     android:textSize="14dp" />
 
                 <TextView
@@ -166,7 +166,7 @@
                     android:layout_alignBaseline="@+id/textView5"
                     android:layout_marginLeft="10dp"
                     android:layout_toEndOf="@+id/textView5"
-                    android:text="易感人群"
+                    android:text="Susceptible People"
                     android:textSize="14dp" />
             </RelativeLayout>
 
@@ -198,7 +198,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginStart="20dp"
-                android:text="@string/main_top_t_first"
+                android:text="PM2.5 intake in an hour"
                 android:textSize="14dp" />
 
             <TextView
@@ -218,10 +218,11 @@
                 android:layout_alignLeft="@+id/textView6"
                 android:layout_below="@+id/textView6"
                 android:layout_marginTop="20dip"
-                android:text="@string/main_top_t_second"
+                android:text="Cumulative PM2.5 intake today"
                 android:textSize="14dp" />
 
             <TextView
+                android:layout_marginLeft="50dp"
                 android:id="@+id/main_day_pm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -237,10 +238,11 @@
                 android:layout_alignLeft="@+id/textView6"
                 android:layout_below="@+id/textView7"
                 android:layout_marginTop="20dip"
-                android:text="@string/main_top_t_third"
+                android:text="Average PM2.5 intake in 7 days"
                 android:textSize="14dp" />
 
             <TextView
+                android:layout_marginLeft="50dp"
                 android:id="@+id/main_week_pm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -300,7 +302,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="20dip"
                 android:layout_toStartOf="@+id/main_chart_1_alert"
-                android:text="@string/main_fig_1_title"
+                android:text="Average PM2.5 intake in 5 min"
                 android:textSize="14dp" />
 
             <TextView
@@ -311,7 +313,7 @@
                 android:layout_alignTop="@+id/main_chart1_title"
                 android:layout_marginRight="8dip"
                 android:background="@color/AccentBlue"
-                android:text="切换"
+                android:text="Switch"
                 android:textColor="@color/White"
                 android:textSize="18dp" />
 
@@ -354,7 +356,7 @@
                 android:layout_alignBaseline="@+id/main_chart_1_column"
                 android:layout_marginRight="2dp"
                 android:layout_toEndOf="@+id/main_chart1_title"
-                android:text="查看"
+                android:text="Check"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/AccentBlue"
                 android:textSize="14dp"
@@ -377,7 +379,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="20dip"
                 android:layout_toStartOf="@+id/main_view_more_2"
-                android:text="@string/main_fig_2_title"
+                android:text="PM2.5 density around(ug/m3)"
                 android:textSize="14dp" />
 
             <TextView
@@ -388,7 +390,7 @@
                 android:layout_alignTop="@+id/main_chart2_title"
                 android:layout_marginRight="8dip"
                 android:background="@color/AccentBlue"
-                android:text="切换"
+                android:text="Switch"
                 android:textColor="@color/White"
                 android:textSize="18dp" />
 
@@ -443,7 +445,7 @@
                 android:layout_alignBaseline="@+id/main_chart_2_column"
                 android:layout_marginRight="2dp"
                 android:layout_toStartOf="@+id/main_chart_2_alert"
-                android:text="查看"
+                android:text="Check"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/AccentBlue"
                 android:textSize="14dp"

@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="当前纬度"
+            android:text="Latitude"
             android:textColor="@android:color/black"
             android:id="@+id/textView13" />
 
@@ -34,7 +34,7 @@
             android:layout_below="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="当前经度"
+            android:text="Longitude"
             android:textColor="@android:color/black"
             android:id="@+id/textView14" />
 
@@ -56,7 +56,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="百度地图"
+            android:text="Baidu Map"
             android:textColor="@android:color/black"
             android:layout_marginLeft="10dp"
             android:id="@+id/get_location_baidu"
@@ -76,7 +76,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="网络"
+            android:text="Network"
             android:textColor="@android:color/black"
             android:layout_marginLeft="5dp"
             android:layout_toEndOf="@+id/get_location_gps"
@@ -87,7 +87,7 @@
             android:layout_below="@+id/get_location_baidu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="新的纬度"
+            android:text="New Latitude"
             android:layout_marginTop="3dp"
             android:layout_marginLeft="20dp"
             android:id="@+id/textView21" />
@@ -105,7 +105,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="新的经度"
+            android:text="New Longitude"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
@@ -131,7 +131,7 @@
         <Button
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="返回"
+            android:text="Back"
             android:layout_marginTop="8dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
@@ -142,7 +142,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:id="@+id/get_location_search"
-            android:text="开始"
+            android:text="Start"
             android:layout_centerHorizontal="true"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="8dp"
@@ -151,7 +151,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="保存"
+            android:text="Save"
             android:id="@+id/get_location_save"
             android:layout_marginTop="8dp"
             android:layout_toStartOf="@+id/get_location_back"

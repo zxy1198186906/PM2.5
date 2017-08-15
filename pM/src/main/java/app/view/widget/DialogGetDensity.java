@@ -38,6 +38,7 @@ import java.util.Date;
 
 import app.bluetooth.DeviceControlActivity;
 import app.model.PMModel;
+import app.model.PMModel_USA;
 import app.services.DataServiceUtil;
 import app.services.BackgroundService;
 import app.services.ForegroundService;
@@ -68,6 +69,7 @@ public class DialogGetDensity extends Dialog implements View.OnClickListener
     private boolean isRunning;
     private boolean isStop;
     private PMModel pmModel;
+    private PMModel_USA pmModel_usa;
     private Double PM25Density;
 
     private TextView mLoading;
@@ -140,7 +142,7 @@ public class DialogGetDensity extends Dialog implements View.OnClickListener
         mLati.setText(latiStr);
         mLongi.setText(longiStr);
         mDensity.setText(density);
-        WifiManager wifi_service = (WifiManager)getContext().getSystemService(WIFI_SERVICE);
+        WifiManager wifi_service = (WifiManager)getContext().getApplicationContext().getSystemService(WIFI_SERVICE);
         WifiInfo wifiInfo = wifi_service.getConnectionInfo();
         currentWifiId = wifiInfo.getSSID();
     }
@@ -167,7 +169,12 @@ public class DialogGetDensity extends Dialog implements View.OnClickListener
         isRunning = true;
         String token = dataServiceUtil.getTokenFromCache();
         String url = HttpUtil.Search_PM_url;
-        url = url + "?longitude=" + longitude + "&latitude=" + latitude + "&access_token=" + token;
+        if(token == null) {
+            url = url + "?longitude=" + longitude + "&latitude=" + latitude + "&access_token=";
+        }else{
+            url = url + "?longitude=" + longitude + "&latitude=" + latitude + "&access_token=" + token;
+        }
+        Log.e("DialogPMurl",url);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -177,44 +184,58 @@ public class DialogGetDensity extends Dialog implements View.OnClickListener
                 mSearch.setClickable(true);
                 setStop();
                 try {
-                    int data_source = response.getInt("source");
-                    aCache.put(Const.Cache_Data_Source,String.valueOf(data_source));
-                    int token_status = response.getInt("token_status");
-                    if (token_status != 2) {
-                        int status = response.getInt("status");
+                    Const.IS_USE_805 = false;
+                    pmModel_usa = PMModel_USA.parse(response.getJSONObject("data"));
+                    Intent intent = new Intent(Const.Action_DB_MAIN_PMDensity);
+                    intent.putExtra(Const.Intent_PM_Density, pmModel_usa.getPm25());
+                    //set current pm density for calculation
+                    PM25Density = Double.valueOf(pmModel_usa.getPm25());
+                    int source = pmModel_usa.getSource();
+//                    aCache.put(Const.Cache_Data_Source,String.valueOf(source));
 
-                        if (status == 1) {
-                            Const.IS_USE_805 = false;
-                            pmModel = PMModel.parse(response.getJSONObject("data"));
-                            Intent intent = new Intent(Const.Action_DB_MAIN_PMDensity);
-                            intent.putExtra(Const.Intent_PM_Density, pmModel.getPm25());
-                            //set current pm density for calculation
-                            PM25Density = Double.valueOf(pmModel.getPm25());
-                            int source = pmModel.getSource();
-                            aCache.put(Const.Cache_Data_Source,String.valueOf(source));
+                    mDensity.setText(String.valueOf(PM25Density));
+                    dataServiceUtil.cachePMResult(PM25Density, source);
+                    dataServiceUtil.cacheSearchPMFailed(0);
 
-                            mDensity.setText(String.valueOf(PM25Density));
-                            dataServiceUtil.cachePMResult(PM25Density, source);
-                            dataServiceUtil.cacheSearchPMFailed(0);
+                    notifyService(PM25Density);
+                    Toast.makeText(mContext.getApplicationContext(), Const.Info_PMDATA_Success, Toast.LENGTH_SHORT).show();
 
-                            notifyService(PM25Density);
-                            Toast.makeText(mContext.getApplicationContext(), Const.Info_PMDATA_Success, Toast.LENGTH_SHORT).show();
-
-                        } else {
-                            String str = response.getString("message");
-                            mDensity.setText(str);
-                        }
-                    }else if (token_status == 2){
-                        backgroundService.checkPMDataForUpload();
-                        aCache.remove(Const.Cache_User_Id);
-                        aCache.remove(Const.Cache_Access_Token);
-                        aCache.remove(Const.Cache_User_Name);
-                        aCache.remove(Const.Cache_User_Nickname);
-                        aCache.remove(Const.Cache_User_Gender);
-                        Activity mActivity = (Activity)mContext;
-                        Intent intent = new Intent(mActivity, ForegroundService.class);
-                        mActivity.stopService(intent);
-                    }
+//                    int token_status = response.getInt("token");
+//                    if (token_status != 2) {
+//                        int status = response.getInt("status");
+//
+//                        if (status == 1) {
+//                            Const.IS_USE_805 = false;
+//                            pmModel_usa = PMModel_USA.parse(response.getJSONObject("data"));
+//                            Intent intent = new Intent(Const.Action_DB_MAIN_PMDensity);
+//                            intent.putExtra(Const.Intent_PM_Density, pmModel_usa.getPm25());
+//                            //set current pm density for calculation
+//                            PM25Density = Double.valueOf(pmModel_usa.getPm25());
+//                            int source = pmModel_usa.getSource();
+//                            aCache.put(Const.Cache_Data_Source,String.valueOf(source));
+//
+//                            mDensity.setText(String.valueOf(PM25Density));
+//                            dataServiceUtil.cachePMResult(PM25Density, source);
+//                            dataServiceUtil.cacheSearchPMFailed(0);
+//
+//                            notifyService(PM25Density);
+//                            Toast.makeText(mContext.getApplicationContext(), Const.Info_PMDATA_Success, Toast.LENGTH_SHORT).show();
+//
+//                        } else {
+//                            String str = response.getString("message");
+//                            mDensity.setText(str);
+//                        }
+//                    }else if (token_status == 2){
+//                        backgroundService.checkPMDataForUpload();
+//                        aCache.remove(Const.Cache_User_Id);
+//                        aCache.remove(Const.Cache_Access_Token);
+//                        aCache.remove(Const.Cache_User_Name);
+//                        aCache.remove(Const.Cache_User_Nickname);
+//                        aCache.remove(Const.Cache_User_Gender);
+//                        Activity mActivity = (Activity)mContext;
+//                        Intent intent = new Intent(mActivity, ForegroundService.class);
+//                        mActivity.stopService(intent);
+//                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                     mDensity.setText("server error");

@@ -18,19 +18,19 @@ public class ChartsConst {
     public static String[] Chart_title = new String[]
             {
                     "",
-                    "1.今日单位时间PM2.5吸入量(微克/30分钟)", "2.今日所处环境的PM2.5浓度(微克/立方米)",
-                    "3.今日累积PM2.5吸入量(微克)", "4.近2小时所处环境的PM2.5浓度(微克/立方米)",
-                    "5.近两小时单位时间PM2.5吸入量(微克/5分钟)", "6.今天平均空气吸入量(升/分钟)",
-                    "7.过去7天PM2.5吸入量(微克)", "8.近两小时平均空气吸入量(升/分钟)",
-                    "", "10.今天累积空气吸入量(升)",
-                    "", "12.过去7天空气吸入量(升)"
+                    "1.PM2.5 inhalation per unit time per day (ug/30 min)", "2.The PM2.5 density around today (ug/m3)",
+                    "3.Cumulative PM2.5 intake today(ug)", "4.Density of PM2.5 around in last 2 hours(ug/m3)",
+                    "5.Inhalation two hours per unit of time (/5 PM2.5)", "6.Average air intake (L/min)",
+                    "7.PM2.5 inhalation over the past 7 days(ug)", "8.Average air intake in two hours (L/min)",
+                    "", "10.Cumulative air intake today(L)",
+                    "", "12.Air intake over the past 7 days(L)"
             };
 
-     public static String[] Chart_bottom = new String[]{
-       "","今日时刻","今日时刻","今日时刻","近两个小时时刻(分钟)"
-         ,"近两个小时时刻(分钟)","今日时刻","日期","近两个小时时刻(分钟)","",
-             "今日时刻","","日期"
-     };
+    public static String[] Chart_bottom = new String[]{
+            "","Moment Today","Moment Today","Moment Today","Moment in two hours(min)"
+            ,"Moment in an hours(min)","Moment Today","Date","Moment in two hours(min)","",
+            "Moment","","Date"
+    };
     /**
      * -1 no chart, 0 column chart, 1 line chart*
      */

@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="为保证APP计算准确性，请输入体重"
+        android:text="Ensure accuracy of APP，please input weight"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
         android:textColor="@color/Black"
@@ -24,12 +24,12 @@
         android:layout_marginTop="28dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="20dp"
-        android:hint="例:65公斤输入65"/>
+        android:hint="e.g.:input 65 for 65kg"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="体重(kg)"
+        android:text="Weight(kg)"
         android:textColor="@color/Black"
         android:layout_marginLeft="6dp"
         android:id="@+id/textView11"
@@ -41,7 +41,7 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="确认"
+        android:text="Confirm"
         android:id="@+id/input_weight_confirm"
         android:layout_above="@+id/dialog_input_div"
         android:layout_alignEnd="@+id/input_weight_content" />
@@ -49,7 +49,7 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="取消"
+        android:text="Cancel"
         android:id="@+id/input_weight_cancel"
         android:layout_above="@+id/dialog_input_div"
         android:layout_alignStart="@+id/input_weight_content" />

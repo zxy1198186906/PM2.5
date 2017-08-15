@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="当前纬度"
+            android:text="Latitude"
             android:textColor="@android:color/black"
             android:id="@+id/textView13" />
 
@@ -34,7 +34,7 @@
             android:layout_below="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="当前经度"
+            android:text="Longtitude"
             android:textColor="@android:color/black"
             android:id="@+id/textView14" />
 
@@ -64,7 +64,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="浓度为"
+            android:text="Density is"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
@@ -90,7 +90,7 @@
         <Button
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="返回"
+            android:text="Back"
             android:layout_marginTop="8dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
@@ -101,7 +101,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:id="@+id/get_density_confirm"
-            android:text="搜索"
+            android:text="Search"
             android:layout_centerHorizontal="true"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="8dp"

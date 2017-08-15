@@ -2,117 +2,108 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:layout_height="match_parent">
 
-   <ScrollView
-       android:id="@+id/dialog_notification_scrollview"
-       android:layout_width="wrap_content"
-       android:layout_height="match_parent"
-       android:layout_above="@+id/dialog_notification_back"
-       android:layout_marginBottom="6dp">
-    <RelativeLayout
-        android:orientation="vertical"
+    <ScrollView
+        android:id="@+id/notification_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/first_app_name"
-        android:id="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dip"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:textColor="@android:color/background_dark"/>
+        android:layout_above="@+id/notification_cancel"
+        android:layout_marginBottom="6dp"
+        android:fillViewport="false">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bio3Air"
+                android:id="@+id/textView1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dip"
+                android:textStyle="bold"
+                android:textSize="20sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/first_title"
-        android:id="@+id/textView2"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_dark"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Tips"
+                android:id="@+id/textView2"
+                android:layout_marginTop="5dip"
+                android:layout_below="@+id/textView1"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/first_para_1"
-        android:id="@+id/textView3"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:textSize="17sp"
-        android:textColor="@android:color/background_dark"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Whoever uses Bio3Air or employs the app data directly or indirectly are regarded as fully agree with listed terms. which means voluntary acceptance of the app declaration and user service agreement"
+                android:id="@+id/textView3"
+                android:layout_marginTop="5dip"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textSize="17sp" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/first_para_2"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView3"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:textSize="17sp"
-        android:textColor="@android:color/background_dark"/>
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Solemn statement: Beijing Shengmashan Environmental Technology Co. Ltd is authorized with patents to issue the series of Bio3Air products, Bio3Air(measurement method, software system, hardware etc.) is protected by patent. Counterfeiting is bound to be punished by law "
+                android:layout_marginTop="5dip"
+                android:layout_below="@+id/textView3"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textSize="17sp" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/first_para_3"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView4"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:textSize="17sp"
-        android:textColor="@android:color/background_dark"/>
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Bio3Air is used for measuring, recording and displaying personal air pollutants (e.g. PM2.5)"
+                android:layout_marginTop="5dip"
+                android:layout_below="@+id/textView4"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textSize="17sp" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/first_para_4"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView5"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:textSize="17sp"
-        android:textColor="@android:color/background_dark"/>
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Bio3Air is not used in the purpose of medical diagnosis and treatment"
+                android:layout_marginTop="5dip"
+                android:layout_below="@+id/textView5"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textSize="17sp" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/first_para_5"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView6"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:textSize="17sp"
-        android:textColor="@android:color/background_dark"/>
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5. Bio3Air will produce a certain amount of data flow and related costs"
+                android:layout_marginTop="5dip"
+                android:layout_below="@+id/textView6"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textSize="17sp" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/first_para_6"
-        android:layout_marginTop="5dip"
-        android:layout_below="@+id/textView7"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:textSize="17sp"
-        android:textColor="@android:color/background_dark"/>
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6. Beijing Shengmashan Environmental Technology Co. Ltd is authorized with patents to issue the series of Bio3Air products. The copyright, Modify right, update right and  final interpretation right belongs to the Beijing Shengmashan Environmental Technology Co. Ltd."
+                android:layout_marginTop="5dip"
+                android:layout_below="@+id/textView7"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textSize="17sp" />
 
         </RelativeLayout>
-   </ScrollView>
+
+    </ScrollView>
 
     <Button
         android:id="@+id/dialog_notification_back"

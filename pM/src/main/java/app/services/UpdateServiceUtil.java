@@ -24,6 +24,7 @@ import java.util.Map;
 
 import app.Entity.State;
 import app.model.PMModel;
+import app.model.PMModel_USA;
 import app.utils.ACache;
 import app.utils.StableCache;
 import app.utils.Const;
@@ -199,7 +200,7 @@ public class UpdateServiceUtil {
                     try {
                         Log.e("Update_search",response.toString());
                         Log.d("connection", "connection is ok now");
-                        PMModel pmModel = PMModel.parse(response.getJSONObject("data"));
+                        PMModel_USA pmModel = PMModel_USA.parse(response.getJSONObject("data"));
                         String mDensity = String.valueOf(pmModel.getPm25());
                         int PM25Source = pmModel.getSource();
                         aCache.put(Const.Cache_Data_Source,String.valueOf(PM25Source));

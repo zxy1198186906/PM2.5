@@ -25,7 +25,7 @@ public class HttpUtil {
 
     private static final String base_url = "http://106.14.63.93/pm25/web/restful/";
 
-    public static final String Search_PM_url = base_url + "urban-airs/search";
+    public static final String Search_PM_url = "http://106.14.63.93:8080/search";
 
     public static final String Search_PM_url_wifi = base_url + "device-datas";
 

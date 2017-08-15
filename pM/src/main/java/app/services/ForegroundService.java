@@ -44,6 +44,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import app.model.PMModel_USA;
 import app.services.DataServiceUtil;
 import app.Entity.State;
 import app.model.PMModel;
@@ -815,8 +816,13 @@ public class ForegroundService extends Service {
 
         String url = HttpUtil.Search_PM_url;
         String token = dataServiceUtil.getTokenFromCache();
-        url = url + "?longitude=" + longitude + "&latitude=" + latitude + "&access_token=" + token;
+        if(token == null) {
+            url = url + "?longitude=" + longitude + "&latitude=" + latitude + "&access_token=";
+        }else{
+            url = url + "?longitude=" + longitude + "&latitude=" + latitude + "&access_token=" + token;
+        }
         FileUtil.appendStrToFile(TAG, "searchPMResult " + url);
+        Log.e("ForeGroundSearchPMurl",url);
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, new Response.Listener<JSONObject>() {
 
@@ -824,34 +830,46 @@ public class ForegroundService extends Service {
             public void onResponse(JSONObject response) {
                 try {
                     Log.e("Fore_search",response.toString());
-                    int token_status = response.getInt("token_status");
-                    if (token_status != 2) {
-                        int status = response.getInt("status");
-                        if (status == 1) {
-                            Const.IS_USE_805 = false;
-                            PMModel pmModel = PMModel.parse(response.getJSONObject("data"));
-                            NotifyServiceUtil.notifyDensityChanged(ForegroundService.this, pmModel.getPm25());
-                            double PM25Density = Double.valueOf(pmModel.getPm25());
-                            int PM25Source = pmModel.getSource();
-                            aCache.put(Const.Cache_Data_Source,String.valueOf(PM25Source));
-                            dataServiceUtil.cachePMResult(PM25Density, PM25Source);
-                            dataServiceUtil.cacheSearchPMFailed(0);
-                            FileUtil.appendStrToFile(TAG, "searchPMResult success, density == " +
-                                    PM25Density);
-                        } else {
-                            dataServiceUtil.cacheSearchPMFailed(
-                                    dataServiceUtil.getSearchFailedCountFromCache() + 1);
-                            FileUtil.appendErrorToFile(TAG, "searchPMResult failed, status != 1");
-                        }
-                    }else if (token_status == 2){
-                        checkPMDataForUpload();
-                        aCache.remove(Const.Cache_User_Id);
-                        aCache.remove(Const.Cache_Access_Token);
-                        aCache.remove(Const.Cache_User_Name);
-                        aCache.remove(Const.Cache_User_Nickname);
-                        aCache.remove(Const.Cache_User_Gender);
-                        onDestroy();
-                    }
+
+                    Const.IS_USE_805 = false;
+                    PMModel_USA pmModel = PMModel_USA.parse(response.getJSONObject("data"));
+                    NotifyServiceUtil.notifyDensityChanged(ForegroundService.this, pmModel.getPm25());
+                    double PM25Density = Double.valueOf(pmModel.getPm25());
+                    int PM25Source = pmModel.getSource();
+//                    aCache.put(Const.Cache_Data_Source,String.valueOf(PM25Source));
+                    dataServiceUtil.cachePMResult(PM25Density, PM25Source);
+                    dataServiceUtil.cacheSearchPMFailed(0);
+                    FileUtil.appendStrToFile(TAG, "searchPMResult success, density == " +
+                            PM25Density);
+
+//                    int token_status = response.getInt("token");
+//                    if (token_status != 2) {
+//                        int status = response.getInt("status");
+//                        if (status == 1) {
+//                            Const.IS_USE_805 = false;
+//                            PMModel_USA pmModel = PMModel_USA.parse(response.getJSONObject("data"));
+//                            NotifyServiceUtil.notifyDensityChanged(ForegroundService.this, pmModel.getPm25());
+//                            double PM25Density = Double.valueOf(pmModel.getPm25());
+//                            int PM25Source = pmModel.getSource();
+//                            aCache.put(Const.Cache_Data_Source,String.valueOf(PM25Source));
+//                            dataServiceUtil.cachePMResult(PM25Density, PM25Source);
+//                            dataServiceUtil.cacheSearchPMFailed(0);
+//                            FileUtil.appendStrToFile(TAG, "searchPMResult success, density == " +
+//                                    PM25Density);
+//                        } else {
+//                            dataServiceUtil.cacheSearchPMFailed(
+//                                    dataServiceUtil.getSearchFailedCountFromCache() + 1);
+//                            FileUtil.appendErrorToFile(TAG, "searchPMResult failed, status != 1");
+//                        }
+//                    }else if (token_status == 2){
+//                        checkPMDataForUpload();
+//                        aCache.remove(Const.Cache_User_Id);
+//                        aCache.remove(Const.Cache_Access_Token);
+//                        aCache.remove(Const.Cache_User_Name);
+//                        aCache.remove(Const.Cache_User_Nickname);
+//                        aCache.remove(Const.Cache_User_Gender);
+//                        onDestroy();
+//                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                     FileUtil.appendErrorToFile(TAG, "searchPMResult failed, JSON parsing error");

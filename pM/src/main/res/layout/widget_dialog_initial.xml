@@ -8,20 +8,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="本应用部分功能需要开启定位蓝牙等权限"
+        android:text="To collect effective data,we need your permission of bluetooth and location"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:id="@+id/add_right" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="为保证数据连续性请将本应用加入耗电白名单"
+        android:text="In order to keep APP running continuously please add Bio3air to battery white list"
         android:layout_marginLeft="20dp"
         android:id="@+id/add_white_album" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="安卓版本6.0以上点击搜索进入设置页面"
+        android:text="6.0 or higher version please click search to come into the setting page"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
         android:id="@+id/add_right2" />
@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="当前纬度"
+            android:text="Latitude"
             android:textColor="@android:color/black"
             android:id="@+id/textView13" />
 
@@ -55,7 +55,7 @@
             android:layout_below="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="当前经度"
+            android:text="Longtitude"
             android:textColor="@android:color/black"
             android:id="@+id/textView14" />
 
@@ -73,7 +73,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="搜索"
+            android:text="Search"
             android:textSize="20sp"
             android:textColor="@android:color/holo_blue_dark"
             android:layout_marginTop="10dp"
@@ -99,7 +99,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="浓度为"
+            android:text="Density is"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
@@ -120,7 +120,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="搜索"
+            android:text="Search"
             android:textSize="20sp"
             android:textColor="@android:color/holo_blue_dark"
             android:layout_marginTop="10dp"
@@ -138,7 +138,7 @@
         <Button
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="返回"
+            android:text="Back"
             android:layout_marginTop="8dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
@@ -149,7 +149,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:id="@+id/initial_success"
-            android:text="成功"
+            android:text="Succeed"
             android:enabled="false"
             android:layout_centerHorizontal="true"
             android:layout_alignParentLeft="true"

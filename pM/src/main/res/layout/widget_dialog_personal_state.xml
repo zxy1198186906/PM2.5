@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="当前纬度"
+            android:text="Latitude"
             android:layout_toRightOf="@+id/personal_state_get_location"
             android:textColor="@android:color/black"
             android:id="@+id/textView13" />
@@ -34,7 +34,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="当前经度"
+            android:text="Longtitude"
             android:layout_alignLeft="@+id/textView13"
             android:layout_below="@+id/textView13"
             android:layout_marginTop="5dp"
@@ -55,7 +55,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="重新定位"
+            android:text="Locate again"
             android:id="@+id/personal_state_get_location" />
     </RelativeLayout>
 
@@ -69,7 +69,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="体重"
+            android:text="Weight"
             android:textColor="@android:color/black"
             android:layout_centerVertical="true"
             android:id="@+id/textView15" />
@@ -87,7 +87,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="保存"
+            android:text="Save"
             android:id="@+id/personal_state_weight_save"
             android:layout_alignParentRight="true"
             android:layout_marginRight="20dp"
@@ -153,7 +153,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="保存"
+                    android:text="Save"
                     android:id="@+id/wifiSave"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="20dp"
@@ -174,7 +174,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="位置"
+            android:text="Location"
             android:textColor="@android:color/black"
             android:id="@+id/textView16"
             android:layout_centerVertical="true"/>
@@ -182,7 +182,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="室内"
+            android:text="Indoor"
             android:textColor="@android:color/black"
             android:id="@+id/personal_state_indoor"
             android:layout_toEndOf="@+id/textView16"
@@ -191,11 +191,11 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="室外"
+            android:text="Outdoor"
             android:textColor="@android:color/black"
             android:id="@+id/personal_state_outdoor"
             android:layout_toEndOf="@+id/personal_state_indoor"
-            android:layout_marginStart="21dp" />
+            android:layout_marginStart="12dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -213,10 +213,10 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" 返回 "
+            android:text=" Back "
             android:layout_marginTop="8dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="40dp"
+            android:layout_marginRight="20dp"
             android:layout_centerHorizontal="true"
             android:id="@+id/personal_state_btn"/>
 
@@ -224,7 +224,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/personal_state_today"
-            android:text="查看今日纪录"
+            android:text="Review record today"
             android:layout_centerHorizontal="true"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="8dp"
