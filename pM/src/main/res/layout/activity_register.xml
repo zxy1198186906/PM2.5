@@ -186,9 +186,8 @@
                 android:layout_height="wrap_content"
                 android:text="First name"
                 android:id="@+id/textView7_2"
-                android:layout_below="@+id/textView6"
-                android:layout_toRightOf="@id/register_lastname"
-                android:layout_marginLeft="10dip"
+                android:layout_below="@+id/textView7"
+                android:layout_alignLeft="@+id/textView7"
                 android:layout_marginTop="30dip"
                 android:textSize="15sp" />
 
@@ -197,17 +196,16 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/register_firstname"
                 android:minWidth="60dip"
-                android:layout_toRightOf="@id/textView7_2"
-                android:layout_marginLeft="10dip"
-                android:layout_alignBaseline="@+id/textView7" />
+                android:layout_alignLeft="@+id/register_lastname"
+                android:layout_alignBaseline="@+id/textView7_2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Phone"
                 android:id="@+id/textView8"
-                android:layout_below="@+id/textView7"
-                android:layout_alignLeft="@+id/textView7"
+                android:layout_below="@+id/textView7_2"
+                android:layout_alignLeft="@+id/textView7_2"
                 android:layout_marginTop="30dip"
                 android:textSize="15sp" />
 

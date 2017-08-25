@@ -198,7 +198,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginStart="20dp"
-                android:text="PM2.5 intake in an hour"
+                android:text="PM2.5 inhaled in Past Hour"
                 android:textSize="14dp" />
 
             <TextView
@@ -218,7 +218,7 @@
                 android:layout_alignLeft="@+id/textView6"
                 android:layout_below="@+id/textView6"
                 android:layout_marginTop="20dip"
-                android:text="Cumulative PM2.5 intake today"
+                android:text="PM2.5 inhaled So Far Today"
                 android:textSize="14dp" />
 
             <TextView
@@ -238,7 +238,7 @@
                 android:layout_alignLeft="@+id/textView6"
                 android:layout_below="@+id/textView7"
                 android:layout_marginTop="20dip"
-                android:text="Average PM2.5 intake in 7 days"
+                android:text="PM2.5 inhaled, 7 Days Average"
                 android:textSize="14dp" />
 
             <TextView

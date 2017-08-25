@@ -18,12 +18,12 @@ public class ChartsConst {
     public static String[] Chart_title = new String[]
             {
                     "",
-                    "1.PM2.5 inhalation per unit time per day (ug/30 min)", "2.The PM2.5 density around today (ug/m3)",
-                    "3.Cumulative PM2.5 intake today(ug)", "4.Density of PM2.5 around in last 2 hours(ug/m3)",
-                    "5.Inhalation two hours per unit of time (/5 PM2.5)", "6.Average air intake (L/min)",
-                    "7.PM2.5 inhalation over the past 7 days(ug)", "8.Average air intake in two hours (L/min)",
-                    "", "10.Cumulative air intake today(L)",
-                    "", "12.Air intake over the past 7 days(L)"
+                    "1.PM2.5 Intake Rate Today (ug/30 min)", "2.PM2.5 Concentration(ug/m3)",
+                    "3.Cumulative PM2.5 intake today(ug)", "4.120 mins PM2.5 Concentration(ug/m3)",
+                    "5.120 mins PM2.5 Intake Rate (/5 PM2.5)", "6.Lung Ventilation Rate (L/min)",
+                    "7.7 Days PM2.5 Intake(ug)", "8.7 Day PM2.5 Intake(ug)",
+                    "", "10.Lung Ventilation Vol today(L)",
+                    "", "12.Daily Lung Ventilation Vol(L)"
             };
 
     public static String[] Chart_bottom = new String[]{
